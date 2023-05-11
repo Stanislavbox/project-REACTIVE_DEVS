@@ -5,6 +5,9 @@ import { root } from "./js/root";
 import { homePage } from "./js/root";
 
 import { supportMarkup } from "./js/supportUaMarkup";
+
+import { getTopBooks } from "./js/homePage"
+
 // *** Support Ukraine Marup *** //
 supportMarkup();
 
