@@ -5,6 +5,9 @@ import { supportMarkup } from "./js/supportUaMarkup";
 
 supportMarkup();
 
+import { spinner } from "./js/spinner"; //! Stas
+spinner.classList.add('visual-hidden'); //! Stas
+
 
 console.log(root.screenWidth)
 
