@@ -10,7 +10,7 @@
 @import url('./header.css');
 
 /* Sidebar */
-@import url('./categories-menu.css');
+@import url('./categories-book/categories-menu.css');
 @import url('./supportUa.css');
 
 /* Main content */
