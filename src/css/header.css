@@ -1,23 +1,41 @@
-.container {
-  padding: 0px 24px;
-  border: 1px solid red;
-}
-
 .header_block {
   display: flex;
   align-items: center;
+  border: 2px solid black;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .header__logo {
-  margin: 24px 0px;
+  margin: 22px 0px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+
+
+.page-logo {
+  height: 24px;
+  width: 24px;
+}
+
+.page-name {
+  width: 77px;
+  height: 14px;
+  margin-left: 8px;
 }
 
 .header__home {
   margin-left: 76px;
   padding: 8px 16px;
-  background-color: rgb(255, 230, 5);
   text-decoration: none;
   border-radius: 25px;
+  font-family: 'DM Sans';
+}
+
+.current {
+  background-color: #EAC645;
 }
 
 .header__shopping_list {
@@ -25,23 +43,26 @@
   align-items: center;
   margin-left: 4px;
   padding: 6.5px 16px;
-
   text-decoration: none;
   border-radius: 25px;
 }
 
-.cart__img {
+
+.header__shopping_icon{
+  width: 13px;
+  height: 16px;
   margin-left: 7px;
   align-self: center;
   transform: translateY(1.5px);
 }
 
 .user_board {
+  padding: 4px;
   display: flex;
   align-items: center;
-  margin-right: 0;
+  margin-right: 24px;
 
-  background-color: #43246f;
+  background-color: #4F2EE8;
   text-decoration: none;
   border-radius: 25px;
   color: #fff;
@@ -55,7 +76,12 @@
 }
 
 .header__user_img {
-  margin-left: 7px;
+  height: 19px;
+  width: 19px;
+  background-color: #fff;
+  border-radius: 25px;
+  border: 9px solid white;
+  fill: #4F2EE8;
 }
 
 .header__toggle {
@@ -64,7 +90,7 @@
 }
 
 .sign_form {
-  margin-top: 50px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,41 +98,11 @@
   border: 1px solid red;
 }
 
+.nav {
+  display: flex;
+}
 
-/* .mt-ios {
-
-
-  label {
-    // background
-
-    width: 5em;
-    height: 3em;
-    border-radius: 1.5em;
-    background: #43246f;
-    box-shadow: inset 0 0 0 0px rgb(88, 0, 240), 0 0 0 0.1875em #dddddd;
-    transition: 0.25s ease-in-out;
-
-    &:before {
-      // circle
-
-      width: 3em;
-      height: 3em;
-      border-radius: 1.5em;
-      background: rgb(255, 255, 255);
-      box-shadow: 0 0.375em 0.375em rgba(0, 0, 0, 0.2), 0 0 0 0.1875em #dddddd;
-      transition: 0.25s ease-in-out;
-    }
-  }
-
-
-  input:checked+label {
-    // background
-    box-shadow: inset 0 0 0 1.5em rgb(224, 202, 255), 0 0 0 0.1875em rgba(0, 0, 0, 0.3);
-
-    &:before {
-      // circle
-      transform: translateX(2em);
-      box-shadow: 0 0 0 0.1875em transparent, 0 0.375em 0.375em rgba(0, 0, 0, 0.3);
-    }
-  }
-} */
+.nav-list {
+  display: flex;
+  align-items: center;
+}
