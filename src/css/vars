@@ -1,0 +1,20 @@
+:root {
+ --main-white-color: #FFFFFF;
+ --main-black-color: #111111;
+ --brand-color: #4F2EE8;
+ --accent-color: #EAC645;
+ --secondary-text-color: rgba(17, 17, 17, 0.6);
+ --subtitle-color: #B4AFAF;
+ --alert-text-color: rgba(0, 0, 0, 0.6);
+ --backdrop-color: #F6F6F6;
+ --dark-theme-color: #202024;
+ --scroll-up-color: rgba(79, 46, 232, 0.3);
+
+ --switcher-light-theme-gradient: linear-gradient(180deg, #4F2EE8 0%, #DCDCDC 100%);
+ --switcher-dark-theme-gradient: linear-gradient(180deg, #4F2EE8 0%, #686868 100%);
+ --section-gradient:radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
+ --section-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+ --hover-shadow: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+
+ --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
