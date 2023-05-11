@@ -2,9 +2,9 @@
 
 import { root } from "./js/root";
 import { supportMarkup } from "./js/supportUaMarkup";
-
+// *** Support Ukraine Marup *** //
 supportMarkup();
-
+// ----------------------------- //
 
 console.log(root.screenWidth)
 
