@@ -2,12 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/project-REACTIVE_DEVS/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/project-REACTIVE_DEVS/assets/apple-touch-icon-bfd08949.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA1NJREFUWEe9l8tPU0EUxr8z97aVhxiQQgDFBC1BRAMYiSALjInxEV/42BjdmLhkwz/gXtcmbow7jSsXBhOQqBDAQAgBBYJKQsAUBIIWOq23994ZM4WiEFsKXDrLpp35zTdfz/kOcc4fALhARFUAdKR4USAQOKHr+kUiugTgWKohSEqphUIhdfAVIrpGRD4pZVqqhCB1kILgnJdLSTdsi26Hg6LYMKTLSQimEdxuICOLQdP+7hwFWIHwTHzlhwMLdvNwv31m9rsssG0J6RBFeibD/oMMNQ06srLZ6q6rAOqTqalQUSRkNY/0iyuf+6ySL0M2hO0MQVY2oaxKw6U7buTm/5VgDQDnvFDa1OSfEo2fek1fd6uJyW8CEWP7EHtygIoaHbfue5BXmACAiJqEQOOsX/gGe0y0vzIxPyNgb1IJIQDbVP5aht8UAIBGy4RvbsZGd5uJ8WEbwYAE+8c8G2nCl4D5HxJGSEYhNg0AwGdGJKYnBfo+WDANidJjWtIQY0M2Ol6b+LUgoz7aEoC6ZcSQaHluILAgUXfWheJDGjy71ljnv2J8bI/gxWMD8zMy+nxbBjB+Szx7FMbIgI3KkzoaLrtReIBtCOEcQFji6cMwulot5HgJVXU66s+7UFKmQdPjK+E4QEeLBU0H9uYTqk/pqDntQunR+BA7AqAemxiQX0SorNUTemLHAGIQ3gJK6IkdBVAQ6jkSeWLHAWIQ8TyREoBEnkgZQDxPDHSZDhWilTqg/oaJ1npPzPkFXj5xohImCbDeE6oB9Xda+Dm3zVKsGlLnGxNjg4kViKnDVJ3Yx2D8BkYHLEx8ETDC2+gF6iaWudzRkloEEAEzUwK97030tFmYmxZIz9xEIFF5QLXjpA6M8yWl3KxfoOetid53FoKLEkeOa7iZTCJyAkBxxfKEUuLbsI09OYTr9xJEsqWlpTxN0+4KIc4xxoq3o0DstyoLjI/YGO63tDAXaedueXJzvGw18q/pp1LK3ZzzOsbYUQC5TgCoPSwLmBi13LN+6a2s12szMllhbPhZD6ACe0YwGExjjDk6J37/ShTihrekwn3N5aKrAMrVGLhxtnJKhuUJzMM5LyWi67FZNKUA6i7/zqLRqdzBCya9lYJYXFysVlP5HwsgXqFBtYlkAAAAAElFTkSuQmCC">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAYVJREFUOE+dkz1IAmEYx/+vV3fvnecF0hS19EFLrc5ha0i4tjmHiA0tDUENTUFLNESTUUEQRRFU5FL0CUEGFQ4VglFmkVednnoXZ6mJpWfP+r7Pj9/7PP+XyLI8yjCMD0AD/lEkHo9LlFJ/WiVDaVUTzTAsDAHlCQgBiNEQjeqNl6evS3ubaedbQq/KaGljMOCl4AXyBYjFYjYCIRBcU10rcykkld8ZmgboGtDRbcHwpACrzVIECIIQSCpwbS2reLrXYJXKIefHWdxeaWjv+gNACHGd7acROsnA7aEQpZxgoWYnPrC7mqkMONxRMTOehLO/Hm4PB1Gy1A6YGkmCpUBvDlI0MW1gAIziKEpMagYYkJ8mi9OKuRnkDfKPz5u8POo4ClYZYvxBQziUKdshxxPcXGexPq+iubXCGivFUHnXsbGQQvgiC+8YXwxSJBLh7Xa7H4CjWo7lBHCwrYo9fayDo0QsJMWAUErrqgGM8+c7jmvqZAYZhvhKo2am+/uO8YtZlvV/AomnyYpY4ttGAAAAAElFTkSuQmCC">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
     
     <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/index-bc041237.js"></script>
-    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/styles-16efbb20.css">
+    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/styles-e746618d.css">
   </head>
  
   <body class="page">
