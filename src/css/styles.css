@@ -8,5 +8,10 @@
 @import url('./vars');
 @import url('./reset.css');
 @import url('./header.css');
+
+/* Sidebar */
+@import url('./categories-menu.css');
 @import url('./supportUa.css');
 
+/* Main content */
+@import url('./home-content-books-category.css');
