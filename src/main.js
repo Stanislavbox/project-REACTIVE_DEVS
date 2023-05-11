@@ -5,11 +5,15 @@ import { root } from "./js/root";
 import { homePage } from "./js/root";
 
 import { supportMarkup } from "./js/supportUaMarkup";
-
+// *** Support Ukraine Marup *** //
 supportMarkup();
+
+// ----------------------------- //
+
 
 import { spinner } from "./js/spinner"; //! Stas
 spinner.classList.add('visual-hidden'); //! Stas
+
 
 
 console.log(root.screenWidth)
