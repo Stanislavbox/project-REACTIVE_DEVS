@@ -11,7 +11,7 @@
 
 /* Sidebar */
 @import url('./categories-book/categories-menu.css');
-@import url('./supportUa.css');
+@import url('./support_ua.css');
 
 /* Main content */
 @import url('./categories-book/home-content-books-category.css');
