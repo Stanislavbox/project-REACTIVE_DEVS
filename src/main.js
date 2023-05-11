@@ -1,6 +1,8 @@
 // import "basiclightbox/dist/basicLightBox.min.css"
 
 import { root } from "./js/root";
+import { homePage } from "./js/root";
+import { getTopBooks } from './js/homePage';
 
 
 console.log(root.screenWidth)
@@ -17,4 +19,6 @@ function markap (){
 }
 markap();
 
-
+getTopBooks(homePage.TOP_BOOKS)
+  .then(resp => homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp))
+  .catch();
