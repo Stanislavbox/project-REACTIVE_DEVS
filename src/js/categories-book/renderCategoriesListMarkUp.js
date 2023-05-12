@@ -2,8 +2,6 @@ import { getCategoriesArray } from './getCategoriesArray';
 
 const categoryListEl = document.querySelector('.categories-list');
 
-// categoryListEl.innerHTML = '';
-
 export async function renderCategoriesListMarkUp() {
   try {
     const arrayOfCategories = await getCategoriesArray();

@@ -1,9 +1,12 @@
 import { getSelectedBooks } from './getSelectedBooks';
 import { renderBooksByCategory } from './renderBooksByCategory.js';
-// import { renderTopBooks } from '';
-// import { renderMainTitle } from '';
+import { renderMainTitle } from './renderBooksCategoryMainTitle.js';
+import { getTopBooks } from '../homePage.js';
+import { homePage } from '../root';
 
+const homeTitleEl = document.querySelector('.home-title');
 const categoryListEl = document.querySelector('.categories-list');
+const renderingContainer = document.querySelector('.js-container');
 
 categoryListEl.addEventListener('click', onCategoryClick);
 
@@ -13,8 +16,14 @@ export async function onCategoryClick(event) {
   if (!event.target.classList.contains('category-btn')) return;
 
   if (event.target.classList.contains('all-categories-btn')) {
-    // mainTitle.innerHTML = `Best Seller <span class="main-title--last-word-static">Books</span>`;
-    // await renderTopBooks();
+    homeTitleEl.innerHTML = `Best Sellers <span class="home-title-accent">Books</span>`;
+    // add function render top books;
+    getTopBooks(homePage.TOP_BOOKS)
+      .then(resp => {
+        renderingContainer.innerHTML = resp;
+        // spinnerFoo();
+      })
+      .catch();
     return;
   }
 
@@ -23,8 +32,9 @@ export async function onCategoryClick(event) {
   const data = await getSelectedBooks(id);
 
   // Change content part title and colorize its last word
-  //   renderMainTitle(id);
+  renderMainTitle(id);
 
   renderBooksByCategory(data);
-  //   scrollToTop();
+
+  //   scroll up function?;
 }

@@ -12,6 +12,8 @@ import { onCategoryClick } from './js/categories-book/handleCategoryClick';
 import { createBookMarkup } from './js/categories-book/oneBookMarkup';
 import { createCategoryBooksMarkup } from './js/categories-book/allBooksCategoryMarkup.js';
 import { renderBooksByCategory } from './js/categories-book/renderBooksByCategory.js';
+import { renderMainTitle } from './js/categories-book/renderBooksCategoryMainTitle.js';
+import { activeCatBtnSwitch } from './js/categories-book/activeCategoryBtnSwitcher.js';
 // ----------------------------- //
 
 import { supportMarkup } from './js/supportUaMarkup';
