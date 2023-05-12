@@ -8,6 +8,8 @@
 @import url('./vars.css');
 @import url('./reset.css');
 @import '../../node_modules/modern-normalize/modern-normalize.css';
+@import './common.css';
+
 
 @import url('./header.css');
 @import url('./spinner.css');
@@ -28,9 +30,3 @@
 
 
 
-.container {
-  max-width: 1440px; /* Установите максимальную ширину контейнера */
-  margin: 0 auto; /* Центрируйте контейнер на странице */
-  padding: 0 24px; /* Добавьте отступы слева и справа для контента */
-  box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
-}
