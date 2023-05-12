@@ -1,0 +1,15 @@
+.container {
+  max-width: 1440px; /* Установите максимальную ширину контейнера */
+  margin: 0 auto; /* Центрируйте контейнер на странице */
+  padding: 0 24px; /* Добавьте отступы слева и справа для контента */
+  box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
+}
+
+.wrapper{
+  display: flex;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+}

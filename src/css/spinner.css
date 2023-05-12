@@ -1,11 +1,12 @@
 .book {
-  --color: #4F2EE8;
+  --color: var(--brand-color);
   --duration: 6.8s;
   width: 32px;
   height: 12px;
   position: relative;
   margin: 32px 0 0 0;
   zoom: 1.5;
+  z-index: 1000;
 
   position: absolute; /* установите позиционирование элемента на absolute */
   top: 50%; /* установите расстояние от верхней границы элемента до верхнего края страницы на 50% */
@@ -734,6 +735,6 @@ body .dribbble img {
   border: 0;
   padding: 0;
   clip: rect(0000);
-  opacity: 100%;
+  opacity: 0;
   visibility: hidden;
 }

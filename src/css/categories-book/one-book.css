@@ -1,0 +1,95 @@
+.book-image {
+  object-fit: fill;
+
+  min-width: 335px;
+  height: 485px;
+}
+
+@media screen and (min-width: 768px) {
+  .book-image {
+    min-width: 218px;
+    height: 316px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .book-image {
+    min-width: 180px;
+    height: 256px;
+  }
+}
+
+.book-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: var(--main-black-color);
+  max-width: 180px;
+
+  margin-bottom: 4px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-author {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.04em;
+
+  font-style: italic;
+  color: var(--subtitle-color);
+}
+
+.book-thumb {
+  position: relative;
+  overflow: hidden;
+
+  /* border-radius: 8px; */
+  margin-bottom: 14px;
+}
+
+.book-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--accent-color);
+
+  transform: translateY(100%);
+
+  /* transition-property: transform; */
+}
+
+.book-link:hover .book-image-overlay,
+.book-link:focus .book-image-overlay {
+  transform: translateY(0);
+}
+
+.book-image-overlay-text {
+  text-transform: uppercase;
+  color: var(--main-black-color);
+  font-size: 18px;
+  font-weight: 500;
+
+  opacity: 0;
+
+  transition-property: opacity;
+  transition-delay: 200ms;
+}
+
+.book-link:hover .book-image-overlay-text,
+.book-link:focus .book-image-overlay-text {
+  opacity: 1;
+}

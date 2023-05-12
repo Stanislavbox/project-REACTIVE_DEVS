@@ -5,9 +5,11 @@
   |============================
 */
 @import url('./fonts.css');
-@import url('./vars');
+@import url('./vars.css');
 @import url('./reset.css');
 @import '../../node_modules/modern-normalize/modern-normalize.css';
+@import './common.css';
+
 
 @import url('./header.css');
 @import url('./spinner.css');
@@ -18,14 +20,13 @@
 
 /* Main content */
 @import url('./categories-book/home-content-books-category.css');
+@import url('./categories-book/one-book.css');
 
 @import url('./home_page.css');
 
 
-.container {
-  max-width: 1440px; /* Установите максимальную ширину контейнера */
-  margin: 0 auto; /* Центрируйте контейнер на странице */
-  padding: 0 24px; /* Добавьте отступы слева и справа для контента */
-  box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
-}
+@import url('./shopping_list.css');
+@import url('./switcher.css'); /*! Stas*/
+
+
 
