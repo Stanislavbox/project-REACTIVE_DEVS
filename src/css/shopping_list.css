@@ -1,0 +1,13 @@
+.shopping__title{
+    position: absolute;
+    width: 292px;
+    height: 52px;
+    color: #111111;
+    
+    margin-left: 420px;
+    margin-top: 40px;
+     }
+    
+     .list{
+        color: rgba(79, 46, 232, 1);
+     }
