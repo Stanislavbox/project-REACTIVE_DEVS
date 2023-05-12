@@ -43,6 +43,6 @@ export async function getTopBooks(TOP_BOOKS) {
         </ul> <button class="btn-see-more" type="button">SEE MORE</button></div>`;
     })
     .join('');
-  console.log(topBooks);
+  // console.log(topBooks);
   return topBooks;
 }

@@ -5,7 +5,7 @@
   |============================
 */
 @import url('./fonts.css');
-@import url('./vars');
+@import url('./vars.css');
 @import url('./reset.css');
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 
@@ -21,6 +21,12 @@
 @import url('./categories-book/one-book.css');
 
 @import url('./home_page.css');
+
+
+@import url('./shopping_list.css');
+@import url('./switcher.css'); /*! Stas*/
+
+
 
 .container {
   max-width: 1440px; /* Установите максимальную ширину контейнера */

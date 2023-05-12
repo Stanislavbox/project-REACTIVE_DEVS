@@ -1,5 +1,5 @@
 .book {
-  --color: #4F2EE8;
+  --color: var(--brand-color);
   --duration: 6.8s;
   width: 32px;
   height: 12px;
@@ -734,6 +734,6 @@ body .dribbble img {
   border: 0;
   padding: 0;
   clip: rect(0000);
-  opacity: 100%;
+  opacity: 0;
   visibility: hidden;
 }
