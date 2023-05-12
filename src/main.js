@@ -6,7 +6,7 @@ import { homePage } from "./js/root";
 
 import { supportMarkup } from "./js/supportUaMarkup";
 
-import { getTopBooks } from "./js/homePage"
+import { getTopBooks, hideText } from "./js/homePage"
 
 // *** Support Ukraine Marup *** //
 supportMarkup();
@@ -36,6 +36,6 @@ markap();
 
 getTopBooks(homePage.TOP_BOOKS)
   .then(resp => homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp))
-  .catch();
+  .catch()
 
 
