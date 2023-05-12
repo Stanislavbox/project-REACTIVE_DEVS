@@ -15,6 +15,8 @@ supportMarkup();
 
 
 import { spinnerFoo } from "./js/spinner"; //! Stas
+import { switchTheme } from "./js/switcher"; //! Stas
+switchTheme() //! Stas
 
 
 
@@ -39,5 +41,3 @@ getTopBooks(homePage.TOP_BOOKS)
     spinnerFoo()
   })
   .catch();
-
-
