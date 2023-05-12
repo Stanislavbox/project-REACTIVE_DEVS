@@ -1,8 +1,10 @@
 const switcher = document.querySelector('.js-switcher');
 
 switcher.addEventListener('click', switchTheme)
+const elementsTheme = document.querySelectorAll('.page');
 
 export function switchTheme(){
-  const body = document.querySelector('.page');
-  body.classList.toggle('dark')
+  for (var i = 0; i < elementsTheme.length; i++) {
+    elementsTheme[i].classList.toggle('dark');
+  }
 }
