@@ -5,6 +5,11 @@
     --additional-text: #B4AFAF;
 }
 
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--primary-font)
 }
@@ -152,7 +157,6 @@ img {
     color: var(--main-text-color);
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 

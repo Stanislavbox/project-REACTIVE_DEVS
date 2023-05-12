@@ -1,18 +1,11 @@
 import axios from 'axios';
 
-// const listOfBooks = document.querySelector('.js-container');
-// const TOP_BOOKS = 'https://books-backend.p.goit.global/books/top-books';
-
-// getTopBooks(TOP_BOOKS)
-//   .then(resp => listOfBooks.insertAdjacentHTML('afterbegin', resp))
-//   .catch();
-
 export async function getTopBooks(TOP_BOOKS) {
-  const response = await axios.get(TOP_BOOKS);
-  const data = response.data;
-  const topBooks = data
-    .map(({ list_name, books }) => {
-      return `<div class = "category-container"><h2 class="home-book-category">${list_name}</h2>
+    const response = await axios.get(TOP_BOOKS);
+    const data = response.data;
+    const topBooks = data
+      .map(({ list_name, books }) => {
+        return `<div class = "category-container"><h2 class="home-book-category">${list_name}</h2>
         <ul class="books-list">
                 <li class="book-item">
                 <div class ="img-wrapper">
@@ -56,9 +49,8 @@ export async function getTopBooks(TOP_BOOKS) {
                     <p class="author-name">${books[4].author}</p>
                 </li>
         </ul> <button class="btn-see-more" type="button">SEE MORE</button></div>`;
-    })
-    .join('');
-  // console.log(topBooks);
+      })
+      .join('');
   return topBooks;
 }
 
@@ -68,4 +60,3 @@ export function hideText(arr) {
     .map(title => {
       return (title.textContent = title.textContent.slice(0, 21) + '...');
     });
-}

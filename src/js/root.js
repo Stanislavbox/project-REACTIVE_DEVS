@@ -11,3 +11,4 @@ export const homePage = {
   bookTitle: document.querySelectorAll('.book-name'),
 };
 
+

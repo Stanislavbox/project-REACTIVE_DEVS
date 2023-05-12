@@ -19,7 +19,7 @@ import { activeCatBtnSwitch } from './js/categories-book/activeCategoryBtnSwitch
 
 import { supportMarkup } from "./js/supportUaMarkup";
 
-import { getTopBooks } from "./js/homePage"
+import { getTopBooks, hideText } from "./js/homePage"
 
 // *** Support Ukraine Marup *** //
 supportMarkup();
@@ -40,17 +40,6 @@ switchTheme() //! Stas
 
 // console.log(root.screenWidth)
 
-// console.log(root.baseUrl)
-
-// if(root.screenWidth >= 1280){
-//   root.namber = 5;
-// }else if (root.screenWidth ){
-//   root.namber = 3;
-// }
-// function markap (){
-//   console.log(root.namber)
-// }
-// markap();
 
 
 
