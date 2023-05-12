@@ -5,7 +5,7 @@
   |============================
 */
 @import url('./fonts.css');
-@import url('./vars');
+@import url('./vars.css');
 @import url('./reset.css');
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 

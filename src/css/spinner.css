@@ -1,5 +1,5 @@
 .book {
-  --color: #4F2EE8;
+  --color: var(--brand-color);
   --duration: 6.8s;
   width: 32px;
   height: 12px;
