@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     speed: 400,
     slidesToShow: 6,
     nextArrow:
-    '<button type="button" class="support-icon-btn"><svg width="22" class="support-icon-next" height="22"><use  href="../img/sprite.svg#icon-scroll-down"></use></svg></button>',
+    '<button type="button" class="support-icon-btn"><svg width="22" class="support-icon-next" height="22"><use  href="./img/sprite.svg#icon-scroll-down"></use></svg></button>',
   });
 });
 
