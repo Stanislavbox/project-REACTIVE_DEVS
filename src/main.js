@@ -14,8 +14,7 @@ supportMarkup();
 // ----------------------------- //
 
 
-import { spinner } from "./js/spinner"; //! Stas
-spinner.classList.add('visual-hidden'); //! Stas
+import { spinnerFoo } from "./js/spinner"; //! Stas
 
 
 
@@ -35,7 +34,10 @@ spinner.classList.add('visual-hidden'); //! Stas
 
 
 getTopBooks(homePage.TOP_BOOKS)
-  .then(resp => homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp))
+  .then(resp => {
+    homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp)
+    spinnerFoo()
+  })
   .catch();
 
 
