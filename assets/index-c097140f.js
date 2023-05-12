@@ -33,4 +33,4 @@
                     <h3 class="book-name">${o[4].title}</h3>
                     <p class="author-name">${o[4].author}</p>
                 </li>
-        </ul> <button class="btn-see-more" type="button">SEE MORE</button></div>`).join("")}const pn=document.querySelector(".book");Xe();pn.classList.add("visual-hidden");dn(se.TOP_BOOKS).then(e=>se.listOfBooks.insertAdjacentHTML("afterbegin",e)).catch();
+        </ul> <button class="btn-see-more" type="button">SEE MORE</button></div>`).join("")}function pn(){document.querySelector(".book").classList.add("visual-hidden")}Xe();dn(se.TOP_BOOKS).then(e=>{se.listOfBooks.insertAdjacentHTML("afterbegin",e),pn()}).catch();
