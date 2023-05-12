@@ -20,7 +20,7 @@
 @import url('./categories-book/home-content-books-category.css');
 
 @import url('./home_page.css');
-
+@import url('./shopping_list.css');
 
 .container {
   max-width: 1440px; /* Установите максимальную ширину контейнера */
