@@ -1,0 +1,71 @@
+/* :root{
+  --main-white-color: #111111;
+} */
+
+body{
+  background-color: var(--main-black-color);
+}
+
+/* header */
+.header_block{
+  border: 2px solid var( --main-white-color);
+}
+
+.page-name{
+  fill: #F3F3F3;
+}
+
+.current{
+  color: var(--main-black-color);
+}
+
+.nav-list{
+  color: var(--main-white-color);
+}
+
+.header__shopping_icon{
+  fill: var(--main-white-color);
+}
+
+/* home */
+.home-title{
+  color: var(--main-white-color);
+}
+
+.book-name{
+  color: var( --main-white-color);
+}
+
+.btn-see-more{
+  background-color: transparent;
+  color: var(--main-white-color);
+}
+
+/* category */
+.category-btn.active-category{
+  color: var(--accent-color);
+}
+
+.category-btn:hover{
+  color: var(--accent-color);
+}
+
+
+.category-btn{
+  color: rgba(255, 255, 255, 0.6)
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.6);
+  border-radius: 12px;
+}
+
+::-moz-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.6);
+  border-radius: 12px;
+}
+
+::-ms-thumb {
+  background: rgba(17, 17, 17, 0.6);
+  border-radius: 12px;
+}

@@ -5,7 +5,7 @@
   height: 12px;
   position: relative;
   margin: 32px 0 0 0;
-  zoom: 1.5;
+  zoom: 1;
 
   position: absolute; /* установите позиционирование элемента на absolute */
   top: 50%; /* установите расстояние от верхней границы элемента до верхнего края страницы на 50% */
@@ -715,25 +715,21 @@ html {
   align-items: center;
   background: transparent;
 } */
-/* body .dribbble {
+body .js-spinner-wrap {
   position: fixed;
-  display: block;
-  right: 24px;
-  bottom: 24px;
+  background-color: #EAC645E6; /*E6*/
+  min-width: 100vw;
+  min-height: 100vh;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  z-index: 999;
 }
-body .dribbble img {
+/* body .js-spinner-wrap img {
   display: block;
   width: 76px;
 } */
 
 .visual-hidden{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0000);
   opacity: 0;
-  visibility: hidden;
+  display: none;
 }
