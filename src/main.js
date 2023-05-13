@@ -23,6 +23,8 @@ import { supportMarkup } from './js/supportUaMarkup';
 import { getTopBooks, hideText } from './js/homePage';
 
 
+
+
 // *** Support Ukraine Marup *** //
 supportMarkup();
 

@@ -28,22 +28,29 @@
   </head>
   <body>
     <load ="partials/header.html" />
-  
+    
     
     <section>
-      <a href="./index.html">
+      
       <h1 class="shopping__title">Shopping<span class="list"> List</span></h1>
+
       <load ="partials/support_ua_home.html" />
+    </section>
+    <section>
+
       <container>
-        <div class="shpopping_card_container">
-          <img src="./img/card_book.png" alt="постер картки">
-          <div>
-  <h2>I will find you</h2>
-  <p>Hardcover fiction</p>
-  <p>David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.</p>
-  <p>Harlan Coben</p>
+        <div class="shopping-card-content">
+          <div class="shopping_card_container">
+           <img class="book-poster" src="./img/card_book.png" alt="постер картки">
+           <div>
+            <div class="book-content">
+  <h2 class="book-title">I will find you</h2>
+  <p class="book-subtitle">Hardcover fiction</p>
+  <p class="book-text">David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.</p>
+  <p class="book-subtitle">Harlan Coben</p>
 </div>
-<button>x</button>
+</div>
+<button class="delete-button">x</button>
 <div>
   <ul>
     <li><a><img src = "img/bookstores/amazon.png"></a></li>
@@ -51,11 +58,29 @@
     <li><a><img src = "img/bookstores/amazon.png"></a></li>
   </ul>
 </div>
+</div>
         </div>
       </container>
+
+      
     </section>
-    
+    <section class="section_pagination">
+    <div class="pagination">
+      <button class="pagination_btn1" ></button>
+      <button class="pagination_btn2"></button>
+      <ul class="pagination_list">
+        <li class="pagination_link active" value="1" active>1</li>
+        <li class="pagination_link" value="2" >2</li>
+        <li class="pagination_link" value="3" >3</li>
+        <li class="pagination_link" value="4" >...</li>
+
+      </ul>
+<button class="pagination_btn3"></button>
+<button class="pagination_btn4" ></button>
+    </div>
+  </section>
    
-    <script type="module" src="/main.js"></script>
+<script></script>
+<script type="module" src="/main.js"></script>
   </body>
 </html>
