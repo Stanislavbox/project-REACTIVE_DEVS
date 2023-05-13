@@ -14,11 +14,14 @@ import { createCategoryBooksMarkup } from './js/categories-book/allBooksCategory
 import { renderBooksByCategory } from './js/categories-book/renderBooksByCategory.js';
 import { renderMainTitle } from './js/categories-book/renderBooksCategoryMainTitle.js';
 import { activeCatBtnSwitch } from './js/categories-book/activeCategoryBtnSwitcher.js';
+
 // ----------------------------- //
 
 import { supportMarkup } from './js/supportUaMarkup';
 
+
 import { getTopBooks, hideText } from './js/homePage';
+
 
 // *** Support Ukraine Marup *** //
 supportMarkup();

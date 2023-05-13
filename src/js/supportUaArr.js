@@ -23,34 +23,37 @@ export const supportUaArr = [
   },
   {
     id: '03',
-    title: 'UNITED24',
-    url: 'https://u24.gov.ua/uk',
-    img: united24,
-  },
-  {
-    id: '04',
     title: 'International Medical Corps',
     url: 'https://internationalmedicalcorps.org/country/ukraine/',
     img: internationalMedicalCorps,
   },
   {
-    id: '05',
-    title: 'Medicins Sans Frontieres',
-    url: 'https://www.msf.org/ukraine',
-    img: medecinsSans,
-  },
-  {
-    id: '06',
+    id: '04',
     title: 'RAZOM',
     url: 'https://www.razomforukraine.org/',
     img: razom,
   },
+
   {
-    id: '07',
+    id: '05',
+    title: 'Serhiy Prytula Charity Foundation',
+    url: 'https://prytulafoundation.org/en',
+    img: charityFoundation,
+  },
+  {
+    id: '06',
     title: 'Action against hunger',
     url: 'https://www.actionagainsthunger.org/location/europe/ukraine/',
     img: actionAgainstHunger,
   },
+  {
+    id: '07',
+    title: 'Medicins Sans Frontieres',
+    url: 'https://www.msf.org/ukraine',
+    img: medecinsSans,
+  },
+ 
+ 
   {
     id: '08',
     title: 'World vision',
@@ -59,8 +62,9 @@ export const supportUaArr = [
   },
   {
     id: '09',
-    title: 'Serhiy Prytula Charity Foundation',
-    url: 'https://prytulafoundation.org/en',
-    img: charityFoundation,
+    title: 'UNITED24',
+    url: 'https://u24.gov.ua/uk',
+    img: united24,
   },
+
 ];
