@@ -18,3 +18,20 @@
   gap: 86px;
   max-width: 356px;
 }
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.6);
+  border-radius: 12px;
+}
+
+::-moz-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.6);
+  border-radius: 12px;
+}
+
+::-ms-thumb {
+  background: rgba(17, 17, 17, 0.6);
+  border-radius: 12px;
+}

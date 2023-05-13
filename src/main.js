@@ -14,38 +14,59 @@ import { createCategoryBooksMarkup } from './js/categories-book/allBooksCategory
 import { renderBooksByCategory } from './js/categories-book/renderBooksByCategory.js';
 import { renderMainTitle } from './js/categories-book/renderBooksCategoryMainTitle.js';
 import { activeCatBtnSwitch } from './js/categories-book/activeCategoryBtnSwitcher.js';
+
 // ----------------------------- //
 
+import { supportMarkup } from './js/supportUaMarkup';
 
-import { supportMarkup } from "./js/supportUaMarkup";
 
-import { getTopBooks, hideText } from "./js/homePage"
+import { getTopBooks, hideText } from './js/homePage';
+
+
+
 
 // *** Support Ukraine Marup *** //
 supportMarkup();
 
 // ----------------------------- //
 
-
-
-import { spinnerFoo } from "./js/spinner"; //! Stas
-import { switchTheme } from "./js/switcher"; //! Stas
-switchTheme() //! Stas
-
+import { spinnerFoo } from './js/spinner'; //! Stas
+// import { switchTheme } from './js/switcher'; //! Stas
+// switchTheme(); //! Stas
 
 // console.log(root.screenWidth);
 
 // console.log(root.baseUrl);
 
-
 // console.log(root.screenWidth)
-
-
-
 
 getTopBooks(homePage.TOP_BOOKS)
   .then(resp => {
-    homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp)
-    spinnerFoo()
+    homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
+    spinnerFoo();
   })
   .catch();
+
+// _________________________Auth__________________________
+
+import { registration } from './js/header';
+import { logIn } from './js/header';
+import { onLoad } from './js/header';
+import { logOutFunc } from './js/header';
+
+onLoad();
+
+const formSignUp = document.querySelector('.sign_up_form');
+const formSignIn = document.querySelector('.sign_in_form');
+
+formSignUp.addEventListener('submit', registration);
+formSignIn.addEventListener('submit', logIn);
+
+const logOutButton = document.getElementById('logOutButton');
+logOutButton.addEventListener('click', logOutFunc);
+
+// todo , {displayname: name} {books: arrey} FORM reset
+
+// !!!Проблема з шопінг ліст на ного не перекидується авторізація!!!
+
+// _______________________________________________________
