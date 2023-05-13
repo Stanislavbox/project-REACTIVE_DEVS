@@ -1,17 +1,24 @@
 .container {
   max-width: 1440px; /* Установите максимальную ширину контейнера */
   margin: 0 auto; /* Центрируйте контейнер на странице */
-  padding: 0 24px; /* Добавьте отступы слева и справа для контента */
+  /* padding: 0px 24px; Добавьте отступы слева и справа для контента */
   box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
 }
 
-.wrapper{
+.wrapper {
   display: flex;
+  flex-direction: row;
+  padding: 40px 24px;
+  gap: 40px;
 }
 
-.sidebar{
+.sidebar {
   display: flex;
   flex-direction: column;
+  gap: 86px;
+  max-width: 356px;
+}
+
 }
 
 ::-webkit-scrollbar-thumb {
