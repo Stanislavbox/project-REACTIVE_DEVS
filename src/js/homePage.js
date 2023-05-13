@@ -54,11 +54,9 @@ export async function getTopBooks(TOP_BOOKS) {
   return topBooks;
 }
 
-
 export function hideText(arr) {
   const titles = [...arr]
     .filter(title => title.textContent.length > 20)
     .map(title => {
       return (title.textContent = title.textContent.slice(0, 21) + '...');
     });
-}
