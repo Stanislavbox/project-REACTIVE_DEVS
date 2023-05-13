@@ -24,8 +24,8 @@
     />
     <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=" />
     
-    <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/main-83d30a97.js"></script>
-    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/main-87c59e92.css">
+    <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/main-de8cffb5.js"></script>
+    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/main-9494a6ea.css">
   </head>
 
   <body class="page dark">
@@ -59,7 +59,7 @@
   </div>
 </div>
 
-    <div class="container">
+    <div class="contain">
   <div class="header_block">
     <nav class="nav">
       <ul class="nav-list">
@@ -77,13 +77,11 @@
           <a href="./index.html" class="header__home current">HOME</a>
         </li>
         <li class="nav-item">
-          <a href="./shopping_list.html" class="header__shopping_list"
-            >SHOPPING LIST
+          <a href="./shopping_list.html" class="header__shopping_list">SHOPPING LIST
             <span class="cart__img">
               <svg class="header__shopping_icon">
                 <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-7f0e75b4.svg#icon-shopping"></use>
-              </svg> </span
-          ></a>
+              </svg> </span></a>
         </li>
       </ul>
     </nav>
@@ -91,7 +89,8 @@
     <div class="header__toggle">
       <label class="switch">
         <input type="checkbox" class="switch__input" />
-        <span class="switch__slider js-switcher"></span> <!--Stas -->
+        <span class="switch__slider js-switcher"></span>
+        <!--Stas -->
       </label>
     </div>
 
@@ -99,23 +98,27 @@
       <svg class="header__user_img">
         <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-7f0e75b4.svg#icon-user"></use>
       </svg>
-      <p class="header__username">USERNAME</p>
+      <p class="header__username">Sign up/Sign in</p>
     </div>
   </div>
 </div>
+<div class="form-container">
+  <form action="submit" class="sign_form sign_up_form">
+    <input type="text" id="sign_up_name" autocomplete="off" placeholder="Name" />
+    <input type="text" id="sign_up_email" autocomplete="off" placeholder="Email" />
+    <input type="text" id="sign_up_password" autocomplete="off" placeholder="Password" />
+    <button class="sign_up">Sign up</button>
+  </form>
+  <form action="submit" class="sign_form sign_in_form">
+    <input type="text" id="sign_in_email" autocomplete="off" placeholder="Email" />
+    <input type="text" id="sign_in_password" autocomplete="off" placeholder="Password" />
+    <button class="sign_in">Sign in</button>
+  </form>
+  <form action="submit" class="sign_form sign_in_form">
 
-<form action="submit" class="sign_form">
-  <input type="text" id="input_name" autocomplete="off" placeholder="Name" />
-  <input type="text" id="input_email" autocomplete="off" placeholder="Email" />
-  <input
-    type="text"
-    id="input_password"
-    autocomplete="off"
-    placeholder="Password"
-  />
-  <button class="sign_up">Sign up</button>
-</form>
-
+    <button class="sign_out" id="logOutButton">Log Out</button>
+  </form>
+</div>
     
 
     <!--Page -->
