@@ -8,6 +8,8 @@ import { supportMarkup } from "./js/supportUaMarkup";
 
 import { getTopBooks } from "./js/homePage"
 
+
+
 // *** Support Ukraine Marup *** //
 supportMarkup();
 
