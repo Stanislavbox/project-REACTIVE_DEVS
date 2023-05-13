@@ -26,6 +26,7 @@
   margin-left: 8px;
 }
 
+
 .header__home {
   margin-left: 76px;
   padding: 8px 16px;
@@ -66,23 +67,27 @@
   text-decoration: none;
   border-radius: 25px;
   color: #fff;
-  width: 184px;
+  width: fit-content;
 
 }
 
 .header__username {
+  padding-left: 5px;
+  padding-right: 5px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .header__user_img {
-  height: 19px;
-  width: 19px;
+  height: 37px;
+  width: 37px;
   background-color: #fff;
   border-radius: 25px;
   border: 9px solid white;
+
   fill: #4F2EE8;
 }
+
 
 .header__toggle {
   margin-right: 24px;
@@ -95,7 +100,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+}
+
+.form-container {
   border: 1px solid red;
+  width: fit-content;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav {

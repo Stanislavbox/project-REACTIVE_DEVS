@@ -157,7 +157,6 @@ img {
     color: var(--main-text-color);
 
     display: flex;
-    
     justify-content: center;
     align-items: center;
 
@@ -170,5 +169,5 @@ img {
 }
 
 .text-overlay:hover {
-color: #ffffff;
+    color: #ffffff;
 }

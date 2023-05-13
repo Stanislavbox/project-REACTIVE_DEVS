@@ -54,7 +54,6 @@ export async function getTopBooks(TOP_BOOKS) {
   return topBooks;
 }
 
-
 export function hideText(arr) {
   const titles = [...arr]
     .filter(title => title.textContent.length > 20)
