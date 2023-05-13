@@ -60,3 +60,4 @@ export function hideText(arr) {
     .map(title => {
       return (title.textContent = title.textContent.slice(0, 21) + '...');
     });
+}
