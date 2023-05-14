@@ -19,10 +19,13 @@
   align-items: center;
 
   background-color: #4f2ee8;
+  fill: #ffffff;
   border: 5px solid transparent;
   border-radius: 50%;
 
   box-shadow: 0 0 0 5px rgba(79, 46, 232, 0.3);
+
+  transition: scale 1s;
 }
 
 .back-to-top:hover,
@@ -35,7 +38,7 @@
   visibility: hidden;
 }
 
-.button-icon-arrow {
+/* .button-icon-arrow {
   fill: #ffffff;
   transition: 500ms ease-in-out;
-}
+} */
