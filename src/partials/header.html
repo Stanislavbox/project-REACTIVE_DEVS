@@ -33,15 +33,31 @@
       </label>
     </div>
 
-    <div class="user_board">
-      <svg class="header__user_img">
-        <use xlink:href="./img/sprite.svg#icon-user"></use>
+    <button class="user_board_signup is-hidden">
+      <p class="header__sign_up_text">Sign up</p>
+      <svg class="header__signup_img">
+        <use xlink:href="./img/sprite.svg#icon-arrow-right"></use>
       </svg>
-      <p class="header__username">Sign up/Sign in</p>
+    </button>
+
+
+    <div class="userboard_dropdown dropdown is-hidden">
+      <button class="user_board_name ">
+        <svg class="header__user_img">
+          <use xlink:href="./img/sprite.svg#icon-user"></use>
+        </svg>
+        <p class="header__username">USERNAME</p>
+        <svg class="header__scroldown_img">
+          <use xlink:href="./img/sprite.svg#icon-scroll-down"></use>
+        </svg>
+      </button>
+
+      <button class="dropdown__button" id="logOutButton">Log out</button>
     </div>
+
   </div>
 </div>
-<div class="form-container">
+<div class="form-container is-hidden">
   <form action="submit" class="sign_form sign_up_form">
     <input type="text" id="sign_up_name" autocomplete="off" placeholder="Name" />
     <input type="text" id="sign_up_email" autocomplete="off" placeholder="Email" />
