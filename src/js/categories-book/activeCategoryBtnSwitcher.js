@@ -16,4 +16,5 @@ export function activeCatBtnSwitch(e) {
   }
 
   activeBtn.classList.add('active-category');
+  activeBtn.scrollIntoView({ block: 'center' });
 }
