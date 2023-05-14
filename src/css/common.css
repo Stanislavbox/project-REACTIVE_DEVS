@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   /* max-width: 1440px; Установите максимальную ширину контейнера */
   margin: 0 auto; /* Центрируйте контейнер на странице */

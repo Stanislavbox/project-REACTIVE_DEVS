@@ -6,9 +6,7 @@ export function createCategoryBooksMarkup(data) {
         ${data
           .map(element => {
             return `
-            <li class="books-list-item">
               ${createBookMarkup(element)}
-            </li>
           `;
           })
           .join('')}

@@ -57,19 +57,50 @@
   transform: translateY(1.5px);
 }
 
-.user_board {
+/* drop__________________ */
+
+.user_board_name {
   padding: 4px;
   display: flex;
   align-items: center;
-  margin-right: 24px;
-
   background-color: #4F2EE8;
   text-decoration: none;
   border-radius: 25px;
   color: #fff;
   width: fit-content;
-
+  border: none;
 }
+
+.dropdown {
+  width: fit-content;
+  margin-right: 24px;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+
+
+.dropdown__button {
+  position: absolute;
+  height: 45px;
+  min-width: 100%;
+  background-color: #fff;
+  border: 2px solid #EAC645;
+  border-radius: 25px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+
+.dropdown:hover .dropdown__button {
+  visibility: visible;
+  opacity: 1;
+  transition: .3s;
+}
+
+/* ____________________________ */
+
 
 .header__username {
   padding-left: 5px;
@@ -88,6 +119,34 @@
   fill: #4F2EE8;
 }
 
+.header__scroldown_img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  fill: #fff;
+}
+
+.user_board_signup {
+  display: flex;
+  width: 184px;
+  height: 48px;
+  border-radius: 20px;
+  border: none;
+  align-items: center;
+  padding: 10px;
+  margin-right: 24px;
+  background-color: #4F2EE8;
+  color: #fff;
+}
+
+.header__signup_img {
+  height: 32px;
+  width: 43px;
+  fill: #EAC645;
+  margin-right: 0;
+  margin-left: auto;
+
+}
 
 .header__toggle {
   margin-right: 24px;
@@ -165,4 +224,8 @@
   -ms-transform: translateX(20px);
   -moz-transform: translateX(20px);
   transition: .3s;
+}
+
+.is-hidden {
+  display: none;
 }

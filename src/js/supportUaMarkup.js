@@ -5,9 +5,6 @@ import $ from 'jquery';
 
 const supportList = document.querySelector('.support-ua-list');
 
-//ВАРИАНТ ДЛЯ ХОМ + ШОПИНГ СТРАНИЦ
-// const supportLists = document.querySelectorAll('.support-ua-list');
-
 function createMarkupSupportUa(arr) {
   const markup = arr
     .map(
@@ -33,25 +30,7 @@ export function supportMarkup() {
   );
 }
 
-//ВАРИАНТ ДЛЯ ХОМ + ШОПИНГ СТРАНИЦ
-// export function supportMarkup() {
-//   for (let i = 0; i < supportLists.length; i++) {
-//     supportLists[i].insertAdjacentHTML('beforeend', createMarkupSupportUa(supportUaArr));
-//   }
-// }
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   $('.support-ua-list').slick({
-//     vertical: true,
-//     verticalSwiping: true,
-//     prevArrow: false,
-//     infinite: true,
-//     speed: 400,
-  
-//     slidesToShow: 6,
-//     nextArrow: $('.next'),
-//   });
-// });
 
 $(document).ready(function () {
   $('.support-ua-list').slick({
@@ -60,8 +39,23 @@ $(document).ready(function () {
     prevArrow: false,
     nextArrow: $('.next'),
     infinite: true,
-    speed: 500,
+    speed: 400,
+    slidesToScroll: 1,
     slidesToShow: 6,
     draggable: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   });
 });
