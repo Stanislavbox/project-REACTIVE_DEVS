@@ -8,7 +8,8 @@ export function createBookMarkup({
   // book_image_height: height,
 }) {
   return `
-    <a class="book-link" href="" data_id=${id} aria-label="Book thumbnail">
+  <li class="books-list-item" data_id=${id}>
+    <div class="book-wrap">
       <div class="book-thumb">
         <img class="book-image" src="${image}" loading="lazy" alt="${description}"/>
         <div class="book-image-overlay" aria-label="${title}">
@@ -19,6 +20,7 @@ export function createBookMarkup({
         <h3 class="book-title">${title}</h3>
         <p class="book-author">${author}</p>
       </div>
-    </a>
+    </div>
+    </li>
   `;
 }

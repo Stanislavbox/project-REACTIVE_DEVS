@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 export async function getTopBooks(TOP_BOOKS) {
-    const response = await axios.get(TOP_BOOKS);
-    const data = response.data;
-    const topBooks = data
-      .map(({ list_name, books }) => {
-        return `<div class = "category-container"><h2 class="home-book-category">${list_name}</h2>
+  const response = await axios.get(TOP_BOOKS);
+  const data = response.data;
+  const topBooks = data
+    .map(({ list_name, books }) => {
+      return `<div class = "category-container"><h2 class="home-book-category">${list_name}</h2>
         <ul class="books-list">
                 <li class="book-item">
                 <div class ="img-wrapper">
@@ -48,9 +48,9 @@ export async function getTopBooks(TOP_BOOKS) {
                     <h3 class="book-name">${books[4].title}</h3>
                     <p class="author-name">${books[4].author}</p>
                 </li>
-        </ul> <button class="btn-see-more" type="button">SEE MORE</button></div>`;
-      })
-      .join('');
+        </ul> <button class="btn-see-more" type="button" data-id="${list_name}">SEE MORE</button></div>`;
+    })
+    .join('');
   return topBooks;
 }
 
