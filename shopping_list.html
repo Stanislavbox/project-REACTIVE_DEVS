@@ -26,14 +26,15 @@
     
     <link
       rel="stylesheet"
-      href="data:text/css;base64,LyogOnJvb3R7CiAgLS1tYWluLXdoaXRlLWNvbG9yOiAjMTExMTExOwp9ICovCgpib2R5ewogIGJhY2tncm91bmQtY29sb3I6IHZhcigtLW1haW4tYmxhY2stY29sb3IpOwp9CgovKiBoZWFkZXIgKi8KLmhlYWRlcl9ibG9ja3sKICBib3JkZXI6IDJweCBzb2xpZCB2YXIoIC0tbWFpbi13aGl0ZS1jb2xvcik7Cn0KCi5wYWdlLW5hbWV7CiAgZmlsbDogI0YzRjNGMzsKfQoKLmN1cnJlbnR7CiAgY29sb3I6IHZhcigtLW1haW4tYmxhY2stY29sb3IpOwp9CgoubmF2LWxpc3R7CiAgY29sb3I6IHZhcigtLW1haW4td2hpdGUtY29sb3IpOwp9CgouaGVhZGVyX19zaG9wcGluZ19pY29uewogIGZpbGw6IHZhcigtLW1haW4td2hpdGUtY29sb3IpOwp9CgovKiBob21lICovCi5ob21lLXRpdGxlewogIGNvbG9yOiB2YXIoLS1tYWluLXdoaXRlLWNvbG9yKTsKfQoKLmJvb2stbmFtZXsKICBjb2xvcjogdmFyKCAtLW1haW4td2hpdGUtY29sb3IpOwp9CgouYnRuLXNlZS1tb3JlewogIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50OwogIGNvbG9yOiB2YXIoLS1tYWluLXdoaXRlLWNvbG9yKTsKfQoKLyogY2F0ZWdvcnkgKi8KLmNhdGVnb3J5LWJ0bi5hY3RpdmUtY2F0ZWdvcnl7CiAgY29sb3I6IHZhcigtLWFjY2VudC1jb2xvcik7Cn0KCi5jYXRlZ29yeS1idG46aG92ZXJ7CiAgY29sb3I6IHZhcigtLWFjY2VudC1jb2xvcik7Cn0KCgouY2F0ZWdvcnktYnRuewogIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNikKfQoKOjotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7CiAgYmFja2dyb3VuZDogcmdiYSgxNywgMTcsIDE3LCAwLjYpOwogIGJvcmRlci1yYWRpdXM6IDEycHg7Cn0KCjo6LW1vei1zY3JvbGxiYXItdGh1bWIgewogIGJhY2tncm91bmQ6IHJnYmEoMTcsIDE3LCAxNywgMC42KTsKICBib3JkZXItcmFkaXVzOiAxMnB4Owp9Cgo6Oi1tcy10aHVtYiB7CiAgYmFja2dyb3VuZDogcmdiYSgxNywgMTcsIDE3LCAwLjYpOwogIGJvcmRlci1yYWRpdXM6IDEycHg7Cn0="
+      href="./css/dark.css"
       media="(prefers-color-scheme: dark)"
     />
-    <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/shopping_list-51fcee4b.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-REACTIVE_DEVS/assets/supportUaMarkup-100a268e.js">
-    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/supportUaMarkup-6ee44282.css">
+    <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/shopping_list-a1a3d4e8.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-REACTIVE_DEVS/assets/switcher-a02138b2.js">
+    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/switcher-cf5f5a55.css">
   </head>
-  <body>
+
+  <body class="page">
     <div class="container">
   <div class="header_block">
     <nav class="nav">
@@ -52,20 +53,22 @@
           <a href="./index.html" class="header__home current">HOME</a>
         </li>
         <li class="nav-item">
-          <a href="./shopping_list.html" class="header__shopping_list">SHOPPING LIST
+          <a href="./shopping_list.html" class="header__shopping_list"
+            >SHOPPING LIST
             <span class="cart__img">
               <svg class="header__shopping_icon">
                 <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-7f0e75b4.svg#icon-shopping"></use>
-              </svg> </span></a>
+              </svg> </span
+          ></a>
         </li>
       </ul>
     </nav>
 
     <div class="header__toggle">
       <label class="switch">
-        <input type="checkbox" class="switch__input" />
-        <span class="switch__slider js-switcher"></span>
+        <input type="checkbox" class="switch__input js-switcher" />
         <!--Stas -->
+        <span class="switch__slider"></span>
       </label>
     </div>
 
@@ -79,21 +82,46 @@
 </div>
 <div class="form-container">
   <form action="submit" class="sign_form sign_up_form">
-    <input type="text" id="sign_up_name" autocomplete="off" placeholder="Name" />
-    <input type="text" id="sign_up_email" autocomplete="off" placeholder="Email" />
-    <input type="text" id="sign_up_password" autocomplete="off" placeholder="Password" />
+    <input
+      type="text"
+      id="sign_up_name"
+      autocomplete="off"
+      placeholder="Name"
+    />
+    <input
+      type="text"
+      id="sign_up_email"
+      autocomplete="off"
+      placeholder="Email"
+    />
+    <input
+      type="text"
+      id="sign_up_password"
+      autocomplete="off"
+      placeholder="Password"
+    />
     <button class="sign_up">Sign up</button>
   </form>
   <form action="submit" class="sign_form sign_in_form">
-    <input type="text" id="sign_in_email" autocomplete="off" placeholder="Email" />
-    <input type="text" id="sign_in_password" autocomplete="off" placeholder="Password" />
+    <input
+      type="text"
+      id="sign_in_email"
+      autocomplete="off"
+      placeholder="Email"
+    />
+    <input
+      type="text"
+      id="sign_in_password"
+      autocomplete="off"
+      placeholder="Password"
+    />
     <button class="sign_in">Sign in</button>
   </form>
   <form action="submit" class="sign_form sign_in_form">
-
     <button class="sign_out" id="logOutButton">Log Out</button>
   </form>
 </div>
+
 
     <section>
       <h1 class="shopping__title">Shopping<span class="list"> List</span></h1>
