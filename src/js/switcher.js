@@ -1,10 +1,26 @@
-// const switcher = document.querySelector('.js-switcher');
+const switcher = document.querySelector('.js-switcher');
+const elementsTheme = document.querySelector('.page');
 
-// switcher.addEventListener('click', switchTheme)
-// const elementsTheme = document.querySelectorAll('.page');
+switcher.addEventListener('click', switchTheme)
 
-// export function switchTheme(){
-//   for (var i = 0; i < elementsTheme.length; i++) {
-//     elementsTheme[i].classList.toggle('dark');
-//   }
-// }
+export function switchTheme(){
+  if (localStorage.getItem('theme') === 'dark'){
+
+    localStorage.removeItem('theme');
+  }else{
+     localStorage.setItem('theme', 'dark')
+  }
+    addClassJsDarkTheme()
+  }
+
+  function addClassJsDarkTheme(){
+    try{
+      if(localStorage.getItem('theme') === 'dark'){
+        elementsTheme.classList.add('js-dark-theme')
+        switcher.checked = true;
+      }else{
+        elementsTheme.classList.remove('js-dark-theme')
+      }
+    }catch(error){}
+  }
+  addClassJsDarkTheme()

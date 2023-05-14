@@ -1,0 +1,63 @@
+
+body.js-dark-theme{
+  background-color: var(--dark-theme-color);
+}
+
+/* header */
+.js-dark-theme .header_block{
+  border: 2px solid var( --main-white-color);
+}
+
+.js-dark-theme .page-name{
+  fill: #F3F3F3;
+}
+
+.js-dark-theme .current{
+  color: var(--main-black-color);
+}
+
+.js-dark-theme .nav-list{
+  color: var(--main-white-color);
+}
+
+.js-dark-theme .header__shopping_icon{
+  fill: var(--main-white-color);
+}
+
+/* home */
+.js-dark-theme .home-title{
+  color: var(--main-white-color);
+}
+
+.js-dark-theme .book-name{
+  color: var( --main-white-color);
+}
+
+.js-dark-theme .btn-see-more{
+  background-color: transparent;
+  color: var(--main-white-color);
+}
+
+/* category */
+.js-dark-theme .category-btn.active-category{
+  color: var(--accent-color);
+}
+
+.js-dark-theme .category-btn:hover{
+  color: var(--accent-color);
+}
+
+
+.js-dark-theme .category-btn{
+  color: rgba(255, 255, 255, 0.6)
+}
+
+.js-dark-theme .categories::-webkit-scrollbar {
+  background: none;
+  width: 8px;
+  border-radius: 12px;
+}
+
+.js-dark-theme .categories::-webkit-scrollbar-thumb {
+  background: var(--secondary-text-color);
+}

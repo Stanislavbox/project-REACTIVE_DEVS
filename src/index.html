@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Bookshelf</title>
+
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -22,20 +24,24 @@
       sizes="16x16"
       href="./favicon/favicon-16x16.png"
     />
-    <link rel="stylesheet" href="" />
+
+
 
     <link rel="manifest" href="./favicon/site.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <!-- <link rel="stylesheet" href="./css/dark.css" media="(prefers-color-scheme: dark)"/> -->
+
   </head>
 
-  <body class="page dark">
+  <body class="page">
     <load ="partials/spinner.html" />
     <load ="partials/header.html" />
 
     <!--Page -->
     <div class="container">
       <div class="wrapper">
+        <!-- Intersection observer target for scroll-up button -->
+        <div class="to-top-target"></div>
+
         <!-- Sidebar -->
         <aside class="sidebar">
           <!-- Book category selection menu -->
@@ -51,6 +57,8 @@
           <load ="partials/home_page.html" />
           <!-- Modal -->
           <!-- burger-menu-->
+          <!-- Back to top button -->
+          <load ="partials/back-to-top.html" />
         </main>
       </div>
     </div>

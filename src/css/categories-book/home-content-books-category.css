@@ -26,7 +26,7 @@
 
 @media screen and (min-width: 375px) {
   .books-list-item {
-    flex-basis: calc((100% - 25px) / 1);
+    flex-basis: calc((100% - 25px * 0) / 1);
   }
 }
 

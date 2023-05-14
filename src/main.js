@@ -19,20 +19,15 @@ import { activeCatBtnSwitch } from './js/categories-book/activeCategoryBtnSwitch
 
 import { supportMarkup } from './js/supportUaMarkup';
 
-
 import { getTopBooks, hideText } from './js/homePage';
-
-
-
 
 // *** Support Ukraine Marup *** //
 supportMarkup();
 
 // ----------------------------- //
-
+import { scrollToTop } from './js/scrollToTop';
 import { spinnerFoo } from './js/spinner'; //! Stas
-// import { switchTheme } from './js/switcher'; //! Stas
-// switchTheme(); //! Stas
+import { switchTheme } from './js/switcher'; //! Stas
 
 // console.log(root.screenWidth);
 
@@ -53,6 +48,7 @@ import { registration } from './js/header';
 import { logIn } from './js/header';
 import { onLoad } from './js/header';
 import { logOutFunc } from './js/header';
+import { openForm } from './js/header';
 
 onLoad();
 
@@ -65,8 +61,8 @@ formSignIn.addEventListener('submit', logIn);
 const logOutButton = document.getElementById('logOutButton');
 logOutButton.addEventListener('click', logOutFunc);
 
+const userBoardBtnSignUp = document.querySelector('.user_board_signup');
+userBoardBtnSignUp.addEventListener('click', openForm);
 // todo , {displayname: name} {books: arrey} FORM reset
-
-// !!!Проблема з шопінг ліст на ного не перекидується авторізація!!!
 
 // _______________________________________________________
