@@ -48,7 +48,10 @@
   position: relative;
   overflow: hidden;
 
-  /* border-radius: 8px; */
+  width: 100%;
+  hyphens: 100%;
+
+  border-radius: 8px;
   margin-bottom: 14px;
 }
 
@@ -59,7 +62,7 @@
   right: 0;
 
   width: 100%;
-  height: 25%;
+  height: 30%;
 
   display: flex;
   justify-content: center;
@@ -68,8 +71,7 @@
   background-color: var(--accent-color);
 
   transform: translateY(100%);
-
-  /* transition-property: transform; */
+  transition: transform 250ms ease;
 }
 
 .book-link:hover .book-image-overlay,
@@ -78,18 +80,14 @@
 }
 
 .book-image-overlay-text {
-  text-transform: uppercase;
   color: var(--main-black-color);
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 18px;
 
-  opacity: 0;
-
-  transition-property: opacity;
-  transition-delay: 200ms;
+  text-transform: uppercase;
 }
 
-.book-link:hover .book-image-overlay-text,
-.book-link:focus .book-image-overlay-text {
-  opacity: 1;
+.book-image-overlay-text:hover {
+  color: var(--main-white-color);
 }

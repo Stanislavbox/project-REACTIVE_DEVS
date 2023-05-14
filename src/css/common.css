@@ -1,24 +1,92 @@
 .container {
-  max-width: 1440px; /* Установите максимальную ширину контейнера */
+  /* max-width: 1440px; Установите максимальную ширину контейнера */
   margin: 0 auto; /* Центрируйте контейнер на странице */
   /* padding: 0px 24px; Добавьте отступы слева и справа для контента */
   box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  padding: 40px 24px;
-  gap: 40px;
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+  }
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  padding-top: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    padding-top: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 100px;
+  }
+}
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 86px;
-  max-width: 356px;
+  gap: 40px;
 }
 
+@media screen and (max-width: 767px) {
+  .sidebar {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+    max-width: 356px;
+  }
+}
 
 ::-webkit-scrollbar-thumb {
   background: rgba(17, 17, 17, 0.6);
