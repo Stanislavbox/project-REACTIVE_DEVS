@@ -25,10 +25,9 @@ import { getTopBooks, hideText } from './js/homePage';
 supportMarkup();
 
 // ----------------------------- //
-
+import { scrollToTop } from './js/scrollToTop';
 import { spinnerFoo } from './js/spinner'; //! Stas
-// import { switchTheme } from './js/switcher'; //! Stas
-// switchTheme(); //! Stas
+import { switchTheme } from './js/switcher'; //! Stas
 
 // console.log(root.screenWidth);
 
