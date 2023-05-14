@@ -4,18 +4,20 @@ import { supportUaArr } from './supportUaArr';
 import $ from 'jquery';
 
 const supportList = document.querySelector('.support-ua-list');
+const isRetina = window.devicePixelRatio > 1;
 
 function createMarkupSupportUa(arr) {
   const markup = arr
     .map(
       ({
         img,
+        imgX2,
         url,
         title,
         id,
       }) => `<li class="support-ua-item"><a target="_blank" class="support-ua-link" href="${url}">
   <span class="support-ua-num">${id}</span>
-  <img class="support-img" src="${img}" alt="${title}">
+  <img class="support-img" src="${isRetina ? imgX2 : img}" alt="${title}">
   </a></li>
 `
     )
@@ -45,7 +47,7 @@ $(document).ready(function () {
     draggable: false,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
