@@ -19,17 +19,13 @@ import { activeCatBtnSwitch } from './js/categories-book/activeCategoryBtnSwitch
 
 import { supportMarkup } from './js/supportUaMarkup';
 
-
 import { getTopBooks, hideText } from './js/homePage';
-
-
-
 
 // *** Support Ukraine Marup *** //
 supportMarkup();
 
 // ----------------------------- //
-
+import { scrollToTop } from './js/scrollToTop';
 import { spinnerFoo } from './js/spinner'; //! Stas
 import { switchTheme } from './js/switcher'; //! Stas
 
