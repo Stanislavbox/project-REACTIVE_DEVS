@@ -18,7 +18,7 @@ const refs = {
 
 const LOCALSTORAGE_SHOPPING_LIST_KEY = "booksShopingList";
 
-refs.bodyEl.addEventListener("click", popUpModal);
+// refs.bodyEl.addEventListener("click", popUpModal);
 
 
 
