@@ -1,6 +1,6 @@
 
 body.js-dark-theme{
-  background-color: var(--main-black-color);
+  background-color: var(--dark-theme-color);
 }
 
 /* header */
@@ -52,17 +52,12 @@ body.js-dark-theme{
   color: rgba(255, 255, 255, 0.6)
 }
 
-.js-dark-theme ::-webkit-scrollbar-thumb {
-  background: rgba(17, 17, 17, 0.6);
+.js-dark-theme .categories::-webkit-scrollbar {
+  background: none;
+  width: 8px;
   border-radius: 12px;
 }
 
-.js-dark-theme ::-moz-scrollbar-thumb {
-  background: rgba(17, 17, 17, 0.6);
-  border-radius: 12px;
-}
-
-.js-dark-theme ::-ms-thumb {
-  background: rgba(17, 17, 17, 0.6);
-  border-radius: 12px;
+.js-dark-theme .categories::-webkit-scrollbar-thumb {
+  background: var(--secondary-text-color);
 }
