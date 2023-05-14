@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth';
+import { getDatabase, ref, set } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBcc1DA6ZvhYH6HNL0bBHQ0dDKoHx7bVFo',
@@ -13,10 +14,26 @@ const firebaseConfig = {
   messagingSenderId: '665612464460',
   appId: '1:665612464460:web:7e87cc8c9c9cb455a91fe9',
   measurementId: 'G-JWPP6GW2CN',
+  databaseURL:
+    'https://goit-77-team-1-books-project-default-rtdb.europe-west1.firebasedatabase.app/',
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
+// ________________database_______________
+
+const database = getDatabase(app);
+
+function writeUserData() {
+  const db = database;
+  set(ref(db, 'users/' + userId), {
+    username: name,
+    email: email,
+  });
+}
+
+// __________________________________
 
 const signUpName = document.getElementById('sign_up_name');
 const signUpEmail = document.getElementById('sign_up_email');
@@ -24,6 +41,7 @@ const signInEmail = document.getElementById('sign_in_email');
 const signUpPassword = document.getElementById('sign_up_password');
 const signInPassword = document.getElementById('sign_in_password');
 const userBlock = document.querySelector('.header__username');
+const userBoardName = document.querySelector('.userboard_dropdown');
 
 export function registration(event) {
   event.preventDefault();
@@ -34,15 +52,16 @@ export function registration(event) {
     alert('Всі поля мають бути заповнені!');
     return;
   }
-
-  const auth = getAuth();
-  createUserWithEmailAndPassword(auth, email, password)
+  createUserWithEmailAndPassword(auth, email, password, name)
     .then(userCredential => {
       // Signed in
       const user = userCredential.user;
       console.log(user);
       userBlock.textContent = user.email;
       localStorage.setItem('user', JSON.stringify(user));
+      userBoardBtnSignUp.classList.toggle('is-hidden');
+      userBoardName.classList.toggle('is-hidden');
+      location.reload();
     })
     .catch(error => {
       const errorMessage = error.message;
@@ -70,6 +89,9 @@ export function logIn(event) {
       // ...
       console.log(user);
       userBlock.textContent = user.email;
+      userBoardBtnSignUp.classList.toggle('is-hidden');
+      userBoardName.classList.toggle('is-hidden');
+      location.reload();
     })
     .catch(error => {
       const errorMessage = error.message;
@@ -88,9 +110,11 @@ export function onLoad() {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       const user = JSON.parse(storedUser);
-      // Відновлення користувача після перезавантаження сторінки
       console.log(user);
       userBlock.textContent = user.email;
+      userBoardName.classList.toggle('is-hidden');
+    } else {
+      userBoardBtnSignUp.classList.toggle('is-hidden');
     }
   });
 }
@@ -102,8 +126,15 @@ export function logOutFunc() {
       localStorage.removeItem('user');
       userBlock.textContent = '';
       alert('Вихід з облікового запису');
+      location.reload();
     })
     .catch(error => {
       console.log('Помилка при виході:', error);
     });
+}
+
+const formContainer = document.querySelector('.form-container');
+const userBoardBtnSignUp = document.querySelector('.user_board_signup');
+export function openForm(event) {
+  formContainer.classList.toggle('is-hidden');
 }
