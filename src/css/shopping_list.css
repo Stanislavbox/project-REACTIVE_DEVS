@@ -1,4 +1,10 @@
 
+.container {
+  /* max-width: 1440px; Установите максимальную ширину контейнера */
+  margin: 0 auto; /* Центрируйте контейнер на странице */
+  /* padding: 0px 24px; Добавьте отступы слева и справа для контента */
+  box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
+}
 
 .shopping__title{
     position: absolute;
@@ -15,28 +21,147 @@
      }
 
      .shopping_card_container{
+   
       display: flex;
-    }
-    
-    .shopping-card-content{
-      
-     padding: 24px;
-    
-      border: 1px solid rgba(79, 46, 232, 0.4);
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 30px 24px;
+      gap: 48px;
+      isolation: isolate;
+      position: absolute;
+      width: 996px;
+      height: 213px;
+      left: 370px;
+      top: 450px;
+      align-items: center;
+      background: #FFFFFF;
+      border: 2px solid rgba(79, 46, 232, 0.4);
       border-radius: 16px;
     }
+    
+    .card_container{
+      display: flex;
+     position: relative;
+ 
+    }
+/* 
+    .shopping-card{
+ 
+  
+    } */
+
     .book-poster{
       margin-right: 24px;
-    }
-    /* .book-content{
-      
-    } */
-    .book-poster{
-      width: 116;
-      height: 165;
+      width: 116px;
+height: 165px;
+border-radius: 8px;
     
+
+    }
+ 
+
+    .book-title{
+      width: 114px;
+      height: 18px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: var(--main-black-color);
     }
      
+    .book-subtitle{
+    width: 101px;
+    height: 14px;
+    left: 164px;
+    top: 46px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--subtitle-color);
+    padding-top: 4px;
+    margin-bottom: 14px;
+}
+
+.second_book_subtitle{
+  padding-top: 48px;
+}
+
+.book-text{
+  width: 808px;
+  height: 53px;
+  left: 164px;
+  top: 74px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: var(--main-black-color);
+
+}
+
+.book-delete-button{
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #4F2EE8;
+  border: none;
+  margin-left: 100px;
+
+  left: 87%;
+
+  transform: translate(-50%);
+ 
+ 
+}
+
+.svg-book-card{
+  position: relative;
+  width: 13.5px;
+  height: 13.5px;
+  fill: #fff;
+}
+
+.card-book-list{
+  margin-left: 140px;
+ top: 30%;
+}
+
+.card-book-list{
+  display: block;
+  display: flex;
+  
+
+}
+
+.card-book-amazon{
+  width: 48px;
+height: 15px;
+
+filter: grayscale();
+margin-top: 6px;
+margin-right: 18px;
+}
+
+.card-book-store{
+  width: 28px;
+height: 27px;
+  filter: grayscale();
+ margin-right: 16px;
+}
+
+.card-book-chop{
+  width: 32px;
+  height: 30px;
+  margin-right: 24px;
+}
+
+
+
+
+
 
     /* Пагінація */
 
@@ -102,12 +227,24 @@ background-repeat: no-repeat;
       cursor: pointer ;
      } */
 
-     .pagination_btn1:disabled, .pagination_btn2:disabled{
+     .pagination_btn1, .pagination_btn2{
 background:#111111 ;
 pointer-events: none;
+display: inline-block;
+margin: 0 10px;
+border: none;
+width: 45px;
+height: 45px;
+border-radius: 50%;
+
+text-align: center;
+font-size: 22px;
+font-weight: 500;
+line-height: 45px;
+cursor: pointer ;
      }
 
-     .pagination_btn1, .pagination_btn2, .pagination_btn3, .pagination_btn4 {
+     .pagination_btn3, .pagination_btn4 {
       display: inline-block;
       margin: 0 10px;
       background: var(--accent-color);
@@ -127,5 +264,26 @@ pointer-events: none;
      .pagination_link:focus{
       color: #fff;
       background-color: var(--main-black-color);
+      width: 12px;
+      height: 14px;
       
      }
+
+
+    
+    
+ 
+
+
+     .icon-angle-double-small-left-1{
+     
+      
+      position: relative;
+  width: 13.5px;
+  height: 13.5px;
+      
+  fill: var(--subtitle-color);
+     }
+
+  
+  
