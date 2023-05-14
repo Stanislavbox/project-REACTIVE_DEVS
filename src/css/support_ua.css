@@ -90,9 +90,11 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     .support-ua-block {
         width: 335px;
         padding:24px 58px 14px 40px;
+       
     }
     .next {
         margin-left: 120px;
+        margin-top: 0;
     }
     .support-ua-item {
         margin-bottom: 20px;

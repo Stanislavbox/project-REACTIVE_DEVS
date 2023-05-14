@@ -1,5 +1,5 @@
-import 'slick-carousel/slick/slick.css'; // импортируем стили Slick
-import 'slick-carousel/slick/slick.js'; // импортируем скрипт Slick
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick.js'; 
 import { supportUaArr } from './supportUaArr';
 import $ from 'jquery';
 
@@ -45,15 +45,10 @@ $(document).ready(function () {
     draggable: false,
     responsive: [
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 5,
-        },
-      },
-      {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
+          slidesToScroll: 1,
         },
       },
     ],
