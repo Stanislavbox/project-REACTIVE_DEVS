@@ -77,7 +77,7 @@
 .category-btn:hover,
 .category-btn:focus {
   color: var(--brand-color);
-  transform: scale(1.02);
+  transform: scale(1.01);
   transform-origin: center left;
 }
 

@@ -3,7 +3,7 @@
 import { root } from './js/root';
 
 import { homePage } from './js/root';
-
+import { seeMoreBtnClickHandler } from './js/seeMoreBtn';
 //----------Book categories------
 import { getCategoriesArray } from './js/categories-book/getCategoriesArray';
 import { renderCategoriesListMarkUp } from './js/categories-book/renderCategoriesListMarkUp';
