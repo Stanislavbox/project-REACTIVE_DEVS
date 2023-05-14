@@ -66,3 +66,4 @@ userBoardBtnSignUp.addEventListener('click', openForm);
 // todo , {displayname: name} {books: arrey} FORM reset
 
 // _______________________________________________________
+import "./js/footer";
