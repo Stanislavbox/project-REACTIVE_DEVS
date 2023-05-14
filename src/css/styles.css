@@ -10,7 +10,6 @@
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 @import './common.css';
 
-
 @import url('./header.css');
 @import url('./spinner.css');
 
@@ -24,7 +23,6 @@
 
 @import url('./home_page.css');
 
-
 @import url('./shopping_list.css');
 @import url('./switcher.css'); /*! Stas*/
-
+@import url('./back-to-top.css');
