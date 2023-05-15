@@ -16,11 +16,13 @@
           <a href="./index.html" class="header__home current">HOME</a>
         </li>
         <li class="nav-item">
-          <a href="./shopping_list.html" class="header__shopping_list">SHOPPING LIST
+          <a href="./shopping_list.html" class="header__shopping_list"
+            >SHOPPING LIST
             <span class="cart__img">
               <svg class="header__shopping_icon">
                 <use xlink:href="./img/sprite.svg#icon-shopping"></use>
-              </svg> </span></a>
+              </svg> </span
+          ></a>
         </li>
       </ul>
     </nav>
@@ -40,7 +42,7 @@
         </svg>
       </button>
       <div class="userboard_dropdown dropdown is-hidden">
-        <button class="user_board_name ">
+        <button class="user_board_name">
           <svg class="header__user_img">
             <use xlink:href="./img/sprite.svg#icon-user"></use>
           </svg>
@@ -49,12 +51,14 @@
             <use xlink:href="./img/sprite.svg#icon-scroll-down"></use>
           </svg>
         </button>
-        <button class="dropdown__button" id="logOutButton"><span class="logout_text">Log out</span><span
-            class="logout_icon">
+        <button class="dropdown__button" id="logOutButton">
+          <span class="logout_text">Log out</span
+          ><span class="logout_icon">
             <svg class="header__logout_icon">
               <use xlink:href="./img/sprite.svg#icon-arrow-right"></use>
             </svg>
-          </span></button>
+          </span>
+        </button>
       </div>
     </div>
     <button class="header__burger_menu">
@@ -65,6 +69,7 @@
   </div>
 </div>
 <div class="modal-form" id="modal_form">
+
   <div class="backdrop  is-hidden " data-modal>
     <div class="modal container-registration">
       <button class="close-modal" id="closeModalButton">Close</button>
@@ -95,13 +100,41 @@
       </div>
       </form>
     </div>
+ 
   </div>
 </div>
 <div class="container">
   <div class="modal_burger" id="modal_burger">
     <div class="modal_burger_content">
-      <button class="close-modal-burger" id="closeBurgerButton">Close</button>
-      <h1>Some info</h1>
+      <div class="header_block header_block_burger">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="header__logo">
+                <svg class="page-logo">
+                  <use xlink:href="./img/sprite.svg#icon-logo-1"></use>
+                </svg>
+                <svg class="page-name">
+                  <use xlink:href="./img/sprite.svg#icon-bookshelf"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__toggle">
+          <label class="switch">
+            <input type="checkbox" class="switch__input js-switcher" />
+            <!--Stas -->
+            <span class="switch__slider"></span>
+          </label>
+        </div>
+        <button class="close-modal-burger" id="closeBurgerButton">
+          <svg class="header__burgercloser__icon">
+            <use xlink:href="./img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </div>

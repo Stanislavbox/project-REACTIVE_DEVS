@@ -47,7 +47,7 @@ $(document).ready(function () {
     draggable: false,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 760,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
@@ -56,3 +56,23 @@ $(document).ready(function () {
     ],
   });
 });
+
+
+
+window.addEventListener('resize', onTabletResponseDisplayNone);
+
+function onTabletResponseDisplayNone() {
+  const supportUaBlock = document.querySelector('.support-ua-block');
+  const pageElement = document.querySelector('.shopping-list-container');
+if (pageElement) {
+    if (window.innerWidth < 1440) {
+      if (supportUaBlock) {
+        supportUaBlock.style.display = 'none';
+      }
+    } else {
+      if (supportUaBlock) {
+        supportUaBlock.style.display = 'block';
+      }
+    }
+  }
+}
