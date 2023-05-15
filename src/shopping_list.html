@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, user-scalable=0, initial-scale=1.0"
     />
-   
+
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -29,64 +29,51 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
- 
   <body class="page">
     <load ="partials/header.html" />
-    
-    
-    <div class="container">
 
-    
-      <aside class="sidebar">
-        <load ="partials/support_ua_home.html" />
-      </aside>
-   
-<!-- shoping list content -->
+    <div class="container">
+      <div class="wrapper">
+        <aside class="sidebar">
+          <load ="partials/support_ua_home.html" />
+        </aside>
+        <!-- shoping list content -->
 
         <div class="shopping-list-container">
-          <h1 class="shopping-list-title">Shopping <span class="list-title">List</span></h1>
-      
+          <h1 class="shopping-list-title">
+            Shopping <span class="list-title">List</span>
+          </h1>
           <div class="shopping-list-empty">
-            <p class="shopping-list-empty-message">This page is empty, add some books and proceed to order.</p>
+            <p class="shopping-list-empty-message">
+              This page is empty, add some books and proceed to order.
+            </p>
             <picture class="shopping-list-empty-img">
               <source
-                srcset="
-                  ./img/books@2x.png 1x,
-                  ./img/books@2x.png  2x
-                "
+                srcset="./img/books@2x.png 1x, ./img/books@2x.png 2x"
                 media="(min-width:1440px)"
               />
               <source
-                srcset="
-                ./img/books@2x.png 1x,
-                ./img/books@2x.png  2x
-                "
+                srcset="./img/books@2x.png 1x, ./img/books@2x.png 2x"
                 media="(min-width:768px)"
               />
               <source
-                srcset="
-                ./img/books.png 1x,
-                ./img/books.png  2x
-                "
+                srcset="./img/books.png 1x, ./img/books.png 2x"
                 media="(max-width:767px)"
               />
-              <img
-                src="./images/books-mob-min.png"
-                alt="books"
-              />
+              <img src="./images/books-mob-min.png" alt="books" />
             </picture>
           </div>
 
-<!-- shopping card and pagination -->
+          <!-- shopping card and pagination -->
 
           <div class="shopping-list-card">
             <div id="booksShopingList" class="shopping-ist-group"></div>
           </div>
           <div id="pagination" class="my-4"></div>
         </div>
-
-<load ="partials/footer.html" />
-
+      </div>
+    </div>
+    <load ="partials/footer.html" />
     <script type="module" src="./main_shopping_list.js"></script>
   </body>
 </html>
