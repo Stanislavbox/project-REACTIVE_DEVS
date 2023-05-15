@@ -86,7 +86,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 760px) {
     .support-ua-block {
         width: 335px;
         padding:24px 58px 14px 40px;
@@ -102,7 +102,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
     .support-ua-block {
         width: 356px;
         padding:24px 40px 24px 40px;

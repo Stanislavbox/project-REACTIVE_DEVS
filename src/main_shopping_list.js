@@ -24,9 +24,10 @@ userBoardBtnSignUp.addEventListener('click', openForm);
 
 // _______________________________________________________
 
-import { supportMarkup } from './js/supportUaMarkup';
-
+import { supportMarkup} from './js/supportUaMarkup';
 supportMarkup();
+
+
 
 
 import { spinnerFoo } from './js/spinner'; //! Stas
