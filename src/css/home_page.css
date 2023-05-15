@@ -31,7 +31,6 @@
   line-height: calc(38 / 32);
   letter-spacing: -0.04em;
   color: var(--main-black-color);
-  margin-top: 45px;
 }
 
 .home-title-accent {
