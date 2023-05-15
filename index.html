@@ -30,9 +30,9 @@
     <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=" />
     
 
-    <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/index-40e2590f.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-REACTIVE_DEVS/assets/footer-19a1271f.js">
-    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/footer-1d38214a.css">
+    <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/index-b1f51fe9.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-REACTIVE_DEVS/assets/footer-88237a02.js">
+    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/footer-40f8f4d2.css">
   </head>
 
   <body class="page">
@@ -84,13 +84,11 @@
           <a href="./index.html" class="header__home current">HOME</a>
         </li>
         <li class="nav-item">
-          <a href="./shopping_list.html" class="header__shopping_list"
-            >SHOPPING LIST
+          <a href="./shopping_list.html" class="header__shopping_list">SHOPPING LIST
             <span class="cart__img">
               <svg class="header__shopping_icon">
                 <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-shopping"></use>
-              </svg> </span
-          ></a>
+              </svg> </span></a>
         </li>
       </ul>
     </nav>
@@ -102,66 +100,47 @@
         <span class="switch__slider"></span>
       </label>
     </div>
-
-    <button class="user_board_signup is-hidden">
-      <p class="header__sign_up_text">Sign up</p>
-      <svg class="header__signup_img">
-        <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-arrow-right"></use>
-      </svg>
-    </button>
-
-
-    <div class="userboard_dropdown dropdown is-hidden">
-      <button class="user_board_name ">
-        <svg class="header__user_img">
-          <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-user"></use>
-        </svg>
-        <p class="header__username">USERNAME</p>
-        <svg class="header__scroldown_img">
-          <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-scroll-down"></use>
+    <div class="header__userauthbuttons">
+      <button class="user_board_signup is-hidden">
+        <p class="header__sign_up_text">Sign up</p>
+        <svg class="header__signup_img">
+          <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-arrow-right"></use>
         </svg>
       </button>
-
-      <button class="dropdown__button" id="logOutButton">Log out</button>
+      <div class="userboard_dropdown dropdown is-hidden">
+        <button class="user_board_name ">
+          <svg class="header__user_img">
+            <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-user"></use>
+          </svg>
+          <p class="header__username">USERNAME</p>
+          <svg class="header__scroldown_img">
+            <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-scroll-down"></use>
+          </svg>
+        </button>
+        <button class="dropdown__button" id="logOutButton"><span class="logout_text">Log out</span><span class="logout_icon">
+                  <svg class="header__logout_icon">
+                    <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-arrow-right"></use>
+                  </svg>
+        </span></button>
+      </div>
     </div>
-
+    <button class="header__burger_menu">
+      <svg class="header__burger_icon">
+        <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-burger"></use>
+      </svg>
+    </button>
   </div>
 </div>
 <div class="form-container is-hidden">
   <form action="submit" class="sign_form sign_up_form">
-    <input
-      type="text"
-      id="sign_up_name"
-      autocomplete="off"
-      placeholder="Name"
-    />
-    <input
-      type="text"
-      id="sign_up_email"
-      autocomplete="off"
-      placeholder="Email"
-    />
-    <input
-      type="text"
-      id="sign_up_password"
-      autocomplete="off"
-      placeholder="Password"
-    />
+    <input type="text" id="sign_up_name" autocomplete="off" placeholder="Name" />
+    <input type="text" id="sign_up_email" autocomplete="off" placeholder="Email" />
+    <input type="text" id="sign_up_password" autocomplete="off" placeholder="Password" />
     <button class="sign_up">Sign up</button>
   </form>
   <form action="submit" class="sign_form sign_in_form">
-    <input
-      type="text"
-      id="sign_in_email"
-      autocomplete="off"
-      placeholder="Email"
-    />
-    <input
-      type="text"
-      id="sign_in_password"
-      autocomplete="off"
-      placeholder="Password"
-    />
+    <input type="text" id="sign_in_email" autocomplete="off" placeholder="Email" />
+    <input type="text" id="sign_in_password" autocomplete="off" placeholder="Password" />
     <button class="sign_in">Sign in</button>
   </form>
   <form action="submit" class="sign_form sign_in_form">
