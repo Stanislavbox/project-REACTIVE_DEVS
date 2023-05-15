@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, user-scalable=0, initial-scale=1.0"
     />
-    <title>Shopping list</title>
+   
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -29,104 +29,61 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
+ 
   <body class="page">
+    <load ="partials/header.html" />
+    
+    
     <div class="container">
-      <load ="partials/header.html" />
 
-      <section>
-        <h1 class="shopping__title">Shopping<span class="list"> List</span></h1>
-
+    
+      <aside class="sidebar">
         <load ="partials/support_ua_home.html" />
-      </section>
+      </aside>
+   
+<!-- shoping list content -->
 
-      <section class="shopping_card_container">
-        <div class="shopping-card">
-          <div class="card_container">
-            <img
-              class="book-poster"
-              src="./img/card_book.png"
-              alt="постер картки"
-            />
-            <div>
-              <div class="book-content">
-                <h2 class="book-title">I will find you</h2>
-                <p class="book-subtitle">Hardcover fiction</p>
-                <p class="book-text">
-                  David Burroughs was once a devoted father to his
-                  three-year-old son Matthew, living a dream life just a short
-                  drive away from the working-class suburb where he and his
-                  wife, Cheryl, first fell in love--until one fateful night when
-                  David woke suddenly to discover Matthew had been murdered
-                  while David was asleep just down the hall.
-                </p>
-
-                <p class="book-subtitle second_book_subtitle">Harlan Coben</p>
-                <ul class="card-book-list">
-                  <li class="card-book-link">
-                    <a
-                      ><img
-                        class="card-book-amazon"
-                        src="img/bookstores/amazon.png"
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      ><img
-                        class="card-book-store"
-                        src="img/bookstores/apple-books.png"
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      ><img
-                        class="card-book-chop"
-                        src="img/bookstores/book-shop.png"
-                    /></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <button class="book-delete-button">
-              <svg class="svg-book-card" width="13.5px">
-                <use href="./img/sprite.svg#icon-trach"></use>
-              </svg>
-            </button>
+        <div class="shopping-list-container">
+          <h1 class="shopping-list-title">Shopping <span class="list-title">List</span></h1>
+      
+          <div class="shopping-list-empty">
+            <p class="shopping-list-empty-message">This page is empty, add some books and proceed to order.</p>
+            <picture class="shopping-list-empty-img">
+              <source
+                srcset="
+                  ./img/books@2x.png 1x,
+                  ./img/books@2x.png  2x
+                "
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="
+                ./img/books@2x.png 1x,
+                ./img/books@2x.png  2x
+                "
+                media="(min-width:768px)"
+              />
+              <source
+                srcset="
+                ./img/books.png 1x,
+                ./img/books.png  2x
+                "
+                media="(max-width:767px)"
+              />
+              <img
+                src="./images/books-mob-min.png"
+                alt="books"
+              />
+            </picture>
           </div>
-        </div>
-      </section>
-      <section class="section_pagination">
-        <div class="pagination">
-          <button fi-rr-angle-small-left class="pagination_btn1">
-            <svg class="double-small-left-1">
-              <use href="img/sprite.svg#double-small-left-1"></use>
-            </svg>
-          </button>
-          <button class="pagination_btn2">
-            <svg class="small-left">
-              <use href="img/sprite.svg#small-left"></use>
-            </svg>
-          </button>
 
-          <ul class="pagination_list">
-            <li class="pagination_link active" value="1" active>1</li>
-            <li class="pagination_link" value="2">2</li>
-            <li class="pagination_link" value="3">3</li>
-            <li class="pagination_link" value="4">...</li>
-          </ul>
+<!-- shopping card and pagination -->
 
-          <button class="pagination_btn3">
-            <svg class="double-small-left-1">
-              <use href="img/sprite.svg#small-left-1"></use>
-            </svg>
-          </button>
-          <button class="pagination_btn4">
-            <svg class="double-small-left-1">
-              <use href="img/sprite.svg#double-small-left-1"></use>
-            </svg>
-          </button>
+          <div class="shopping-list-card">
+            <div id="booksShopingList" class="shopping-ist-group"></div>
+          </div>
+          <div id="pagination" class="my-4"></div>
         </div>
-      </section>
-    </div>
 
     <script type="module" src="./main_shopping_list.js"></script>
   </body>
