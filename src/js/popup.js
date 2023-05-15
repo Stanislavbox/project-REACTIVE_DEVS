@@ -4,9 +4,10 @@ import storage from './storage';
 const instanceAxios = axios.create({
   baseURL: 'https://books-backend.p.goit.global/books/',
 });
-
+// =======================Добавить На ЛИ сласс .js-book-item
 const refs = {
   bodyEl: document.querySelector("body"),
+  bookItemEl: document.querySelectorAll(".book-item"),
   modalBook: document.querySelector(".popup-backdrop"),
   coverBook: document.querySelector(".popup-book-cover"),
   titleBook: document.querySelector(".popup-book-title"),
@@ -18,17 +19,15 @@ const refs = {
 
 const LOCALSTORAGE_SHOPPING_LIST_KEY = "booksShopingList";
 
-// refs.bodyEl.addEventListener("click", popUpModal);
 
 
 
 
-
-async function getBooks(id) {
+async function getBooksById(id) {
   try {
     const response = await instanceAxios.get(`${id}`);
     return (response.data)
-    
+
   } catch (error) {
     console.log(error)
   }
@@ -37,63 +36,99 @@ async function getBooks(id) {
 
 export async function popUpModal(event) {
   event.preventDefault();
-
-  if (event.target.nodeName !== 'LI') {
-    return;
-  };
   
-  refs.modalBook.classList.remove("is-hidden")
+  const bookId = event.currentTarget.getAttribute("data_id")
+  
+
+  refs.modalBook.classList.remove("popup-is-hidden");
+  refs.modalBook.firstElementChild.classList.remove("popup-is-hidden");
 
   const closing = event => {
     if (event.key === 'Escape' ||
       event.target.classList.contains("js-popup-close") ||
       event.target.classList.contains("popup-backdrop")) {
-      
+      // ВИДАЛЕННЯ СЛУХАЧІВ
       refs.bodyEl.removeEventListener('keydown', closing);
-      refs.bodyEl.removeEventListener('click', closing);
-      refs.bodyEl.classList.remove("fixed-background");
+      refs.bodyEl.removeEventListener('click', closing);      
       refs.modalBook.removeEventListener('click', closing);
-      refs.modalBook.classList.add("is-hidden");
+      refs.popUpBtn.removeEventListener('click', shoppingListMngmnt);
+      // Закриття POPUP
+      refs.modalBook.classList.add("popup-is-hidden");
+      refs.modalBook.firstElementChild.classList.add("popup-is-hidden");
+      refs.bodyEl.classList.remove("fixed-background");
+      // Видалення Атрибутів
+      refs.popUpBtn.removeAttribute("data_id");
     }
     return;
   };
 
+  refs.popUpBtn.setAttribute("data_id", bookId);
+
   refs.bodyEl.addEventListener('keydown', closing);
   refs.bodyEl.addEventListener('click', closing);
-  refs.modalBook.addEventListener('click', closing);  
+  refs.modalBook.addEventListener('click', closing);
+  refs.popUpBtn.addEventListener('click', shoppingListMngmnt);
+  
 
   refs.bodyEl.classList.add("fixed-background");
 
-  const arrBooksID = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY)
+  let arrBooksID = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
 
-  if (!arrBooksID) {
+  if (!arrBooksID || !JSON.parse(arrBooksID).length) {
     refs.popUpBtn.textContent = "add to shopping list";
-    refs.popUpNotice.style.display = "none"
-  } else if (JSON.arrBooksID.length) {
-    
+    refs.popUpNotice.style.display = "none";
+    arrBooksID = [];
+  } else if (!JSON.parse(arrBooksID).includes(bookId)) {
+    refs.popUpBtn.textContent = "add to shopping list";
+    refs.popUpNotice.style.display = "none";
+    arrBooksID = JSON.parse(arrBooksID);    
+  } else { 
+    refs.popUpBtn.textContent = "remove from the shopping list";
+    refs.popUpNotice.style.display = "block";
   }
 
-  const { author, book_image, description, title } = await getBooks("643282b1e85766588626a080");
-  
+
+
+  const { author, book_image, description, title } = await getBooksById(bookId);
+
   refs.coverBook.setAttribute("src", `${book_image}`);
   refs.titleBook.textContent = `${title}`;
   refs.authorBook.textContent = `${author}`;
   if (description) {
     refs.descrBook.textContent = `${description}`;
-  }
-
-  
-  // storage.save(LOCALSTORAGE_SHOPPING_LIST_KEY, JSON.stringify([]));
-  // console.log(shoppingListMngmnt("643282b1e85766588626a080", LOCALSTORAGE_SHOPPING_LIST_KEY));
-// JSON.parse(storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY)).length
-  // console.log(JSON.parse(storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY)).length)
+  }  
 }
 
-// function shoppingListMngmnt(bookId, key) {
-//   if (storage.load(key)) {
-//     const arrBooksID = JSON.parse(storage.load(key));
-//     if (arrBooksID.length)
-    
-//     return arrBooksID.find(bookId)
-//   }  
-// }
+
+
+function shoppingListMngmnt(event) { 
+  if (refs.popUpBtn.textContent.includes("add")) {
+    addLocalStorageBook(event);
+    refs.popUpBtn.textContent = "remove from the shopping list";
+    refs.popUpNotice.style.display = "block";
+    return
+  }  
+  removeLocalStorageBook(event);
+  refs.popUpBtn.textContent = "add to shopping list";
+  refs.popUpNotice.style.display = "none";
+}
+
+function removeLocalStorageBook(event) {
+  const id = event.currentTarget.getAttribute("data_id");
+  const books = JSON.parse(storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY));
+  books.splice(books.indexOf(id), 1);
+  storage.save(LOCALSTORAGE_SHOPPING_LIST_KEY, JSON.stringify(books));
+}
+
+function addLocalStorageBook(event) {
+  const id = event.currentTarget.getAttribute("data_id");
+  let books = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
+  console.log(books)
+  if (books && JSON.parse(books).length) {
+    books = JSON.parse(books);
+  } else {
+    books = [];
+  }  
+  books.splice(0, 0, id);
+  storage.save(LOCALSTORAGE_SHOPPING_LIST_KEY, JSON.stringify(books));
+}

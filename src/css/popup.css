@@ -1,6 +1,3 @@
-/* body {
-  overflow: hidden;
-} */
 /* ======================= */
 .visually-hidden {
   position: absolute;
@@ -18,6 +15,7 @@
 .fixed-background {
   overflow: hidden;
 }
+
 .popup-backdrop {
   position: fixed;
   top: 0;
@@ -27,15 +25,17 @@
 
   background-color: rgba(17, 17, 17, 0.4);
 
+
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  pointer-events: auto;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.popup-backdrop.is-hidden {
+.popup-backdrop.popup-is-hidden {
   opacity: 0;
-  pointer-events: none;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .popup-book-modal {
@@ -48,12 +48,22 @@
   justify-content: center;
   flex-direction: column;
   max-width: 335px;
-  /* max-height: 80%;
-  overflow-y: auto;   */
+
   padding: 40px 24px;
-  border: 2px solid #111111;
+  border: 2px solid var(--main-black-color);
   border-radius: 18px;
   background-color: var(--main-white-color);
+
+  opacity: 1;
+  visibility: visible;
+
+  transition: visibility 0.5s ease,
+    opacity 0.5s ease 0.5s;
+}
+
+.popup-book-modal.popup-is-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .popup-book-close-btn {
@@ -63,16 +73,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+
   background: none;
+  padding: 0;
 
   box-sizing: border-box;
   border: none;
   color: var(--main-black-color);
 }
+
 .popup-book-close-icon {
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
   fill: currentColor;
   transition: fill var(--animation);
 }
@@ -81,6 +93,7 @@
 .popup-book-close-btn:focus .popup-book-close-icon {
   fill: var(--brand-color);
 }
+
 .popup-book-wrapper {
   display: flex;
   justify-content: center;
@@ -90,6 +103,7 @@
 
   letter-spacing: -0.04em;
 }
+
 .popup-book-cover {
   max-width: 287px;
   margin-bottom: 14px;
@@ -167,7 +181,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 14px 28px;
+  padding: 14px 23px;
+  /* padding-top: 14px;
+  padding-bottom: 14px; */
   background-color: inherit;
 
   border: 2px solid var(--brand-color);
@@ -182,8 +198,7 @@
   transition: background-color var(--animation), color var(--animation);
 }
 
-.popup-book-btn:hover,
-.popup-book-btn:focus {
+.popup-book-btn:hover {
   background-color: var(--brand-color);
   color: var(--main-white-color);
 }
@@ -198,4 +213,61 @@
   letter-spacing: -0.04em;
 
   color: rgba(17, 17, 17, 0.5);
+}
+
+@media (min-width: 768px) {
+  .popup-book-modal {
+
+    max-width: 580px;
+    padding: 40px 40px;
+  }
+
+  .popup-book-close-btn {
+    top: 24px;
+    right: 24px;
+    padding: 2px;
+  }
+
+  .popup-book-wrapper {
+    flex-direction: row;
+    gap: 24px;
+    margin-right: auto;
+  }
+
+  .popup-book-cover {
+    max-width: 192px;
+    margin-bottom: 0;
+  }
+
+  .popup-book-title {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+    line-height: calc(28 / 24);
+  }
+
+  .popup-book-author {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+  }
+
+  .popup-book-description {
+    margin-bottom: 20px;
+  }
+
+  .popup-book-btn {
+    width: 100%;
+    padding: 20px;
+
+    font-size: 18px;
+    line-height: calc(24 / 18);
+
+  }
+
+  .popup-book-notice {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    width: 320px;
+  }
 }
