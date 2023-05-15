@@ -152,12 +152,12 @@ justify-content: center;
   margin-bottom: 0;
   align-items: end;
 }
-.book-shopping-author-div {
+.book-author-div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.book-shopping-author {
+.book-author {
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
@@ -196,182 +196,15 @@ justify-content: center;
 
 
 
-  /* .section_pagination{
-    
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-  } */
-
-  .pagination{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    /* background: #fff; */
-    color: var(--main-black-color);
-    padding: 10px 40px;
-    border-radius: 6px;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
-    
-   }
-   
-   .pagination_list{
-
-margin: 20px;
-   }
-   .pagination_list .pagination_link{
-    display: inline-block;
-    margin: 0 10px;
-    background: var(--main-wite-color);
-    width: 45px;
-    height: 45px;
-    border: 1px solid #111111;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 45px;
-    cursor: pointer ;
-   }
-
-   .pagination_list .pagination_link.active{
-color: #fff;
-background: #111111;
-background-repeat: no-repeat;
-
-     } 
 
 
-     /* .pagination_btn1, .pagination_btn2{
-      display: inline-block;
-      margin: 0 10px;
-      background: var(--main-black-color);
-      width: 45px;
-      height: 45px;
-      color: #fff;
-      border-radius: 50%;
-      border: 1px solid #111111;
-      text-align: center;
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 45px;
-      cursor: pointer ;
-     } */
-
-     /* .pagination_btn1, .pagination_btn2{
-
-   }  */
 
 
-   /* .pagination_btn1, .pagination_btn2{
-    display: inline-block;
-    margin: 0 10px;
-    background: var(--main-black-color);
-    width: 45px;
-    height: 45px;
-    color: #fff;
-    border-radius: 50%;
-    border: 1px solid #111111;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 45px;
-    cursor: pointer ;
-   } */
 
-   .pagination_btn1, .pagination_btn2{
-
-background:#111111 ;
-pointer-events: none;
-display: inline-block;
-margin: 0 10px;
-border: none;
-width: 45px;
-height: 45px;
-border-radius: 50%;
-
-
-text-align: center;
-font-size: 22px;
-font-weight: 500;
-line-height: 45px;
-cursor: pointer ;
-     }
-
-     .pagination_btn3, .pagination_btn4 {
-      display: inline-block;
-      margin: 0 10px;
-      background: var(--accent-color);
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      border: 1px solid #111111;
-      text-align: center;
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 45px;
-      cursor: pointer ;
-     }
-
-   
-     .pagination_link:hover,
-     .pagination_link:focus{
-      color: #fff;
-      background-color: var(--main-black-color);
-      width: 12px;
-      height: 14px;
-      
-     }
-
+ 
 
     
     
  
 
-
-     /* .icon-angle-double-small-left-1{
-      position: relative;
-  width: 13.5px;
-  height: 13.5px;
-      fill: var(--subtitle-color);
-     }
-text-align: center;
-font-size: 22px;
-font-weight: 500;
-line-height: 45px;
-cursor: pointer ; */
   
-
-   .pagination_btn3, .pagination_btn4 {
-    display: inline-block;
-    margin: 0 10px;
-    background: var(--accent-color);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: 1px solid #111111;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 45px;
-    cursor: pointer ;
-   }
-
- 
-   .pagination_link:hover,
-   .pagination_link:focus{
-    color: #fff;
-    background-color: var(--main-black-color);
-    width: 12px;
-    height: 14px;
-    
-   }
-
-  .double-small-left-1, .small-left{
-    position: relative;
-    width: 13.5px;
-    height: 13.5px;
-    fill: var(--subtitle-color);
-  }

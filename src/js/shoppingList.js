@@ -196,3 +196,58 @@
 
 
 
+// appendShoppingListMarkup();
+
+// function createShoppingList(books) {
+//   return books.reduce((acc, item) => {
+//     return (
+//       acc +
+//       ` <div class="shopping-card" id="">
+//         <div class="shopping-list-img">
+//         <img
+//           class="book-shopping-img"
+//           src=""
+//           alt=""
+//           loading="lazy"
+//         />
+//       </div>
+//       <div class="info">
+//         <div class="first-info-div">
+//           <div>
+//             <p class="book-shopping-name"></p>
+//             <p class=".book-shopping-category">$</p>
+//           </div>
+//           <button class="remove-shopping-book">
+//             <svg class="trash-icon" width="16" height="16"><use href="#icon-trash"></use></svg>
+//           </button>
+//         </div>
+//         <div class="second-info-div">
+//           <p class="book-shopping-description">
+       
+//           </p>
+//         </div>
+//         <div class="third-info-div">
+//           <div>
+//             <p class="book-author">
+      
+//             </p>
+//           </div>
+//           <div class="shop-list-div">
+//           <ul class="shop-list">
+//                <li class="shop-item">
+//               <a class="shop-link" href=" target="_blank"><img class="" src="" alt="" width="32" height="11"></a>
+//               </li>
+//                 <li class="shop-item">
+//                     <a class="shop-link" href="" target="_blank"><img class="" src="" alt="" width="16" height="16"></a>
+//                   </li>
+//                     <li class="shop-item">
+//                         <a class="shop-link" href="" target="_blank" ><img class="" src="" alt="" width="16" height="16"></a>
+//                       </li>
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+//     </div>`
+//     );
+//   }, '');
+// }
