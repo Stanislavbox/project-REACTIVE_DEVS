@@ -5,7 +5,6 @@ export async function getTopBooks(TOP_BOOKS, numCardsToRender) {
   const data = response.data;
   const topBooks = data
     .map(obj => {
-      console.log(obj.books)
       return `<div class = "category-container"><h2 class="home-book-category">${obj.list_name}</h2>
       <ul class="books-list js-book-list">
               ${obj.books.slice(0, numCardsToRender).map(
