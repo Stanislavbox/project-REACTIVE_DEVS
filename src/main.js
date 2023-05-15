@@ -52,23 +52,10 @@ getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
     spinnerFoo();
   })
-
-//   .catch()
-//   .finally(() => addBookListListeners());
-
   .catch(error =>
     Notify.failure('Sorry, there is nothing here. Try again later.')
   )
-  .finally(() => {
-    const booksList = document.querySelectorAll('.js-book-list');
-    if (booksList.length) {
-      booksList.forEach(element =>
-        element.addEventListener('click', popUpModal)
-      );
-    }
-  });
-
-
+  .finally(() => addBookListListeners());
 
 // const observer = new IntersectionObserver(onIntersection, { threshold: 0.5 });
 // async function onIntersection(entries) {
@@ -89,7 +76,6 @@ getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
 //     }
 //   }
 // }
-
 
 // _________________________Auth__________________________
 
