@@ -1,17 +1,4 @@
 /* ======================= */
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
 .fixed-background {
   overflow: hidden;
 }
@@ -48,6 +35,8 @@
   justify-content: center;
   flex-direction: column;
   max-width: 335px;
+  max-height: 80%;
+  overflow-y: auto;
 
   padding: 40px 24px;
   border: 2px solid var(--main-black-color);
@@ -182,8 +171,7 @@
   align-items: center;
   justify-content: space-around;
   padding: 14px 23px;
-  /* padding-top: 14px;
-  padding-bottom: 14px; */
+
   background-color: inherit;
 
   border: 2px solid var(--brand-color);
@@ -215,7 +203,7 @@
   color: rgba(17, 17, 17, 0.5);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .popup-book-modal {
 
     max-width: 580px;

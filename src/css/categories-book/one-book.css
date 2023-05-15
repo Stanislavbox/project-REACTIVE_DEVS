@@ -71,8 +71,8 @@
   transition: transform 250ms ease;
 }
 
-.book-wrap:hover .book-image-overlay,
-.book-wrap:focus .book-image-overlay {
+.books-list-item:hover .book-image-overlay,
+.books-list-item:focus .book-image-overlay {
   transform: translateY(0);
 }
 
