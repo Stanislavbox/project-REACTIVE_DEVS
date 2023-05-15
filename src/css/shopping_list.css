@@ -1,11 +1,4 @@
 
-.container {
-  /* max-width: 1440px; Установите максимальную ширину контейнера */
-  margin: 0 auto; /* Центрируйте контейнер на странице */
-  /* padding: 0px 24px; Добавьте отступы слева и справа для контента */
-  box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
-}
-
 .shopping__title{
   position: absolute;
   width: 292px;
@@ -84,7 +77,7 @@ border-radius: 8px;
   margin-bottom: 14px;
 }
 
-<<<<<<< Updated upstream
+
      .shopping_card_container{
    
       display: flex;
@@ -252,7 +245,7 @@ height: 27px;
      }
      
      .pagination_list{
-=======
+
 .second_book_subtitle{
 padding-top: 48px;
 }
@@ -356,7 +349,7 @@ margin-right: 24px;
    }
    
    .pagination_list{
->>>>>>> Stashed changes
+
 margin: 20px;
    }
    .pagination_list .pagination_link{
@@ -378,7 +371,7 @@ margin: 20px;
 color: #fff;
 background: #111111;
 background-repeat: no-repeat;
-<<<<<<< Updated upstream
+
      } 
 
 
@@ -399,7 +392,7 @@ background-repeat: no-repeat;
      } */
 
      .pagination_btn1, .pagination_btn2{
-=======
+
    } 
 
 
@@ -420,7 +413,7 @@ background-repeat: no-repeat;
    } */
 
    .pagination_btn1, .pagination_btn2{
->>>>>>> Stashed changes
+
 background:#111111 ;
 pointer-events: none;
 display: inline-block;
@@ -429,7 +422,7 @@ border: none;
 width: 45px;
 height: 45px;
 border-radius: 50%;
-<<<<<<< Updated upstream
+
 
 text-align: center;
 font-size: 22px;
@@ -481,7 +474,7 @@ cursor: pointer ;
 
   
   
-=======
+
 
 text-align: center;
 font-size: 22px;
@@ -515,17 +508,10 @@ cursor: pointer ;
     
    }
 
+  .double-small-left-1, .small-left{
+    position: relative;
+    width: 13.5px;
+    height: 13.5px;
+    fill: var(--subtitle-color);
+  }
 
-  
-  
-
-
-
-   .double-small-left-1, .small-left{
-   position: relative;
-width: 13.5px;
-height: 13.5px;
-    
-fill: var(--subtitle-color);
-   }
->>>>>>> Stashed changes

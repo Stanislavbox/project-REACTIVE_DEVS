@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=0, initial-scale=1.0"
+    />
     <title>Shopping list</title>
     <link
       rel="apple-touch-icon"
@@ -27,24 +30,18 @@
   </head>
 
   <body class="page">
-    <container class="container">
+    <div class="container">
+      <load ="partials/header.html" />
 
+      <section>
+        <h1 class="shopping__title">Shopping<span class="list"> List</span></h1>
 
-  
+        <load ="partials/support_ua_home.html" />
+      </section>
 
-    <load ="partials/header.html" />
-
-    <section>
-      <h1 class="shopping__title">Shopping<span class="list"> List</span></h1>
-
-      <load ="partials/support_ua_home.html" />
-    </section>
-
-    <section class="shopping_card_container">
-   
+      <section class="shopping_card_container">
         <div class="shopping-card">
           <div class="card_container">
-
             <img
               class="book-poster"
               src="./img/card_book.png"
@@ -66,63 +63,70 @@
                 <p class="book-subtitle second_book_subtitle">Harlan Coben</p>
                 <ul class="card-book-list">
                   <li class="card-book-link">
-                    <a ><img class="card-book-amazon" src="img/bookstores/amazon.png" /></a>
+                    <a
+                      ><img
+                        class="card-book-amazon"
+                        src="img/bookstores/amazon.png"
+                    /></a>
                   </li>
                   <li>
-                    <a ><img class="card-book-store" src="img/bookstores/apple-books.png" /></a>
+                    <a
+                      ><img
+                        class="card-book-store"
+                        src="img/bookstores/apple-books.png"
+                    /></a>
                   </li>
                   <li>
-                    <a ><img class="card-book-chop" src="img/bookstores/book-shop.png" /></a>
+                    <a
+                      ><img
+                        class="card-book-chop"
+                        src="img/bookstores/book-shop.png"
+                    /></a>
                   </li>
                 </ul>
-             </div>
+              </div>
             </div>
             <button class="book-delete-button">
               <svg class="svg-book-card" width="13.5px">
-                <use  href ="./img/sprite.svg#icon-trach" ></use>
+                <use href="./img/sprite.svg#icon-trach"></use>
               </svg>
             </button>
           </div>
         </div>
-      
-    </section>
-    <section class="section_pagination">
-      <div class="pagination">
-        <button fi-rr-angle-small-left class="pagination_btn1">
-          <svg class="double-small-left-1">
-            <use href = "img/sprite.svg#double-small-left-1"></use>
-          </svg>
-        </button>
-        <button class="pagination_btn2">
-          <svg class="small-left">
-            <use href = "img/sprite.svg#small-left"></use>
-          </svg>
-        </button>
+      </section>
+      <section class="section_pagination">
+        <div class="pagination">
+          <button fi-rr-angle-small-left class="pagination_btn1">
+            <svg class="double-small-left-1">
+              <use href="img/sprite.svg#double-small-left-1"></use>
+            </svg>
+          </button>
+          <button class="pagination_btn2">
+            <svg class="small-left">
+              <use href="img/sprite.svg#small-left"></use>
+            </svg>
+          </button>
 
-            
+          <ul class="pagination_list">
+            <li class="pagination_link active" value="1" active>1</li>
+            <li class="pagination_link" value="2">2</li>
+            <li class="pagination_link" value="3">3</li>
+            <li class="pagination_link" value="4">...</li>
+          </ul>
 
-        <ul class="pagination_list">
-          <li class="pagination_link active" value="1" active>1</li>
-          <li class="pagination_link" value="2">2</li>
-          <li class="pagination_link" value="3">3</li>
-          <li class="pagination_link" value="4">...</li>
-        </ul>
-
-        <button class="pagination_btn3">
-          <svg class="double-small-left-1">
-            <use href = "img/sprite.svg#small-left-1"></use>
-          </svg>
-        </button>
-        <button class="pagination_btn4">
-          <svg class="double-small-left-1">
-            <use href = "img/sprite.svg#double-small-left-1"></use>
-          </svg>
-        </button>
-      </div>
-    </section>
-  </container>
-
-     
+          <button class="pagination_btn3">
+            <svg class="double-small-left-1">
+              <use href="img/sprite.svg#small-left-1"></use>
+            </svg>
+          </button>
+          <button class="pagination_btn4">
+            <svg class="double-small-left-1">
+              <use href="img/sprite.svg#double-small-left-1"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </div>
 
     <script type="module" src="./main_shopping_list.js"></script>
   </body>
