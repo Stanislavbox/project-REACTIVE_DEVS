@@ -11,7 +11,7 @@
 @import './common.css';
 
 @import url('./header.css');
-/* @import url('./modal-roma.css'); Roma */
+@import url('./modal-registraition.css');
 
 @import url('./spinner.css');
 
