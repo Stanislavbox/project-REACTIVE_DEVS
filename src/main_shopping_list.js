@@ -33,3 +33,6 @@ import { switchTheme } from './js/switcher'; //! Stas
 
 
 
+
+
+import "./js/footer";
