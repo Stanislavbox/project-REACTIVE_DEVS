@@ -1,13 +1,12 @@
-body{
-font-family: var(--main-font);
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: calc(18/14);
-letter-spacing: -0.04em;
-color: var(--main-black-color);
+body {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  letter-spacing: -0.04em;
+  color: var(--main-black-color);
 }
-
 
 body::-webkit-scrollbar {
   display: none;
@@ -20,13 +19,13 @@ body::-webkit-scrollbar {
   box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
   .container {
     width: 375px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 760px) {
   .container {
     width: 768px;
   }
@@ -49,7 +48,7 @@ body::-webkit-scrollbar {
   padding-bottom: 80px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 760px) {
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -81,13 +80,13 @@ body::-webkit-scrollbar {
   gap: 40px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 759px) {
   .sidebar {
     align-items: center;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 760px) {
   .sidebar {
     display: flex;
     flex-direction: row;

@@ -5,7 +5,7 @@
   height: 485px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 760px) {
   .book-image {
     min-width: 218px;
     height: 316px;

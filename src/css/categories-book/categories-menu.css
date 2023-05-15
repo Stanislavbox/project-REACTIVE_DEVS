@@ -18,7 +18,7 @@
   background: #e0e0e0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 760px) {
   .categories {
     height: 472px;
     width: 337px;
@@ -39,7 +39,7 @@
   gap: 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 760px) {
   .categories-list {
     gap: 32px;
   }
@@ -76,7 +76,7 @@
   transition: color 200ms, font-weight 200ms, transform 400ms;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 760px) {
   .category-btn {
     font-size: 18px;
     line-height: 24px;
