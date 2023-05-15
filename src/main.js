@@ -51,13 +51,7 @@ getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
     spinnerFoo();
   })
   .catch()
-  .finally(() => {
-    const booksList = document.querySelectorAll(".js-book-list");
-    if (booksList.length) {
-      booksList.forEach(element =>
-        element.addEventListener('click', popUpModal))
-    }
-  });
+  .finally(() => addBookListListeners());
 
 // _________________________Auth__________________________
 
@@ -87,5 +81,9 @@ closeFormBtn.addEventListener('click', closeForm);
 // todo , {displayname: name} {books: arrey} FORM reset
 
 // _______________________________________________________
-import "./js/footer";
-import { popUpModal } from './js/popup';
+import './js/footer';
+import {
+  popUpModal,
+  addBookListListeners,
+  removeBookListListeners,
+} from './js/popup';
