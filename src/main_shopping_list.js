@@ -6,6 +6,7 @@ import { logOutFunc } from './js/header';
 import { openForm } from './js/header';
 import { onLoad } from './js/header';
 
+
 onLoad();
 
 const formSignUp = document.querySelector('.sign_up_form');
@@ -36,3 +37,6 @@ import { switchTheme } from './js/switcher'; //! Stas
 
 
 import "./js/footer";
+
+
+
