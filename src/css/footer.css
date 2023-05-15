@@ -1,12 +1,18 @@
+.wrap-for-footer{
+    min-height: calc(100vh - 60px);
+}
+
 .footer-section {
     border-top: 1px solid var(--brand-color);
+    bottom: 0;
 }
 
 .footer-container {
-    padding: 15px 0;
+    padding: 20px;
     color: var(--subtitle-color);
     text-align: center;
     font-size: 14px;
+    
 }
 
 .footer-team-name {
@@ -22,11 +28,25 @@
 
     text-decoration: underline;
     color: var(--brand-color);
+
+    transition: transform var(--animation), color var(--animation);
+}
+
+.open-footer-modal:hover,
+.open-footer-modal:focus{
+    transform: scale(1.05);
+    color: var(--accent-color);
 }
 
 @media screen and (max-width: 767px) {
     .footer-part-text {
         display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-container {
+        padding: 20px 32px;
     }
 }
 
@@ -87,7 +107,7 @@
     padding: 20px;
     width: 320px;
     max-height: 90vh;
-    
+
     text-align: center;
     overflow: auto;
     border-radius: 3px;
@@ -154,11 +174,11 @@
     object-fit: cover;
     overflow: hidden;
 
-    transition: transform 250ms linear;
+    transition: transform var(--animation);
 }
 
 .developer-card {
-    transition: transform 250ms linear;
+    transition: transform var(--animation);
 }
 
 .developer-card:hover,
