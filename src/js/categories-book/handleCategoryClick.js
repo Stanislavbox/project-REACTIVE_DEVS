@@ -5,7 +5,11 @@ import { getTopBooks } from '../homePage.js';
 import { homePage } from '../root';
 import { spinnerFoo } from '../spinner';
 import { scrollToTop } from '../scrollToTop';
-import { popUpModal } from '../popup';
+import {
+  popUpModal,
+  addBookListListeners,
+  removeBookListListeners,
+} from '../popup';
 
 const homeTitleEl = document.querySelector('.home-title');
 const categoryListEl = document.querySelector('.categories-list');
@@ -17,6 +21,8 @@ export async function onCategoryClick(event) {
   event.preventDefault();
 
   if (!event.target.classList.contains('category-btn')) return;
+
+  removeBookListListeners();
 
   if (event.target.classList.contains('all-categories-btn')) {
     homeTitleEl.innerHTML = `Best Sellers <span class="home-title-accent">Books</span>`;
@@ -30,12 +36,7 @@ export async function onCategoryClick(event) {
       })
       .catch()
       .finally(() => {
-        const booksList = document.querySelectorAll('.js-book-list');
-        if (booksList.length) {
-          booksList.forEach(element =>
-            element.addEventListener('click', popUpModal)
-          );
-        }
+        addBookListListeners();
       });
     return;
   }
@@ -51,8 +52,5 @@ export async function onCategoryClick(event) {
   spinnerFoo();
   scrollToTop();
 
-  const booksList = document.querySelectorAll('.js-book-list');
-  if (booksList.length) {
-    booksList.forEach(element => element.addEventListener('click', popUpModal));
-  }
+  addBookListListeners();
 }
