@@ -5,6 +5,7 @@ import { getTopBooks } from '../homePage.js';
 import { homePage } from '../root';
 import { spinnerFoo } from '../spinner';
 import { scrollToTop } from '../scrollToTop';
+import { popUpModal } from '../popup';
 
 const homeTitleEl = document.querySelector('.home-title');
 const categoryListEl = document.querySelector('.categories-list');
@@ -27,7 +28,15 @@ export async function onCategoryClick(event) {
         spinnerFoo();
         scrollToTop();
       })
-      .catch();
+      .catch()
+      .finally(() => {
+        const booksList = document.querySelectorAll('.js-book-list');
+        if (booksList.length) {
+          booksList.forEach(element =>
+            element.addEventListener('click', popUpModal)
+          );
+        }
+      });
     return;
   }
   spinnerFoo();
@@ -39,8 +48,11 @@ export async function onCategoryClick(event) {
   renderMainTitle(id);
 
   renderBooksByCategory(data);
-
   spinnerFoo();
-
   scrollToTop();
+
+  const booksList = document.querySelectorAll('.js-book-list');
+  if (booksList.length) {
+    booksList.forEach(element => element.addEventListener('click', popUpModal));
+  }
 }

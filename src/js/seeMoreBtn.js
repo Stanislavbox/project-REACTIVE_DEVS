@@ -5,6 +5,7 @@ import { renderBooksByCategory } from './categories-book/renderBooksByCategory';
 import { renderMainTitle } from './categories-book/renderBooksCategoryMainTitle.js';
 import { spinnerFoo } from './spinner';
 import { scrollToTop } from './scrollToTop';
+import { popUpModal } from './popup';
 
 renderingContainer.addEventListener('click', seeMoreBtnClickHandler);
 
@@ -33,4 +34,9 @@ export async function seeMoreBtnClickHandler(e) {
   renderBooksByCategory(data);
   spinnerFoo();
   scrollToTop();
+
+  const booksList = document.querySelectorAll('.js-book-list');
+  if (booksList.length) {
+    booksList.forEach(element => element.addEventListener('click', popUpModal));
+  }
 }

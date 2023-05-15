@@ -139,3 +139,19 @@ export function addLocalStorageBook(event) {
   books.splice(0, 0, id);
   storage.save(LOCALSTORAGE_SHOPPING_LIST_KEY, JSON.stringify(books));
 }
+
+export function addBookListListeners() {
+  const booksList = document.querySelectorAll(".js-book-list");
+    if (booksList.length) {
+      booksList.forEach(element =>
+        element.addEventListener('click', popUpModal))
+    }
+}
+
+export function removeBookListListeners() {
+  const booksList = document.querySelectorAll(".js-book-list");
+    if (booksList.length) {
+      booksList.forEach(element =>
+        element.removeEventListener('click', popUpModal))
+    }
+}
