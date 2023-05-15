@@ -50,7 +50,14 @@ getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
     spinnerFoo();
   })
-  .catch();
+  .catch()
+  .finally(() => {
+    const booksList = document.querySelectorAll(".js-book-list");
+    if (booksList.length) {
+      booksList.forEach(element =>
+        element.addEventListener('click', popUpModal))
+    }
+  });
 
 // _________________________Auth__________________________
 
@@ -77,3 +84,4 @@ userBoardBtnSignUp.addEventListener('click', openForm);
 
 // _______________________________________________________
 import "./js/footer";
+import { popUpModal } from './js/popup';
