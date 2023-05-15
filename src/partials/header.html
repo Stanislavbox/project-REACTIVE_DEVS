@@ -69,44 +69,38 @@
   </div>
 </div>
 <div class="modal-form" id="modal_form">
-  <div class="form-container modal-content">
-    <button class="close-modal" id="closeModalButton">Close</button>
-    <form action="submit" class="sign_form sign_up_form">
-      <input
-        type="text"
-        id="sign_up_name"
-        autocomplete="off"
-        placeholder="Name"
-      />
-      <input
-        type="text"
-        id="sign_up_email"
-        autocomplete="off"
-        placeholder="Email"
-      />
-      <input
-        type="text"
-        id="sign_up_password"
-        autocomplete="off"
-        placeholder="Password"
-      />
-      <button class="sign_up">Sign up</button>
-    </form>
-    <form action="submit" class="sign_form sign_in_form">
-      <input
-        type="text"
-        id="sign_in_email"
-        autocomplete="off"
-        placeholder="Email"
-      />
-      <input
-        type="text"
-        id="sign_in_password"
-        autocomplete="off"
-        placeholder="Password"
-      />
-      <button class="sign_in">Sign in</button>
-    </form>
+
+  <div class="backdrop  is-hidden " data-modal>
+    <div class="modal container-registration">
+      <button class="close-modal" id="closeModalButton">Close</button>
+      <div class="position-form">
+        <form action="submit" class="sign_form sign_up_form">
+          <div class="uni-form">
+            <div class="position-name">
+              <input type="text" name="name" id="sign_up_name" placeholder="name" required>
+            </div>
+          </div>
+      </div>
+      <div class="uni-form">
+        <div class="position-name">
+          <input type="email" name="email" id="sign_up_email" placeholder="email" required>
+        </div>
+      </div>
+      <div class="uni-form">
+        <div class="position-name">
+          <input type="password" name="password" id="sign_up_password" placeholder="password" required>
+        </div>
+      </div>
+      <div class="pos-button">
+        <button class="button-registraition" type="button">SIGN UP</button>
+      </div>
+      <div class="link-change">
+        <a class="first-link" href="#">SIGN UP</a>
+        <a class="last-link" href="#">SIGN IN</a>
+      </div>
+      </form>
+    </div>
+ 
   </div>
 </div>
 <div class="container">
