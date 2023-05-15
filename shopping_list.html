@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=0, initial-scale=1.0"
+    />
     <title>Shopping list</title>
     <link
       rel="apple-touch-icon"
@@ -26,11 +29,12 @@
     
     <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/shopping_list-24c28fd7.js"></script>
     <link rel="modulepreload" crossorigin href="/project-REACTIVE_DEVS/assets/header-9bb5585d.js">
-    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/header-1151cbc7.css">
+    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/header-1cfa0a50.css">
   </head>
 
   <body class="page">
     <div class="container">
+      <div class="container">
   <div class="header_block">
     <nav class="nav">
       <ul class="nav-list">
@@ -134,10 +138,10 @@
 </div>
 
 
-    <section>
-      <h1 class="shopping__title">Shopping<span class="list"> List</span></h1>
+      <section>
+        <h1 class="shopping__title">Shopping<span class="list"> List</span></h1>
 
-      <section class="support-ua-block">
+        <section class="support-ua-block">
   <div class="support-title-flex">
     <h2 class="support-ua-title">Support Ukraine</h2>
     <svg class="support-icon" width="20" height="32">
@@ -152,11 +156,11 @@
   </button>
 </section>
 
-    </section>
-    <section>
-      <container>
-        <div class="shopping-card-content">
-          <div class="shopping_card_container">
+      </section>
+
+      <section class="shopping_card_container">
+        <div class="shopping-card">
+          <div class="card_container">
             <img
               class="book-poster"
               src="/project-REACTIVE_DEVS/assets/card_book-77a532fe.png"
@@ -174,41 +178,75 @@
                   David woke suddenly to discover Matthew had been murdered
                   while David was asleep just down the hall.
                 </p>
-                <p class="book-subtitle">Harlan Coben</p>
+
+                <p class="book-subtitle second_book_subtitle">Harlan Coben</p>
+                <ul class="card-book-list">
+                  <li class="card-book-link">
+                    <a
+                      ><img
+                        class="card-book-amazon"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAUCAYAAADV9o4UAAAAAXNSR0IArs4c6QAABVlJREFUeNrNVn9o1VUUv9NZkr/24623vff9fu/3+77vPd0TpFqQOaThCqtFIbWwIKVIyijDGpQ62iIhC4piOpubRFn2A3QT7A9FEJIokpQkTLIWUg2Vfs7pzOVun0P3xOHL8/FgjO3Ch++95557zvncc+69XyWbrqmp9V338ZTrrtWOc6dfVlYm513XDb3q6lwikYilysvnpJLJRt9xbvd9n/RULBabhfVLtdZ3sEw2z/PKsaYp0LpFu+4jaa2v5zleHzjOgrwIgrjUxVgHrnu39V8t58g3xek4Tsb6zQWed5+O+FN+VVV16Hl9Kc8bSWltGBifTHvefNZDwKftXA/wtdA7BqM3hFofZxl0+9PJpMNrMbcM8t8BIzCKtW9gugRQ6DfK+Ugsm0inrq5uGmx3QHZRzJ8G2dXsC7pP/z+HREpdzL2oRFDdduIy0AvsEkZ7WQ/9M4DB7v2SJ7gTUVnouhsVWjabTWI8YOX92OQuaQPjetJDkDdi/IfAJdZBjBsU6fj+OuHjAG827J2n9ZZPi0gA+2UMcoWUYHAYGAXeFyS/sAtPSeJW9isWL4SzZuHgt0wQ3JZKpW4lW1a+22aAZMPAZZRdytq6l9eiZJ9VkQY7HuYuWJ1T8Xh8RkNDQ6mI4XPSS6fTV4eIx+rtiBJHjHvCMLwWMexjGWK/TnHL5XJXURlVVFTMToMUFL+0igNR4sAnVjSVjwe+B1gPWTlLstD392Aofcykjaa7gu4RsWnrpV4z7EL+lcj2EpLTcRIl+4KIa6+VD9HmSOJcBfg+zDLYuVmJ8/ukcCYxkKfUPxTH5Jwt1z6pJ4+JuGC6sSmDwnZe4iD1nMhYF8tx3zwkCK0V/razPIuLVxIHyRrSQRKWC9kizlCnCGRnOgjuRzBHCmT8AyE7n+cuOCtlc7UOqFwtyW8paMpYPuKh46Qpczar39fawGXWosSx6dtYTmUtidN5zktc/xfU33wmxa7vK5L4UAHiu+3GtrHTjNa1tlKWRIjzfXNUBN2gREtjLO6FVpZTBfIrQWe+KOJ4B28SZfWmfQeni9twkM7NWIjj+x77SCaTlXYzuJwJWyyBVTQWGAZ+BnroTQap2eJO2c/PG/o/Wf1DJCuKOG7PLN22fPXD+YrA9/sib+jLYyEuj5Lvup3w8ZT4JzDUp5LmsyohdA5a2z02phHINuC7VZBcXjRxtBIuFYELWLzRnt8BeqLyE+fLrTBx+gmC478iPj4TQffS3xYRh+wwsAnndiU27AGgjZ4uyD61f2xxjE/k2ZjXjDElxRNHQxlV+J73GM5NBzbhVfq147dWvnkYP4EA2jDfxDKsW0My+n0spBckEnOpcsgHgnyUiFKZUp/eaI6DjplpV6Vms6o0O1UM/SmUHMjnsa1cVdVMWkfZB6Eu2L2rvb19ividXUD+odNKTy6/KiQjZB0nqYpppkc1IoBr1Dg3s1X5pku9DpwDjMWf8F+vJqKZt1TGbFPfmG61xmD3x81Pp1oM8svwvQXfevhsIfLwf4+aqIYAQuA74EfgecAbFz/vqEoQbYX9ZmxAHRFH2c9XE9SY/BzgFWAUGEKAeynAsW6C2a5mwcZK2PsIWR5G/yjIZlFhK9DvV5OlmS2qFgEeomwInAR2IPh1yFQT+vPMu2qGkusOqlLIPZTxUnzXA93AMWDE2hjE3CrztppO+vCxn8irydYQ1GIQ3UUBA+YK+Ae4CL1LtlKMhJUdx/wzdJOzbZAvg2yzMbhTJmtD4DFgNdAL/MAZLIAzIHUEeIkuMoyn5bM7qUlHm/lYTTUdKgChhbakHwRBOqvNKN1F6GfoTKsJbv8Cugxi8nAZnKEAAAAASUVORK5CYII="
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      ><img
+                        class="card-book-store"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAMAAACrZuH4AAAAAXNSR0IArs4c6QAAAklQTFRFAAAA//8A/wAA/5cA93QX/5oH/50A/5kA+XMa/5sA+XYZ+XMY/5sG+nIb/HcY/JgD/JgG+XYV/J0D+nEb/JwD+m8a/6AC/Z0C+W4a+XAZ/Z8E/Z4E+28a+28Y+W8a/ZcJ/JcJ+ngW+3oV/pYH/pUI+XoV/JMK+3sU/JQJ/JIJ/I8L/I4M/IwM/IsN/IoP/IcP/IQQ/IMQ+4IS+4AT+30U+3sU/JEJ/JAJ/I0L+4oM+4kN+4gN+4YP+4QQ+4IR+oET+n4T/p0F+nEY/pkG+XQY/pwF+nIZ/poG+XUY/5wF+nIY/psF+nMY//////z6//jv/vjx//fw//bv/u3W/unY/unX/ufL/uTQ/uTO/uXG/uPO/uPA/uDJ/ciA/cJ4/b6M/b2N/byJ/cBv/r51/r50/r11/b9t/bx2/b5q/bt2/biF/b1p/bp2/bl3/bh2/bd3/bd2/bth/bZ3/bV4/bV3/bR4/bN5/rZe/bZW/bNl/bFl/bNY/bFg/LBl/K9l/K5m/Kxm/bBJ/bBH/Kpm/Kln/Khn/Kdo/JxU/aAy/aEo/Z8l/JhJ/Z8i/JhF/p0F/p0E/pwF/ZgW/poG/pkH/pgH/ZgH/ZcI/ZcH/ZUJ/ZUI/ZQH/ZMK/ZMJ/ZIK/ZEJ/ZAL/Y4M/Icp/IwM/IYk/IoN/IQj/IgO/IcP/IIi/IUQ/IMR+4MR+4ES+38X+38T+38S+34U+30Z+30T+3wV+3wT+3sY+3sU+3oV+3oT+3gW+3gV+ngW+3cS+nYX+nYW+nUX+nMY+nIZ+nEZGpGOEAAAAE10Uk5TAAEBICEmJygoKSkqLi9JSlJUXl9iY3Z4eHl9fn5+fpOVla6vtba7u7y9vb29vb29vb29vb29vr6+vr6+vr6+vr7Q0djZ3d3f3+/x+vu9OMipAAABj0lEQVR42q2QO0sDQRSF77m7G19oDIpgYSMiiKV2QSy08QUi6P+x1V/iL7ARQSvtFCx9FT7Q+IgmuiGb7HhnczcbdFMIOXDv3J35OHNmqQOCrl6WXVCiWuD7rUQmvwZDv7R/WLeLY1vXwgr+apIfqzGxuIw0TZRv5ZClBleZGYjKgfTGDF4fkFNXKuuSAakA/bBL7qNBeEyiyu0Xj44aOSk8+SPD/XFK15YdjkqS/L5nZujt/JOowNk5CKE5BgDcFKOn+Wd8+mmH8P0SQEyAmZ80Rvm5qtOL7EJvAaQoRuLBHjcJtl6qepPgNgTaEQ6pkqGVQJoH8K9bgBTCAUyaR5JDdqFEPLs94VfkgUz3d0DMiUdZGnpnxz0qHbyAhhZyYXh1AjfJUZI2nfdkym3uYWzJIaap6aISLBUAGMkg0hY2XFiZLICiephGTA5tzdRZP0Q1JV5tg7F+Uiq2W0V9XHA/j1TtXChhCg95pGj3KFCCqtd36iLmYNsZ2D72W39yX3fGC6M4MNK4Wi9VqGP6AU7naRQQXdVWAAAAAElFTkSuQmCC"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      ><img
+                        class="card-book-chop"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAkCAYAAADl9UilAAAAAXNSR0IArs4c6QAABZFJREFUeNrtl2lMVGcUhgEBrYARGgh2CZGQmGBNtNYWQ4gbbg1GTSokVinUaCIwIJQdZRGEQWBYZBGQxQVkkUgBGyu1lDIsU6AsQtTGSts/TVpsK11+UOnbc04KtEJnUED8wZecfHfmzv2+577nnPfe0Zsf82PieJXCncKZwphizocVRaK+vv7PNIPmYZo/pXhLb47GywYGBuk0P6TAJDFMkDdodngWMPoLFy60o7mYNv31cRgtgPU0O84W1Euk0AXa5Hfe8EmDrvuT4jM6dprJGjpLi05I2TQA1YaGhts5A08DZEmhongwDRBtgCME179gwQKXKdcRhYIu/JFmzHJIFy9fvvzEVMBepxh5FlDLli3DqVOncO2ja9/RZxOtVFTgsbMNZG1tjcioSHR0diA0NBT79+/ncnlFl2KVFEhISOAFZlyh4OBgNKmbZP2AgABcLrsMPz8/NmcbrVSU82qaoG5Wo7CoECtWrAB517QVCg4hoKZxoIqKCkRHRyM8PByFhYU/ySNNx7hAnYKuri5ZyM3NDS0tLYiPjwdBP5VCAqT8B6iyAlHRUQwkxyEhIfz5wVTA/BYvXoy2tjZUVVUhJSUFjZ83IjsnG5s2bYKHhwdvqBXI3Nx8XCHlYwpFjAPFnIxBSUkJfHx8fqHrbHWBvUENABMTE7i6ucLR0RHNzc3Izs5GWXkZent7cfHSRdja2jLAf4CWLl2KoKAgaL7QjAFVVlZOUCgmJgbl5eXwD/BHVlYWamtrh3fs2LFd5+uLu7s7YmNjeWNJ3759+3Cr7xYCAwORm5cLlUqFiIgINDQ0YNeuXViyZImAJScncw3xhv+rUHlFuQCnpaWhsbERBw4eAGfIyMjovC6wF1atWjXCC7a0tgighYUFyKVhamoqqnV3d0Phq8DtO7fR3tGOjRs3wszMDHe/uivpj4oShUStkNDJgQ4dOsRA/zbaOzQbam3MNWvWPGSAyMhI2USj0SA2ThQEubTU2bbt2zhlbI4Cve7NdRgYGBCFrlZfJYV0AvF1clMODg78+QcKa62S7d69+1vyFl5Y7vrw4cPIzc2FWq3mQmVAbgDp2I6ODll8y5YtGBwcRFxcHI4dO4a6ujqEhYdJPbVp2hhuFIhntiBOu9yYMlHJ3+s22fXr13f6+voylIDEJ8SjrKwM3t7eKCouQnNL8xigjY0NSGGsXr0aA98M4Pr165zGSYG4qSwtLVFaWoq6a3VQKpVSGitXruTz31O8qBVs8+bNtZmZmexBXMgCePToUSSnJLMZwsvbCyWlJWhtax0DXLRokYAcP3FcPDDggzEgLmzY2dlJaeTn53PDsLqi2J69e0b9UaPzNSg1NfVkUVERPD09uZ1lk8CgQBSfL+Y0Sb2cO3cOXl5eDC1APgofRByPQFhY2CiQbGhlZcXWIJbBN9vT0yOpv1F/A6pUFZydnfm3f1B4UOgcZmSmebT5UF5+ngDm5OSwgtwMkk6FQoEzmWdwNvesqFn9YTWncRSKU8sgUgadX3byefHCK1VX0N7ejrVr13Jq+S2mnZ40e5/0pdF+w4YNBQQ3RIuKQqlpqexn0hgFBQWcSnkqZGVnoaamBq6urgLW2trKirA6oqjn+55cW2w9bC2PSM0uAvKY7l+915ycnC6lp6cPJSUlCQwdw9/fn9+nuG4Ymm2Fu5LBRJ2+/j7Q79nZ4eLiwp34iM4x0Hs0G+nN1KAiXrfz7Z0lKaqU3+iRI+lMz0gHWYt02L2v7yEjI0PAbt68Kc9Ye3t7GBsbjymkHWj6gA7kWzX8gKdGYcOVxqj/pB6JpxMFjDqbDZSP7xPQu1qAZgeQAD4+nXSaUyYWcuTIkdGO7CeggwI0R0OflHHaunVrDTXJX+YW5vfpu3coDPSeo2H6vAHNjzkffwOxJpLCktIOogAAAABJRU5ErkJggg=="
+                    /></a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <button class="delete-button">x</button>
-            <div>
-              <ul>
-                <li>
-                  <a><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAUCAYAAADV9o4UAAAAAXNSR0IArs4c6QAABVlJREFUeNrNVn9o1VUUv9NZkr/24623vff9fu/3+77vPd0TpFqQOaThCqtFIbWwIKVIyijDGpQ62iIhC4piOpubRFn2A3QT7A9FEJIokpQkTLIWUg2Vfs7pzOVun0P3xOHL8/FgjO3Ch++95557zvncc+69XyWbrqmp9V338ZTrrtWOc6dfVlYm513XDb3q6lwikYilysvnpJLJRt9xbvd9n/RULBabhfVLtdZ3sEw2z/PKsaYp0LpFu+4jaa2v5zleHzjOgrwIgrjUxVgHrnu39V8t58g3xek4Tsb6zQWed5+O+FN+VVV16Hl9Kc8bSWltGBifTHvefNZDwKftXA/wtdA7BqM3hFofZxl0+9PJpMNrMbcM8t8BIzCKtW9gugRQ6DfK+Ugsm0inrq5uGmx3QHZRzJ8G2dXsC7pP/z+HREpdzL2oRFDdduIy0AvsEkZ7WQ/9M4DB7v2SJ7gTUVnouhsVWjabTWI8YOX92OQuaQPjetJDkDdi/IfAJdZBjBsU6fj+OuHjAG827J2n9ZZPi0gA+2UMcoWUYHAYGAXeFyS/sAtPSeJW9isWL4SzZuHgt0wQ3JZKpW4lW1a+22aAZMPAZZRdytq6l9eiZJ9VkQY7HuYuWJ1T8Xh8RkNDQ6mI4XPSS6fTV4eIx+rtiBJHjHvCMLwWMexjGWK/TnHL5XJXURlVVFTMToMUFL+0igNR4sAnVjSVjwe+B1gPWTlLstD392Aofcykjaa7gu4RsWnrpV4z7EL+lcj2EpLTcRIl+4KIa6+VD9HmSOJcBfg+zDLYuVmJ8/ukcCYxkKfUPxTH5Jwt1z6pJ4+JuGC6sSmDwnZe4iD1nMhYF8tx3zwkCK0V/razPIuLVxIHyRrSQRKWC9kizlCnCGRnOgjuRzBHCmT8AyE7n+cuOCtlc7UOqFwtyW8paMpYPuKh46Qpczar39fawGXWosSx6dtYTmUtidN5zktc/xfU33wmxa7vK5L4UAHiu+3GtrHTjNa1tlKWRIjzfXNUBN2gREtjLO6FVpZTBfIrQWe+KOJ4B28SZfWmfQeni9twkM7NWIjj+x77SCaTlXYzuJwJWyyBVTQWGAZ+BnroTQap2eJO2c/PG/o/Wf1DJCuKOG7PLN22fPXD+YrA9/sib+jLYyEuj5Lvup3w8ZT4JzDUp5LmsyohdA5a2z02phHINuC7VZBcXjRxtBIuFYELWLzRnt8BeqLyE+fLrTBx+gmC478iPj4TQffS3xYRh+wwsAnndiU27AGgjZ4uyD61f2xxjE/k2ZjXjDElxRNHQxlV+J73GM5NBzbhVfq147dWvnkYP4EA2jDfxDKsW0My+n0spBckEnOpcsgHgnyUiFKZUp/eaI6DjplpV6Vms6o0O1UM/SmUHMjnsa1cVdVMWkfZB6Eu2L2rvb19ividXUD+odNKTy6/KiQjZB0nqYpppkc1IoBr1Dg3s1X5pku9DpwDjMWf8F+vJqKZt1TGbFPfmG61xmD3x81Pp1oM8svwvQXfevhsIfLwf4+aqIYAQuA74EfgecAbFz/vqEoQbYX9ZmxAHRFH2c9XE9SY/BzgFWAUGEKAeynAsW6C2a5mwcZK2PsIWR5G/yjIZlFhK9DvV5OlmS2qFgEeomwInAR2IPh1yFQT+vPMu2qGkusOqlLIPZTxUnzXA93AMWDE2hjE3CrztppO+vCxn8irydYQ1GIQ3UUBA+YK+Ae4CL1LtlKMhJUdx/wzdJOzbZAvg2yzMbhTJmtD4DFgNdAL/MAZLIAzIHUEeIkuMoyn5bM7qUlHm/lYTTUdKgChhbakHwRBOqvNKN1F6GfoTKsJbv8Cugxi8nAZnKEAAAAASUVORK5CYII=" /></a>
-                </li>
-                <li>
-                  <a><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAUCAYAAADV9o4UAAAAAXNSR0IArs4c6QAABVlJREFUeNrNVn9o1VUUv9NZkr/24623vff9fu/3+77vPd0TpFqQOaThCqtFIbWwIKVIyijDGpQ62iIhC4piOpubRFn2A3QT7A9FEJIokpQkTLIWUg2Vfs7pzOVun0P3xOHL8/FgjO3Ch++95557zvncc+69XyWbrqmp9V338ZTrrtWOc6dfVlYm513XDb3q6lwikYilysvnpJLJRt9xbvd9n/RULBabhfVLtdZ3sEw2z/PKsaYp0LpFu+4jaa2v5zleHzjOgrwIgrjUxVgHrnu39V8t58g3xek4Tsb6zQWed5+O+FN+VVV16Hl9Kc8bSWltGBifTHvefNZDwKftXA/wtdA7BqM3hFofZxl0+9PJpMNrMbcM8t8BIzCKtW9gugRQ6DfK+Ugsm0inrq5uGmx3QHZRzJ8G2dXsC7pP/z+HREpdzL2oRFDdduIy0AvsEkZ7WQ/9M4DB7v2SJ7gTUVnouhsVWjabTWI8YOX92OQuaQPjetJDkDdi/IfAJdZBjBsU6fj+OuHjAG827J2n9ZZPi0gA+2UMcoWUYHAYGAXeFyS/sAtPSeJW9isWL4SzZuHgt0wQ3JZKpW4lW1a+22aAZMPAZZRdytq6l9eiZJ9VkQY7HuYuWJ1T8Xh8RkNDQ6mI4XPSS6fTV4eIx+rtiBJHjHvCMLwWMexjGWK/TnHL5XJXURlVVFTMToMUFL+0igNR4sAnVjSVjwe+B1gPWTlLstD392Aofcykjaa7gu4RsWnrpV4z7EL+lcj2EpLTcRIl+4KIa6+VD9HmSOJcBfg+zDLYuVmJ8/ukcCYxkKfUPxTH5Jwt1z6pJ4+JuGC6sSmDwnZe4iD1nMhYF8tx3zwkCK0V/razPIuLVxIHyRrSQRKWC9kizlCnCGRnOgjuRzBHCmT8AyE7n+cuOCtlc7UOqFwtyW8paMpYPuKh46Qpczar39fawGXWosSx6dtYTmUtidN5zktc/xfU33wmxa7vK5L4UAHiu+3GtrHTjNa1tlKWRIjzfXNUBN2gREtjLO6FVpZTBfIrQWe+KOJ4B28SZfWmfQeni9twkM7NWIjj+x77SCaTlXYzuJwJWyyBVTQWGAZ+BnroTQap2eJO2c/PG/o/Wf1DJCuKOG7PLN22fPXD+YrA9/sib+jLYyEuj5Lvup3w8ZT4JzDUp5LmsyohdA5a2z02phHINuC7VZBcXjRxtBIuFYELWLzRnt8BeqLyE+fLrTBx+gmC478iPj4TQffS3xYRh+wwsAnndiU27AGgjZ4uyD61f2xxjE/k2ZjXjDElxRNHQxlV+J73GM5NBzbhVfq147dWvnkYP4EA2jDfxDKsW0My+n0spBckEnOpcsgHgnyUiFKZUp/eaI6DjplpV6Vms6o0O1UM/SmUHMjnsa1cVdVMWkfZB6Eu2L2rvb19ividXUD+odNKTy6/KiQjZB0nqYpppkc1IoBr1Dg3s1X5pku9DpwDjMWf8F+vJqKZt1TGbFPfmG61xmD3x81Pp1oM8svwvQXfevhsIfLwf4+aqIYAQuA74EfgecAbFz/vqEoQbYX9ZmxAHRFH2c9XE9SY/BzgFWAUGEKAeynAsW6C2a5mwcZK2PsIWR5G/yjIZlFhK9DvV5OlmS2qFgEeomwInAR2IPh1yFQT+vPMu2qGkusOqlLIPZTxUnzXA93AMWDE2hjE3CrztppO+vCxn8irydYQ1GIQ3UUBA+YK+Ae4CL1LtlKMhJUdx/wzdJOzbZAvg2yzMbhTJmtD4DFgNdAL/MAZLIAzIHUEeIkuMoyn5bM7qUlHm/lYTTUdKgChhbakHwRBOqvNKN1F6GfoTKsJbv8Cugxi8nAZnKEAAAAASUVORK5CYII=" /></a>
-                </li>
-                <li>
-                  <a><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAUCAYAAADV9o4UAAAAAXNSR0IArs4c6QAABVlJREFUeNrNVn9o1VUUv9NZkr/24623vff9fu/3+77vPd0TpFqQOaThCqtFIbWwIKVIyijDGpQ62iIhC4piOpubRFn2A3QT7A9FEJIokpQkTLIWUg2Vfs7pzOVun0P3xOHL8/FgjO3Ch++95557zvncc+69XyWbrqmp9V338ZTrrtWOc6dfVlYm513XDb3q6lwikYilysvnpJLJRt9xbvd9n/RULBabhfVLtdZ3sEw2z/PKsaYp0LpFu+4jaa2v5zleHzjOgrwIgrjUxVgHrnu39V8t58g3xek4Tsb6zQWed5+O+FN+VVV16Hl9Kc8bSWltGBifTHvefNZDwKftXA/wtdA7BqM3hFofZxl0+9PJpMNrMbcM8t8BIzCKtW9gugRQ6DfK+Ugsm0inrq5uGmx3QHZRzJ8G2dXsC7pP/z+HREpdzL2oRFDdduIy0AvsEkZ7WQ/9M4DB7v2SJ7gTUVnouhsVWjabTWI8YOX92OQuaQPjetJDkDdi/IfAJdZBjBsU6fj+OuHjAG827J2n9ZZPi0gA+2UMcoWUYHAYGAXeFyS/sAtPSeJW9isWL4SzZuHgt0wQ3JZKpW4lW1a+22aAZMPAZZRdytq6l9eiZJ9VkQY7HuYuWJ1T8Xh8RkNDQ6mI4XPSS6fTV4eIx+rtiBJHjHvCMLwWMexjGWK/TnHL5XJXURlVVFTMToMUFL+0igNR4sAnVjSVjwe+B1gPWTlLstD392Aofcykjaa7gu4RsWnrpV4z7EL+lcj2EpLTcRIl+4KIa6+VD9HmSOJcBfg+zDLYuVmJ8/ukcCYxkKfUPxTH5Jwt1z6pJ4+JuGC6sSmDwnZe4iD1nMhYF8tx3zwkCK0V/razPIuLVxIHyRrSQRKWC9kizlCnCGRnOgjuRzBHCmT8AyE7n+cuOCtlc7UOqFwtyW8paMpYPuKh46Qpczar39fawGXWosSx6dtYTmUtidN5zktc/xfU33wmxa7vK5L4UAHiu+3GtrHTjNa1tlKWRIjzfXNUBN2gREtjLO6FVpZTBfIrQWe+KOJ4B28SZfWmfQeni9twkM7NWIjj+x77SCaTlXYzuJwJWyyBVTQWGAZ+BnroTQap2eJO2c/PG/o/Wf1DJCuKOG7PLN22fPXD+YrA9/sib+jLYyEuj5Lvup3w8ZT4JzDUp5LmsyohdA5a2z02phHINuC7VZBcXjRxtBIuFYELWLzRnt8BeqLyE+fLrTBx+gmC478iPj4TQffS3xYRh+wwsAnndiU27AGgjZ4uyD61f2xxjE/k2ZjXjDElxRNHQxlV+J73GM5NBzbhVfq147dWvnkYP4EA2jDfxDKsW0My+n0spBckEnOpcsgHgnyUiFKZUp/eaI6DjplpV6Vms6o0O1UM/SmUHMjnsa1cVdVMWkfZB6Eu2L2rvb19ividXUD+odNKTy6/KiQjZB0nqYpppkc1IoBr1Dg3s1X5pku9DpwDjMWf8F+vJqKZt1TGbFPfmG61xmD3x81Pp1oM8svwvQXfevhsIfLwf4+aqIYAQuA74EfgecAbFz/vqEoQbYX9ZmxAHRFH2c9XE9SY/BzgFWAUGEKAeynAsW6C2a5mwcZK2PsIWR5G/yjIZlFhK9DvV5OlmS2qFgEeomwInAR2IPh1yFQT+vPMu2qGkusOqlLIPZTxUnzXA93AMWDE2hjE3CrztppO+vCxn8irydYQ1GIQ3UUBA+YK+Ae4CL1LtlKMhJUdx/wzdJOzbZAvg2yzMbhTJmtD4DFgNdAL/MAZLIAzIHUEeIkuMoyn5bM7qUlHm/lYTTUdKgChhbakHwRBOqvNKN1F6GfoTKsJbv8Cugxi8nAZnKEAAAAASUVORK5CYII=" /></a>
-                </li>
-              </ul>
-            </div>
+            <button class="book-delete-button">
+              <svg class="svg-book-card" width="13.5px">
+                <use href="/project-REACTIVE_DEVS/assets/sprite-ecc16bac.svg#icon-trach"></use>
+              </svg>
+            </button>
           </div>
         </div>
-      </container>
-    </section>
-    <section class="section_pagination">
-      <div class="pagination">
-        <button class="pagination_btn1"></button>
-        <button class="pagination_btn2"></button>
-        <ul class="pagination_list">
-          <li class="pagination_link active" value="1" active>1</li>
-          <li class="pagination_link" value="2">2</li>
-          <li class="pagination_link" value="3">3</li>
-          <li class="pagination_link" value="4">...</li>
-        </ul>
-        <button class="pagination_btn3"></button>
-        <button class="pagination_btn4"></button>
-      </div>
-    </section>
+      </section>
+      <section class="section_pagination">
+        <div class="pagination">
+          <button fi-rr-angle-small-left class="pagination_btn1">
+            <svg class="double-small-left-1">
+              <use href="/project-REACTIVE_DEVS/assets/sprite-ecc16bac.svg#double-small-left-1"></use>
+            </svg>
+          </button>
+          <button class="pagination_btn2">
+            <svg class="small-left">
+              <use href="/project-REACTIVE_DEVS/assets/sprite-ecc16bac.svg#small-left"></use>
+            </svg>
+          </button>
+
+          <ul class="pagination_list">
+            <li class="pagination_link active" value="1" active>1</li>
+            <li class="pagination_link" value="2">2</li>
+            <li class="pagination_link" value="3">3</li>
+            <li class="pagination_link" value="4">...</li>
+          </ul>
+
+          <button class="pagination_btn3">
+            <svg class="double-small-left-1">
+              <use href="/project-REACTIVE_DEVS/assets/sprite-ecc16bac.svg#small-left-1"></use>
+            </svg>
+          </button>
+          <button class="pagination_btn4">
+            <svg class="double-small-left-1">
+              <use href="/project-REACTIVE_DEVS/assets/sprite-ecc16bac.svg#double-small-left-1"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </div>
+
     
   </body>
 </html>
