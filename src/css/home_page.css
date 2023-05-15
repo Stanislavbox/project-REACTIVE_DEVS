@@ -19,7 +19,7 @@
 
 @media screen and (min-width: 375px) {
   .book-item {
-    max-width: 180px;
+    max-width: 335px;
   }
 
 }
@@ -31,7 +31,6 @@
   line-height: calc(38 / 32);
   letter-spacing: -0.04em;
   color: var(--main-black-color);
-  margin-top: 45px;
 }
 
 .home-title-accent {
@@ -163,12 +162,12 @@
     height: 316px;
   }
 
-  /* .books-list{
+  .books-list{
     column-gap: 25px;
-  } */
+  }
 
   .book-item {
-    max-width: 218px;
+    width: 218px;
   }
 
   .img-wrapper {
@@ -211,8 +210,8 @@
   }
 
   .img-wrapper {
-    max-width: 180px;
-    max-height: 256px;
+    width: 180px;
+    height: 256px;
   }
 
   .book-item {
