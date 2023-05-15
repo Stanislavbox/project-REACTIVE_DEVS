@@ -66,6 +66,7 @@ import { logIn } from './js/header';
 import { onLoad } from './js/header';
 import { logOutFunc } from './js/header';
 import { openForm } from './js/header';
+import { closeForm } from './js/header';
 
 onLoad();
 
@@ -80,6 +81,9 @@ logOutButton.addEventListener('click', logOutFunc);
 
 const userBoardBtnSignUp = document.querySelector('.user_board_signup');
 userBoardBtnSignUp.addEventListener('click', openForm);
+
+const closeFormBtn = document.querySelector('.close-modal');
+closeFormBtn.addEventListener('click', closeForm);
 // todo , {displayname: name} {books: arrey} FORM reset
 
 // _______________________________________________________
