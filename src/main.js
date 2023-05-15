@@ -19,7 +19,7 @@ import { activeCatBtnSwitch } from './js/categories-book/activeCategoryBtnSwitch
 
 import { supportMarkup } from './js/supportUaMarkup';
 
-import { getTopBooks, hideText } from './js/homePage';
+import { getTopBooks } from './js/homePage';
 
 // *** Support Ukraine Marup *** //
 supportMarkup();
@@ -35,7 +35,17 @@ import { switchTheme } from './js/switcher'; //! Stas
 
 // console.log(root.screenWidth)
 
-getTopBooks(homePage.TOP_BOOKS)
+let numCardsToRender = 1;
+
+if (window.innerWidth < 767) {
+  numCardsToRender = 1;
+} else if (window.innerWidth < 1439) {
+  numCardsToRender = 3;
+} else {
+  numCardsToRender = 5;
+}
+
+getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
   .then(resp => {
     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
     spinnerFoo();
