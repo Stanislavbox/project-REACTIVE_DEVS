@@ -1,42 +1,232 @@
 
+.container {
+  /* max-width: 1440px; Установите максимальную ширину контейнера */
+  margin: 0 auto; /* Центрируйте контейнер на странице */
+  /* padding: 0px 24px; Добавьте отступы слева и справа для контента */
+  box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
+}
 
 .shopping__title{
-    position: absolute;
-    width: 292px;
-    height: 52px;
-    color: var(--main-black-color);
-    
-    margin-left: 420px;
-    margin-top: 40px;
-     }
-    
-     .list{
-        color: var(--brand-color);
-     }
+  position: absolute;
+  width: 292px;
+  height: 52px;
+  color: var(--main-black-color);
+  
+  margin-left: 420px;
+  margin-top: 40px;
+   }
+  
+   .list{
+      color: var(--brand-color);
+   }
 
+   .shopping_card_container{
+ position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 30px 24px;
+    gap: 48px;
+  
+    position: absolute;
+    width: 996px;
+    height: 213px;
+    left: 370px;
+  bottom: 50%;
+    align-items: center;
+    background: #FFFFFF;
+    border: 2px solid rgba(79, 46, 232, 0.4);
+    border-radius: 16px;
+  }
+  
+  .card_container{
+    display: flex;
+   position: relative;
+
+  }
+/* 
+  .shopping-card{
+
+
+  } */
+
+  .book-poster{
+    margin-right: 24px;
+    width: 116px;
+height: 165px;
+border-radius: 8px;
+  
+
+  }
+
+
+  .book-title{
+    width: 114px;
+    height: 18px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--main-black-color);
+  }
+   
+  .book-subtitle{
+  width: 101px;
+  height: 14px;
+  left: 164px;
+  top: 46px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--subtitle-color);
+  padding-top: 4px;
+  margin-bottom: 14px;
+}
+
+<<<<<<< Updated upstream
      .shopping_card_container{
+   
       display: flex;
-    }
-    
-    .shopping-card-content{
-      
-     padding: 24px;
-    
-      border: 1px solid rgba(79, 46, 232, 0.4);
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 30px 24px;
+      gap: 48px;
+      isolation: isolate;
+      position: absolute;
+      width: 996px;
+      height: 213px;
+      left: 370px;
+      top: 450px;
+      align-items: center;
+      background: #FFFFFF;
+      border: 2px solid rgba(79, 46, 232, 0.4);
       border-radius: 16px;
     }
+    
+    .card_container{
+      display: flex;
+     position: relative;
+ 
+    }
+/* 
+    .shopping-card{
+ 
+  
+    } */
+
     .book-poster{
       margin-right: 24px;
-    }
-    /* .book-content{
-      
-    } */
-    .book-poster{
-      width: 116;
-      height: 165;
+      width: 116px;
+height: 165px;
+border-radius: 8px;
     
+
+    }
+ 
+
+    .book-title{
+      width: 114px;
+      height: 18px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: var(--main-black-color);
     }
      
+    .book-subtitle{
+    width: 101px;
+    height: 14px;
+    left: 164px;
+    top: 46px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--subtitle-color);
+    padding-top: 4px;
+    margin-bottom: 14px;
+}
+
+.second_book_subtitle{
+  padding-top: 48px;
+}
+
+.book-text{
+  width: 808px;
+  height: 53px;
+  left: 164px;
+  top: 74px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: var(--main-black-color);
+
+}
+
+.book-delete-button{
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #4F2EE8;
+  border: none;
+  margin-left: 100px;
+
+  left: 87%;
+
+  transform: translate(-50%);
+ 
+ 
+}
+
+.svg-book-card{
+  position: relative;
+  width: 13.5px;
+  height: 13.5px;
+  fill: #fff;
+}
+
+.card-book-list{
+  margin-left: 140px;
+ top: 30%;
+}
+
+.card-book-list{
+  display: block;
+  display: flex;
+  
+
+}
+
+.card-book-amazon{
+  width: 48px;
+height: 15px;
+
+filter: grayscale();
+margin-top: 6px;
+margin-right: 18px;
+}
+
+.card-book-store{
+  width: 28px;
+height: 27px;
+  filter: grayscale();
+ margin-right: 16px;
+}
+
+.card-book-chop{
+  width: 32px;
+  height: 30px;
+  margin-right: 24px;
+}
+
+
+
+
+
 
     /* Пагінація */
 
@@ -62,27 +252,133 @@
      }
      
      .pagination_list{
-margin: 20px;
-     }
-     .pagination_list .pagination_link{
-      display: inline-block;
-      margin: 0 10px;
-      background: var(--main-wite-color);
-      width: 45px;
-      height: 45px;
-      border: 1px solid #111111;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 45px;
-      cursor: pointer ;
-     }
+=======
+.second_book_subtitle{
+padding-top: 48px;
+}
 
-     .pagination_list .pagination_link.active{
+.book-text{
+width: 808px;
+height: 53px;
+left: 164px;
+top: 74px;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+letter-spacing: -0.04em;
+color: var(--main-black-color);
+
+}
+
+.book-delete-button{
+position: absolute;
+width: 34px;
+height: 34px;
+border-radius: 50%;
+background: #4F2EE8;
+border: none;
+margin-left: 100px;
+
+left: 87%;
+
+transform: translate(-50%);
+
+
+}
+
+.svg-book-card{
+position: relative;
+width: 13.5px;
+height: 13.5px;
+fill: #fff;
+}
+
+.card-book-list{
+margin-left: 140px;
+top: 30%;
+}
+
+.card-book-list{
+display: block;
+display: flex;
+
+
+}
+
+.card-book-amazon{
+width: 48px;
+height: 15px;
+
+filter: grayscale();
+margin-top: 6px;
+margin-right: 18px;
+}
+
+.card-book-store{
+width: 28px;
+height: 27px;
+filter: grayscale();
+margin-right: 16px;
+}
+
+.card-book-chop{
+width: 32px;
+height: 30px;
+margin-right: 24px;
+}
+
+
+
+
+
+
+  /* Пагінація */
+
+  /* .section_pagination{
+    
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  } */
+
+   .pagination{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* background: #fff; */
+    color: var(--main-black-color);
+    padding: 10px 40px;
+    border-radius: 6px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+   }
+   
+   .pagination_list{
+>>>>>>> Stashed changes
+margin: 20px;
+   }
+   .pagination_list .pagination_link{
+    display: inline-block;
+    margin: 0 10px;
+    background: var(--main-wite-color);
+    width: 45px;
+    height: 45px;
+    border: 1px solid #111111;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
+    cursor: pointer ;
+   }
+
+   .pagination_list .pagination_link.active{
 color: #fff;
 background: #111111;
 background-repeat: no-repeat;
+<<<<<<< Updated upstream
      } 
 
 
@@ -102,12 +398,47 @@ background-repeat: no-repeat;
       cursor: pointer ;
      } */
 
-     .pagination_btn1:disabled, .pagination_btn2:disabled{
+     .pagination_btn1, .pagination_btn2{
+=======
+   } 
+
+
+   /* .pagination_btn1, .pagination_btn2{
+    display: inline-block;
+    margin: 0 10px;
+    background: var(--main-black-color);
+    width: 45px;
+    height: 45px;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid #111111;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
+    cursor: pointer ;
+   } */
+
+   .pagination_btn1, .pagination_btn2{
+>>>>>>> Stashed changes
 background:#111111 ;
 pointer-events: none;
+display: inline-block;
+margin: 0 10px;
+border: none;
+width: 45px;
+height: 45px;
+border-radius: 50%;
+<<<<<<< Updated upstream
+
+text-align: center;
+font-size: 22px;
+font-weight: 500;
+line-height: 45px;
+cursor: pointer ;
      }
 
-     .pagination_btn1, .pagination_btn2, .pagination_btn3, .pagination_btn4 {
+     .pagination_btn3, .pagination_btn4 {
       display: inline-block;
       margin: 0 10px;
       background: var(--accent-color);
@@ -127,5 +458,74 @@ pointer-events: none;
      .pagination_link:focus{
       color: #fff;
       background-color: var(--main-black-color);
+      width: 12px;
+      height: 14px;
       
      }
+
+
+    
+    
+ 
+
+
+     .icon-angle-double-small-left-1{
+     
+      
+      position: relative;
+  width: 13.5px;
+  height: 13.5px;
+      
+  fill: var(--subtitle-color);
+     }
+
+  
+  
+=======
+
+text-align: center;
+font-size: 22px;
+font-weight: 500;
+line-height: 45px;
+cursor: pointer ;
+   }
+
+   .pagination_btn3, .pagination_btn4 {
+    display: inline-block;
+    margin: 0 10px;
+    background: var(--accent-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #111111;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
+    cursor: pointer ;
+   }
+
+ 
+   .pagination_link:hover,
+   .pagination_link:focus{
+    color: #fff;
+    background-color: var(--main-black-color);
+    width: 12px;
+    height: 14px;
+    
+   }
+
+
+  
+  
+
+
+
+   .double-small-left-1, .small-left{
+   position: relative;
+width: 13.5px;
+height: 13.5px;
+    
+fill: var(--subtitle-color);
+   }
+>>>>>>> Stashed changes
