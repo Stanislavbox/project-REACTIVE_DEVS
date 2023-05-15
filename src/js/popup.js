@@ -1,5 +1,6 @@
 import axios from 'axios';
 import storage from './storage';
+import { Notify } from 'notiflix';
 
 const instanceAxios = axios.create({
   baseURL: 'https://books-backend.p.goit.global/books/',
@@ -36,8 +37,10 @@ async function getBooksById(id) {
 
 export async function popUpModal(event) {
   event.preventDefault();
-  
-  const bookId = event.currentTarget.getAttribute("data_id")
+  if (event.target.nodeName === "UL") {
+    return
+  }
+   const bookId = event.target.getAttribute("data_id")
   
 
   refs.modalBook.classList.remove("popup-is-hidden");
@@ -88,15 +91,20 @@ export async function popUpModal(event) {
   }
 
 
+  try {
 
   const { author, book_image, description, title } = await getBooksById(bookId);
-
   refs.coverBook.setAttribute("src", `${book_image}`);
   refs.titleBook.textContent = `${title}`;
   refs.authorBook.textContent = `${author}`;
   if (description) {
     refs.descrBook.textContent = `${description}`;
-  }  
+    } 
+    
+  } catch (error) {
+    Notify.failure(error.message)  
+}
+   
 }
 
 
@@ -113,17 +121,16 @@ function shoppingListMngmnt(event) {
   refs.popUpNotice.style.display = "none";
 }
 
-function removeLocalStorageBook(event) {
+export function removeLocalStorageBook(event) {
   const id = event.currentTarget.getAttribute("data_id");
   const books = JSON.parse(storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY));
   books.splice(books.indexOf(id), 1);
   storage.save(LOCALSTORAGE_SHOPPING_LIST_KEY, JSON.stringify(books));
 }
 
-function addLocalStorageBook(event) {
+export function addLocalStorageBook(event) {
   const id = event.currentTarget.getAttribute("data_id");
   let books = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
-  console.log(books)
   if (books && JSON.parse(books).length) {
     books = JSON.parse(books);
   } else {
