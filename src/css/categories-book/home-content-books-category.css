@@ -42,3 +42,7 @@
     flex-basis: calc((100% - 24px * (5 - 1)) / 5);
   }
 }
+
+.book-wrap {
+  pointer-events: none;
+}
