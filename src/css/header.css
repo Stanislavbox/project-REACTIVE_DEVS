@@ -75,7 +75,7 @@
   width: fit-content;
   margin-right: 24px;
   position: relative;
-  display: inline-block;
+
   transition: .3s;
 }
 
@@ -93,12 +93,20 @@
   transition: .3s;
 }
 
+
+
 .dropdown:hover .dropdown__button {
   visibility: visible;
   opacity: 1;
   transition: .3s;
 }
-
+.header__logout_icon{
+  width: 14px;
+  height: 12px;
+  stroke: #EAC645;
+  margin-left: auto;
+  margin-right: 0;
+}
 /* ____________________________ */
 
 
@@ -137,16 +145,17 @@
   margin-right: 24px;
   background-color: #4F2EE8;
   color: #fff;
+  
 }
 
 .header__signup_img {
-  height: 32px;
-  width: 43px;
-  fill: #EAC645;
-  margin-right: 0;
+  height: 10px;
+  width: 13px;
+  stroke: #EAC645;
+  margin-right: 5px;
   margin-left: auto;
-
 }
+
 
 .header__toggle {
   margin-right: 24px;
@@ -226,6 +235,45 @@
   transition: .3s;
 }
 
+.header__burger_menu{
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin-right: 24px;
+  border: none;
+  background-color: #fff;
+}
+
+.header__burger_icon{
+  width: 32px;
+  height: 32px;
+  stroke: black;
+}
+
 .is-hidden {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+ .header__userauthbuttons{
+  display: none;
+ }
+ .header__home{
+  display: none;
+ }
+ .header__shopping_list {
+  display: none;
+ }
+
+}
+/* @media screen and (max-width:1280px){
+  .header__home {
+      margin-left: 24px;
+    }
+} */
+
+@media screen and (min-width: 768px){
+  .header__burger_menu{
+    display: none;
+  }
 }

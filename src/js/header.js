@@ -56,7 +56,6 @@ export function registration(event) {
     .then(userCredential => {
       // Signed in
       const user = userCredential.user;
-      console.log(user);
       userBlock.textContent = user.email;
       localStorage.setItem('user', JSON.stringify(user));
       userBoardBtnSignUp.classList.toggle('is-hidden');
@@ -87,7 +86,6 @@ export function logIn(event) {
       const user = userCredential.user;
       localStorage.setItem('user', JSON.stringify(user));
       // ...
-      console.log(user);
       userBlock.textContent = user.email;
       userBoardBtnSignUp.classList.toggle('is-hidden');
       userBoardName.classList.toggle('is-hidden');
@@ -110,7 +108,6 @@ export function onLoad() {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       const user = JSON.parse(storedUser);
-      console.log(user);
       userBlock.textContent = user.email;
       userBoardName.classList.toggle('is-hidden');
     } else {
