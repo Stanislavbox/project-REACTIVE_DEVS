@@ -32,7 +32,7 @@
 
     <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/index-ccaad157.js"></script>
     <link rel="modulepreload" crossorigin href="/project-REACTIVE_DEVS/assets/footer-73f3bc97.js">
-    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/footer-a6405e62.css">
+    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/footer-e1c2eb77.css">
   </head>
 
   <body class="page">
@@ -151,8 +151,35 @@
 <div class="container">
   <div class="modal_burger" id="modal_burger">
     <div class="modal_burger_content">
-      <button class="close-modal-burger" id="closeBurgerButton">Close</button>
-      <h1>Some info</h1>
+      <div class="header_block header_block_burger">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="header__logo">
+                <svg class="page-logo">
+                  <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-logo-1"></use>
+                </svg>
+                <svg class="page-name">
+                  <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-bookshelf"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__toggle">
+          <label class="switch">
+            <input type="checkbox" class="switch__input js-switcher" />
+            <!--Stas -->
+            <span class="switch__slider"></span>
+          </label>
+        </div>
+        <button class="close-modal-burger" id="closeBurgerButton">
+          <svg class="header__burgercloser__icon">
+            <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </div>
