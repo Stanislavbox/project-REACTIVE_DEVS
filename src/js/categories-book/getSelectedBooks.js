@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Notify } from 'notiflix';
 
 export async function getSelectedBooks(category) {
   try {
@@ -7,6 +8,6 @@ export async function getSelectedBooks(category) {
     );
     return data;
   } catch (error) {
-    console.log(error);
+    Notify.failure('Sorry, there is nothing here. Try again later.');
   }
 }

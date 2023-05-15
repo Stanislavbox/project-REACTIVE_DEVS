@@ -1,3 +1,4 @@
+import { Notify } from 'notiflix';
 import { getSelectedBooks } from './getSelectedBooks';
 import { renderBooksByCategory } from './renderBooksByCategory.js';
 import { renderMainTitle } from './renderBooksCategoryMainTitle.js';
@@ -34,7 +35,9 @@ export async function onCategoryClick(event) {
         spinnerFoo();
         scrollToTop();
       })
-      .catch()
+      .catch(error =>
+        Notify.failure('Sorry, there is nothing here. Try again later.')
+      )
       .finally(() => {
         addBookListListeners();
       });
