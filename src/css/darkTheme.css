@@ -3,7 +3,8 @@ body.js-dark-theme{
   background-color: var(--dark-theme-color);
 }
 
-/* header */
+/*?HEADER */
+
 .js-dark-theme .header_block{
   border: 1.5px solid var( --main-white-color);
   background-color: var(--main-black-color);
@@ -34,7 +35,8 @@ body.js-dark-theme{
   stroke: var(--main-white-color);
 }
 
-/* home */
+/*? HOME */
+
 .js-dark-theme .home-title{
   color: var(--main-white-color);
 }
@@ -49,7 +51,8 @@ body.js-dark-theme{
   color: var(--main-white-color);
 }
 
-/* category */
+/*? CATEGORY */
+
 .js-dark-theme .category-btn.active-category{
   color: var(--accent-color);
 }
@@ -71,4 +74,30 @@ body.js-dark-theme{
 
 .js-dark-theme .categories::-webkit-scrollbar-thumb {
   background: var(--secondary-text-color);
+}
+
+/*? POP UP MODAL */
+
+.js-dark-theme .popup-book-modal{
+background-color: var(--dark-theme-color);
+}
+
+.js-dark-theme .popup-book-title{
+  color: var( --main-white-color);
+}
+
+.js-dark-theme .popup-book-description{
+  color: var( --main-white-color);
+}
+
+.js-dark-theme .popup-book-close-icon{
+  fill: var( --main-white-color);
+}
+
+.js-dark-theme .popup-book-btn{
+  color: var( --main-white-color);
+}
+
+.js-dark-theme .popup-book-notice{
+  color: rgba(255, 255, 255, 0.5);
 }
