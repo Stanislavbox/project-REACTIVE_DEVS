@@ -3,24 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0" />
     <title>Shopping list</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
+
+  <body class="page">
     <container class="container">
+
+
+  
+
     <load ="partials/header.html" />
-    
-    
+
     <section>
-      
       <h1 class="shopping__title">Shopping<span class="list"> List</span></h1>
-      <load ="partials/support_ua.html" />
+
+      <load ="partials/support_ua_home.html" />
     </section>
+
     <section class="shopping_card_container">
    
         <div class="shopping-card">
           <div class="card_container">
+
             <img
               class="book-poster"
               src="./img/card_book.png"
@@ -38,6 +62,7 @@
                   David woke suddenly to discover Matthew had been murdered
                   while David was asleep just down the hall.
                 </p>
+
                 <p class="book-subtitle second_book_subtitle">Harlan Coben</p>
                 <ul class="card-book-list">
                   <li class="card-book-link">
@@ -73,12 +98,16 @@
             <use href = "img/sprite.svg#small-left"></use>
           </svg>
         </button>
+
+            
+
         <ul class="pagination_list">
           <li class="pagination_link active" value="1" active>1</li>
           <li class="pagination_link" value="2">2</li>
           <li class="pagination_link" value="3">3</li>
           <li class="pagination_link" value="4">...</li>
         </ul>
+
         <button class="pagination_btn3">
           <svg class="double-small-left-1">
             <use href = "img/sprite.svg#small-left-1"></use>
@@ -92,6 +121,9 @@
       </div>
     </section>
   </container>
+
+     
+
     <script type="module" src="./main_shopping_list.js"></script>
   </body>
 </html>

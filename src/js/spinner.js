@@ -1,4 +1,4 @@
 export function spinnerFoo(){
-  const spinner = document.querySelector('.book');
-  spinner.classList.add('visual-hidden')
+  const spinner = document.querySelector('.js-spinner-wrap');
+  spinner.classList.toggle('visual-hidden')
 }

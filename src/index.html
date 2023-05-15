@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0"  />
+
+    <title>Bookshelf</title>
+
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -22,33 +24,50 @@
       sizes="16x16"
       href="./favicon/favicon-16x16.png"
     />
+
+
+
     <link rel="manifest" href="./favicon/site.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
+
   </head>
 
   <body class="page">
-    <load ="partials/header.html" />
     <load ="partials/spinner.html" />
+    <load ="partials/header.html" />
 
     <!--Page -->
     <div class="container">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <!-- Book category selection menu -->
-        <load ="partials/categories.html" />
+      <div class="wrapper">
+        <!-- Intersection observer target for scroll-up button -->
+        <div class="to-top-target"></div>
 
-        <!-- Support Ukraine -->
-        <load ="partials/support_ua.html" />
-      </aside>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <!-- Book category selection menu -->
+          <load ="partials/categories.html" />
 
-      <!-- Main -->
-      <main class="content">
-        <!-- Page content -->
-        <load ="partials/home_page.html" />
-        <!-- Modal -->
-        <!-- burger-menu-->
-      </main>
+          <!-- Support Ukraine -->
+          <load ="partials/support_ua_home.html" />
+        </aside>
+
+        <!-- Main -->
+        <main class="content">
+          <!-- Page content -->
+          <load ="partials/home_page.html" />
+          <!-- Modal -->
+          <!-- burger-menu-->
+          <!-- Back to top button -->
+          <load ="partials/back-to-top.html" />
+        </main>
+      </div>
     </div>
+
+    <load ="partials/footer.html" />
+
+    <load ="partials/popup.html" />
+
     <script type="module" src="/main.js"></script>
+    <script type="module" src="./js/popup.js"></script>
   </body>
 </html>

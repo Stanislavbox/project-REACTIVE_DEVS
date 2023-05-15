@@ -26,6 +26,7 @@
   margin-left: 8px;
 }
 
+
 .header__home {
   margin-left: 76px;
   padding: 8px 16px;
@@ -56,32 +57,95 @@
   transform: translateY(1.5px);
 }
 
-.user_board {
+/* drop__________________ */
+
+.user_board_name {
   padding: 4px;
   display: flex;
   align-items: center;
-  margin-right: 24px;
-
   background-color: #4F2EE8;
   text-decoration: none;
   border-radius: 25px;
   color: #fff;
-  width: 184px;
-
+  width: fit-content;
+  border: none;
 }
 
+.dropdown {
+  width: fit-content;
+  margin-right: 24px;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+
+
+.dropdown__button {
+  position: absolute;
+  height: 45px;
+  min-width: 100%;
+  background-color: #fff;
+  border: 2px solid #EAC645;
+  border-radius: 25px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+
+.dropdown:hover .dropdown__button {
+  visibility: visible;
+  opacity: 1;
+  transition: .3s;
+}
+
+/* ____________________________ */
+
+
 .header__username {
+  padding-left: 5px;
+  padding-right: 5px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .header__user_img {
-  height: 19px;
-  width: 19px;
+  height: 37px;
+  width: 37px;
   background-color: #fff;
   border-radius: 25px;
   border: 9px solid white;
+
   fill: #4F2EE8;
+}
+
+.header__scroldown_img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  fill: #fff;
+}
+
+.user_board_signup {
+  display: flex;
+  width: 184px;
+  height: 48px;
+  border-radius: 20px;
+  border: none;
+  align-items: center;
+  padding: 10px;
+  margin-right: 24px;
+  background-color: #4F2EE8;
+  color: #fff;
+}
+
+.header__signup_img {
+  height: 32px;
+  width: 43px;
+  fill: #EAC645;
+  margin-right: 0;
+  margin-left: auto;
+
 }
 
 .header__toggle {
@@ -95,7 +159,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+}
+
+.form-container {
   border: 1px solid red;
+  width: fit-content;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav {
@@ -152,4 +224,8 @@
   -ms-transform: translateX(20px);
   -moz-transform: translateX(20px);
   transition: .3s;
+}
+
+.is-hidden {
+  display: none;
 }

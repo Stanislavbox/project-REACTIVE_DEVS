@@ -1,150 +1,252 @@
 :root {
-    --primary-font: 'DM Sans', sans-serif;
-    --main-text-color: #111111;
-    --accent-text: #4F2EE8;
-    --additional-text: #B4AFAF;
+  --primary-font: 'DM Sans', sans-serif;
+  --main-text-color: #111111;
+  --accent-text: #4f2ee8;
+  --additional-text: #b4afaf;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--primary-font)
+  font-family: var(--primary-font);
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    display: block;
-}
-
-.home-wrapper {
-    width: 1000px;
-    margin: 40px 24px 40px 40px;
+  display: block;
 }
 
 .category-container {
-    margin-top: 40px;
+  margin-top: 40px;
 }
-
-/* .books-container {
-    /* margin-top: 40px; */
-/* margin-left: 40px;
-    margin-right: 24px;
-    padding-bottom: 78px;
-    padding: 0; */
-/* } */
-
 
 .books-list {
-    display: flex;
-    flex-direction: row;
-    column-gap: 24px;
-    margin: 0;
-    padding-left: 0;
-}
-
-.book-item {
-    width: 180px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  margin: 0;
+  padding-left: 0;
+  flex-wrap: nowrap;
 }
 
 .book-img {
-    width: 180px;
-    height: 256px;
+        object-fit: fill;
+        max-height: 485px;
+      
 }
 
-.home-title {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: calc(52 / 48);
-    letter-spacing: -0.04em;
-    color: var(--main-text-color);
+@media screen and (min-width: 375px) {
+  .book-item {
+    max-width: 180px;
+  }
 
-    margin-top: 40px;
+}
+
+
+
+
+
+.home-title {
+  font-weight: 700;
+  font-size: 32px;
+    line-height: calc(38 / 32);
+  letter-spacing: -0.04em;
+  color: var(--main-text-color);
+margin-top: 45px;
 }
 
 .home-title-accent {
-    color: var(--accent-text);
+  color: var(--accent-text);
 }
 
 .home-book-category {
-    font-weight: 400;
+  font-weight: 400;
     font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--additional-text);
+    line-height: calc(18 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--additional-text);
 
-    margin-bottom: 18px;
-    margin-top: 0;
+  margin-bottom: 18px;
+  margin-top: 0;
 }
 
 .book-name {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(18 / 16);
-    letter-spacing: -0.04em;
-    color: var(--main-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(18 / 16);
+  letter-spacing: -0.04em;
+  color: var(--main-text-color);
 
-    margin-top: 14px;
-    margin-bottom: 4px;
+  margin-top: 14px;
+  margin-bottom: 4px;
+
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .author-name {
-    font-style: italic;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: -0.04em;
-    color: var(--additional-text);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: -0.04em;
+  color: var(--additional-text);
 
-    margin: 0;
+  margin: 0;
 }
 
+
+
+
 .btn-see-more {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-top: 32px;
-    padding: 14px 28px;
-    background-color: #ffffff;
-    margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 8px;
+  padding: 14px 28px;
+  background-color: #ffffff;
+  margin-left: auto;
 
-    width: auto;
-    height: 46px;
+  width: auto;
+  height: 46px;
 
-    border: 2px solid var(--accent-text);
-    border-radius: 40px;
+  border: 2px solid var(--accent-text);
+  border-radius: 40px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(18 / 14);
-    letter-spacing: -0.01em;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  letter-spacing: -0.01em;
 
-    transition: background-color 1000ms linear, transform 300ms linear
+  transition: background-color 1000ms linear, transform 300ms linear;
 }
 
 .btn-see-more:hover {
-    box-shadow: 0 0.5em 0.5em -0.4em;
-    transform: scale(1.10)
+  box-shadow: 0 0.5em 0.5em -0.4em;
+  transform: scale(1.1);
 }
 
-/* .book-img {
-    position: relative;
-    overflow: hidden;
+.img-wrapper {
+  position: relative;
+  display: block;
+  max-width: 335px;
+  max-height: 485px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .overlay {
-    background-color: #EAC645;
-    position: absolute;
-    bottom: 68px;
-    left: 0;
-    width: 100%;
-    height: 30%;
+  background-color: #eac645;
+  position: absolute;
+  bottom: 49px;
+  left: 0;
+  width: 100%;
+  height: 28%;
 
-    transform: translateY(170%);
-    transition: transform 250ms ease;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  letter-spacing: -0.04em;
+  color: var(--main-text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(145%); 
+  transition: transform 250ms ease;
 }
 
-.book-img:hover .overlay {
-    transform: translateY(0);
-} */
+.book-item:hover .overlay {
+  transform: translateY(45%);
+}
+
+.text-overlay:hover {
+  color: #ffffff;
+}
+
+
+
+
+
+@media screen and (min-width: 767px) {
+   .category-container {
+    width: 706px;
+    margin-top: 45px;
+  }
+
+  .book-img {
+    width: 218px;
+    height: 316px;
+  }
+
+  /* .books-list{
+    column-gap: 25px;
+  } */
+
+  .book-item{
+    max-width: 218px;
+  }
+
+  .img-wrapper {
+    width: 218px;
+      height: 316px;
+  }
+.home-title {
+  font-size: 48px;
+  line-height: calc(52 / 48);
+}
+.home-book-category {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+}
+
+.btn-see-more{
+  margin-top: 20px;
+}
+.overlay {
+  transform: translateY(160%);
+}
+
+.book-item:hover .overlay {
+  transform: translateY(60%);
+}
+  
+}
+
+@media screen and (min-width: 1440px) {
+  .category-container {
+    width: 1000px;
+  }
+
+  .book-img {
+    width: 180px;
+    height: 256px;
+  }
+.img-wrapper{
+  max-width: 180px;
+    max-height: 256px;
+}
+   .book-item{
+    width: 180px;
+   }
+
+  .btn-see-more{
+  margin-top: 32px;
+}
+
+.overlay {
+  transform: translateY(170%);
+}
+
+.book-item:hover .overlay {
+  transform: translateY(70%);
+}
+}

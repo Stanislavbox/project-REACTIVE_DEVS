@@ -1,0 +1,226 @@
+.footer-section{
+    border-top: 1px solid var(--brand-color);
+}
+
+.footer-container{
+    padding: 15px 0;
+    color: var(--subtitle-color);
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-team-name{
+font-size: 16px;
+}
+
+.open-footer-modal {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+  
+    text-decoration: underline;
+    color: var(--brand-color);
+}
+
+@media screen and (max-width: 767px) {
+.footer-part-text {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+.footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 120px 20px 24px;
+        color: var(--subtitle-color);
+    }
+
+    .creators-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .creators-info-text {
+        margin-right: 10px;
+    }
+}
+
+/*----------------- FOOTER MODAL --------------------*/
+
+
+
+.footer-modal-is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.footer-modal.footer-modal-is-hidden .footer-modal-container {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.footer-modal {
+    position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(46, 47, 66, 0.4);
+    
+        opacity: 1;
+        transition: opacity var(----animation);
+}
+
+
+.footer-modal-container {
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    
+        padding: 72px 24px 24px;
+        width: 408px;
+        min-height: 576px;
+        background-color: var(--main-white-color);
+        transition: transform var(--animation), opacity var(--animation);
+}
+
+.footer-modal-close {
+    color: var(--main-black-color);
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer-modal-close:hover,
+.footer-modal-close:focus {
+    color: var(--brand-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-modal-title {
+    color: var(--brand-color);
+    margin-bottom: 25px;
+}
+
+.developer-card {
+    margin-bottom: 15px;
+}
+
+.developer-card-text {
+    margin-top: 5px;
+}
+
+.footer-modal-developer-name {
+    font-size: 20px;
+}
+
+.footer-modal-developer-position {
+    font-size: 16px;
+    color: var(--subtitle-color);
+    font-style: italic;
+}
+
+@media screen and (min-width: 768px) {} 
+
+
+/* .developer-card{
+    flex-basis: calc((100% - 20px) / 3);
+} */
+
+/* 
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px 20px 24px;
+    color: var(--subtitle-color);
+}
+
+.creators-info{
+   display: flex;
+   align-items: center;
+}
+
+.creators-info-text{
+ margin-right: 10px;
+}
+
+
+.developers-list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 30px;
+    justify-content: center;
+}
+
+.developer-card-text{
+margin-top: 10px;
+text-align: center;
+}
+
+.open-footer-modal {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--brand-color);
+}
+ */
+
+
+
+/* 
+.footer-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-modal-container {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.footer-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.footer-modal-close:hover,
+.footer-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-modal-title{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+} */
+
+
