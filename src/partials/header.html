@@ -49,11 +49,12 @@
             <use xlink:href="./img/sprite.svg#icon-scroll-down"></use>
           </svg>
         </button>
-        <button class="dropdown__button" id="logOutButton"><span class="logout_text">Log out</span><span class="logout_icon">
-                  <svg class="header__logout_icon">
-                    <use xlink:href="./img/sprite.svg#icon-arrow-right"></use>
-                  </svg>
-        </span></button>
+        <button class="dropdown__button" id="logOutButton"><span class="logout_text">Log out</span><span
+            class="logout_icon">
+            <svg class="header__logout_icon">
+              <use xlink:href="./img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </span></button>
       </div>
     </div>
     <button class="header__burger_menu">
@@ -63,19 +64,27 @@
     </button>
   </div>
 </div>
-<div class="form-container is-hidden">
-  <form action="submit" class="sign_form sign_up_form">
-    <input type="text" id="sign_up_name" autocomplete="off" placeholder="Name" />
-    <input type="text" id="sign_up_email" autocomplete="off" placeholder="Email" />
-    <input type="text" id="sign_up_password" autocomplete="off" placeholder="Password" />
-    <button class="sign_up">Sign up</button>
-  </form>
-  <form action="submit" class="sign_form sign_in_form">
-    <input type="text" id="sign_in_email" autocomplete="off" placeholder="Email" />
-    <input type="text" id="sign_in_password" autocomplete="off" placeholder="Password" />
-    <button class="sign_in">Sign in</button>
-  </form>
-  <form action="submit" class="sign_form sign_in_form">
-    <button class="sign_out" id="logOutButton">Log Out</button>
-  </form>
+<div class="modal-form" id="modal_form">
+  <div class="form-container modal-content">
+    <button class="close-modal" id="closeModalButton">Close</button>
+    <form action="submit" class="sign_form sign_up_form">
+      <input type="text" id="sign_up_name" autocomplete="off" placeholder="Name" />
+      <input type="text" id="sign_up_email" autocomplete="off" placeholder="Email" />
+      <input type="text" id="sign_up_password" autocomplete="off" placeholder="Password" />
+      <button class="sign_up">Sign up</button>
+    </form>
+    <form action="submit" class="sign_form sign_in_form">
+      <input type="text" id="sign_in_email" autocomplete="off" placeholder="Email" />
+      <input type="text" id="sign_in_password" autocomplete="off" placeholder="Password" />
+      <button class="sign_in">Sign in</button>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <div class="modal_burger" id="modal_burger">
+    <div class="modal_burger_content">
+      <button class="close-modal-burger" id="closeBurgerButton">Close</button>
+      <h1>Some info</h1>
+    </div>
+  </div>
 </div>

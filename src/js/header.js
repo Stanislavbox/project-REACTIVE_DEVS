@@ -130,8 +130,35 @@ export function logOutFunc() {
     });
 }
 
-const formContainer = document.querySelector('.form-container');
+// ____________________MODALS_____________
 const userBoardBtnSignUp = document.querySelector('.user_board_signup');
 export function openForm(event) {
-  formContainer.classList.toggle('is-hidden');
+    modal_form.style.visibility = 'visible';
+    modal_form.style.opacity = 1;
 }
+
+const closeFormBtn = document.querySelector('.close-modal')
+closeFormBtn.addEventListener('click', closeForm);
+export function closeForm() {
+    modal_form.style.visibility = 'hidden';
+    modal_form.style.opacity = 0;
+}
+
+const burgerBtn = document.querySelector('.header__burger_menu');
+burgerBtn.addEventListener('click',openBurgerMenu)
+export function openBurgerMenu() {
+  modal_burger.style.visibility = 'visible';
+  modal_burger.style.opacity = 1;
+}
+
+const closeBurgerBtn = document.querySelector('.close-modal-burger');
+closeBurgerBtn.addEventListener('click', closeBurgerMenu)
+
+export function closeBurgerMenu() {
+    modal_burger.style.visibility = 'hidden';
+    modal_burger.style.opacity = 0;
+}
+
+
+
+// __________________________________________
