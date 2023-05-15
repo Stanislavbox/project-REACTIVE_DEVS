@@ -1,5 +1,6 @@
 .categories {
   height: 228px;
+  width: 335px;
   padding-right: 20px;
   overflow-y: scroll;
   overflow-x: auto;
@@ -20,6 +21,14 @@
 @media screen and (min-width: 768px) {
   .categories {
     height: 472px;
+    width: 337px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .categories {
+    height: 472px;
+    width: 356px;
   }
 }
 
