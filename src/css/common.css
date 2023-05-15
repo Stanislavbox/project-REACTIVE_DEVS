@@ -1,3 +1,14 @@
+body{
+font-family: var(--main-font);
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: calc(18/14);
+letter-spacing: -0.04em;
+color: var(--main-black-color);
+}
+
+
 body::-webkit-scrollbar {
   display: none;
 }

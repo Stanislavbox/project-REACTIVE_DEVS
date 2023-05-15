@@ -5,7 +5,8 @@ body.js-dark-theme{
 
 /* header */
 .js-dark-theme .header_block{
-  border: 2px solid var( --main-white-color);
+  border: 1.5px solid var( --main-white-color);
+  background-color: var(--main-black-color);
 }
 
 .js-dark-theme .page-name{
@@ -24,12 +25,22 @@ body.js-dark-theme{
   fill: var(--main-white-color);
 }
 
+.js-dark-theme .switch__slider{
+  background: var(--switcher-dark-theme-gradient);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.js-dark-theme .header__burger_icon{
+  stroke: var(--main-white-color);
+}
+
 /* home */
 .js-dark-theme .home-title{
   color: var(--main-white-color);
 }
 
-.js-dark-theme .book-name{
+.js-dark-theme .book-name,
+.js-dark-theme .book-title{
   color: var( --main-white-color);
 }
 
