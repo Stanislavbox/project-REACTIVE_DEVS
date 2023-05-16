@@ -10,7 +10,7 @@
   padding: 40px 26px;
 }
 
-.shop-list-container {}
+/* .shop-list-container {} */
 
 .shop-list-title {
   margin-bottom: 40px;
@@ -47,7 +47,7 @@
   border-radius: 8px;
 }
 
-.sh-list-item-main-wrapper {}
+/* .sh-list-item-main-wrapper {} */
 
 .sh-list-item-top-wrapper {
   display: flex;
@@ -164,8 +164,79 @@
   background-image: url(../img/bookstores/book-shop@2x.png);
 }
 
+.shopping-list-empty-message {
+  width: 244px;
+  font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+letter-spacing: -0.02em;
+color: rgba(0, 0, 0, 0.6);
+}
+
 /* Макс: что не сделал */
 /* Не разобрался  как скрыть лишний текст для краткого описания
 <p class="sh-list-book-descr">${description}</p> */
 
 /* Не сделана адаптивная верстка. Сделал только на мобилу */
+
+
+/* // Адаптив для таблета Ира  */
+
+@media screen and (min-width: 768px) {
+  .shop-list-wrapper {
+padding-left: 32px;
+  
+  }
+  .shop-list-title {
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+
+  .shopping-list-empty-message {
+    width: 349px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-top: 100px;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.02em;
+color: rgba(0, 0, 0, 0.6);
+  }
+
+.sh-list-item {
+  justify-content: space-around;
+  width: 704px;
+  padding: 30px 24px;
+}  
+
+.sh-list-book-img {
+  max-width: 116px;
+  height: 165px;
+}
+
+
+.sh-list-shops-list
+
+.sh-list-shops-amazon {
+  width: 48px;
+}
+
+.sh-list-shops-bs {
+ margin-left: 16px;
+}
+
+.sh-list-item-top-wrapper {
+  margin-bottom: 14px;
+}
+
+.sh-list-book-descr {
+  width: 508px;
+  margin-bottom: 28px;
+}
+
+}
