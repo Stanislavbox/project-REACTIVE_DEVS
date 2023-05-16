@@ -48,6 +48,7 @@ if (window.innerWidth < 767) {
 
 getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
   .then(resp => {
+    
     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
     spinnerFoo();
   })
