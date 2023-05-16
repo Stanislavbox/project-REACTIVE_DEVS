@@ -1,6 +1,8 @@
 const switcher = document.querySelector('.js-switcher');
+const switcherTwo = document.querySelector('.js-switcher-two');
 const elementsTheme = document.querySelector('.page');
 
+switcherTwo.addEventListener('click', switchTheme);
 switcher.addEventListener('click', switchTheme)
 
 export function switchTheme(){
