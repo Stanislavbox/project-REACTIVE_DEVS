@@ -58,14 +58,12 @@ getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
   .finally(() => addBookListListeners());
 
 // _________________________Auth__________________________
-
 import { registration } from './js/header';
 import { logIn } from './js/header';
 import { onLoad } from './js/header';
 import { logOutFunc } from './js/header';
 import { openForm } from './js/header';
 import { closeForm } from './js/header';
-
 
 onLoad();
 
@@ -87,8 +85,6 @@ userSignUpBurgBtn.addEventListener('click', openForm);
 
 const closeFormBtn = document.querySelector('.close-modal');
 closeFormBtn.addEventListener('click', closeForm);
-// todo , {displayname: name} {books: arrey} FORM reset
-
 // _______________________________________________________
 import './js/footer';
 import {

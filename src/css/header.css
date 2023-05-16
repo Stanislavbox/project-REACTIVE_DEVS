@@ -388,6 +388,21 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 40px;
+  background-image: url('../img/books-background.png');
+  background-repeat: no-repeat;
+  background-position: -40px 325px;
+  background-size: 140%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  .burger__signup_button {
+    background-image: url('../img/books-background@2x.png');
+    background-size: 140%;
+  }
 }
 
 .burger_nav {
