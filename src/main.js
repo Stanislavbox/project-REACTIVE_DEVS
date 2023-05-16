@@ -66,6 +66,7 @@ import { logOutFunc } from './js/header';
 import { openForm } from './js/header';
 import { closeForm } from './js/header';
 
+
 onLoad();
 
 const formSignUp = document.querySelector('.button-registraition');
