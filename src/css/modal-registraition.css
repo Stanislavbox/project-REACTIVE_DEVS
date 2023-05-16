@@ -26,7 +26,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px){
     .container-registration {
         width: 579px;
         margin-left: auto;
@@ -36,14 +36,14 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     .position-form {
         padding: 80px 0px 0px 0px;
     }
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     .modal {
         padding-top: 80px;
     }
@@ -75,20 +75,20 @@
     margin-bottom: 40px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     .margin {
         margin-bottom: 60px;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     .position-name {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     input {
         width: 499px;
     }
@@ -98,7 +98,7 @@
     padding: 16px 0px 16px 24px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     .uni-form input {
         padding: 20px 0px 20px 40px;
 
@@ -148,7 +148,7 @@ input::placeholder {
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     .button-registraition {
         width: 545px;
         border-radius: 40px;
@@ -210,7 +210,7 @@ input::placeholder {
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     .first-link {
         font-family: 'DM Sans';
         font-style: normal;
@@ -237,7 +237,7 @@ input::placeholder {
     text-transform: uppercase;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     .last-link {
         font-family: 'DM Sans';
         font-style: normal;
