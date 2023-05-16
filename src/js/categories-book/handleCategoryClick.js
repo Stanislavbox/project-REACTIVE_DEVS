@@ -29,7 +29,18 @@ export async function onCategoryClick(event) {
     homeTitleEl.innerHTML = `Best Sellers <span class="home-title-accent">Books</span>`;
     spinnerFoo();
     // add function render top books;
-    getTopBooks(homePage.TOP_BOOKS)
+
+    let numCardsToRender = 1;
+
+    if (window.innerWidth < 759) {
+      numCardsToRender = 1;
+    } else if (window.innerWidth < 1439) {
+      numCardsToRender = 3;
+    } else {
+      numCardsToRender = 5;
+    }
+
+    getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
       .then(resp => {
         renderingContainer.innerHTML = resp;
         spinnerFoo();
