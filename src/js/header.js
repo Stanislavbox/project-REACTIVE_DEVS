@@ -43,21 +43,22 @@ const signUpPassword = document.getElementById('sign_up_password');
 const signInPassword = document.getElementById('sign_in_password');
 const userBlock = document.querySelector('.header__username');
 const userBoardName = document.querySelector('.userboard_dropdown');
-
+const burgerUserBlock = document.querySelector('.burger__userinfo');
 export function registration(event) {
   event.preventDefault();
   const email = signUpEmail.value;
   const password = signUpPassword.value;
-  const name = signUpName.value;
-  if (!email || !password || !name) {
+  // const name = signUpName.value;
+  if (!email || !password ) {
     alert('Всі поля мають бути заповнені!');
     return;
   }
-  createUserWithEmailAndPassword(auth, email, password, name)
+  createUserWithEmailAndPassword(auth, email, password,)
     .then(userCredential => {
       // Signed in
       const user = userCredential.user;
       userBlock.textContent = user.email;
+      burgerUserBlock.textContent = user.email;
       localStorage.setItem('user', JSON.stringify(user));
       userBoardBtnSignUp.classList.toggle('is-hidden');
       userBoardName.classList.toggle('is-hidden');
@@ -89,6 +90,7 @@ export function logIn(event) {
       localStorage.setItem('user', JSON.stringify(user));
       // ...
       userBlock.textContent = user.email;
+      burgerUserBlock.textContent = user.email;
       userBoardBtnSignUp.classList.toggle('is-hidden');
       userBoardName.classList.toggle('is-hidden');
       location.reload();
@@ -111,6 +113,7 @@ export function onLoad() {
     if (storedUser) {
       const user = JSON.parse(storedUser);
       userBlock.textContent = user.email;
+      burgerUserBlock.textContent = user.email;
       userBoardName.classList.toggle('is-hidden');
     } else {
       userBoardBtnSignUp.classList.toggle('is-hidden');
@@ -147,12 +150,25 @@ export function closeForm() {
   modal_form.style.opacity = 0;
   backdrop_hide_show.classList.toggle('is-hidden');
 }
+// _________________________burger________________
 
+const burgerSignUpButton = document.querySelector('.burger_user_board_signup');
 const burgerBtn = document.querySelector('.header__burger_menu');
 burgerBtn.addEventListener('click', openBurgerMenu);
 export function openBurgerMenu() {
   modal_burger.style.visibility = 'visible';
   modal_burger.style.opacity = 1;
+
+  const storedUser = localStorage.getItem('user');
+  if (storedUser) {
+    const user = JSON.parse(storedUser);
+    userBlock.textContent = user.email;
+    burgerUserBlock.textContent = user.email;
+        burgerUserBlock.classList.toggle('is-hidden');
+  } else {
+    burgerSignUpButton.classList.toggle('is-hidden')
+
+  }
 }
 
 const closeBurgerBtn = document.querySelector('.close-modal-burger');
@@ -161,6 +177,13 @@ closeBurgerBtn.addEventListener('click', closeBurgerMenu);
 export function closeBurgerMenu() {
   modal_burger.style.visibility = 'hidden';
   modal_burger.style.opacity = 0;
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+
+      burgerUserBlock.classList.toggle('is-hidden');
+    } else {
+      burgerSignUpButton.classList.toggle('is-hidden');
+    }
 }
 
 // __________________________________________

@@ -78,8 +78,10 @@ formSignIn.addEventListener('click', logIn);
 const logOutButton = document.getElementById('logOutButton');
 logOutButton.addEventListener('click', logOutFunc);
 
+const userSignUpBurgBtn = document.querySelector('.burger_user_board_signup');
 const userBoardBtnSignUp = document.querySelector('.user_board_signup');
 userBoardBtnSignUp.addEventListener('click', openForm);
+userSignUpBurgBtn.addEventListener('click', openForm);
 
 const closeFormBtn = document.querySelector('.close-modal');
 closeFormBtn.addEventListener('click', closeForm);

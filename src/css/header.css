@@ -145,7 +145,18 @@
   margin-right: 24px;
   background-color: #4F2EE8;
   color: #fff;
-  
+}
+.burger_user_board_signup{
+    display: flex;
+      width: 184px;
+      height: 48px;
+      border-radius: 20px;
+      border: none;
+      align-items: center;
+      padding: 10px;
+      margin-right: 24px;
+      background-color: #4F2EE8;
+      color: #fff;
 }
 
 .header__signup_img {
@@ -286,7 +297,7 @@
 }
 
 /* ____MODAL________ */
-.modal-form {
+/* .modal-form {
   position: fixed;
   top: 0;
   left: 0;
@@ -300,7 +311,7 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s;
-}
+} */
 
 .modal-content {
   background-color: #fff;
@@ -362,8 +373,34 @@
 .header_block_burger{
   background-color: var(--main-white-color);
 }
+
+.burger__signup_button{
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-top: 40px;
+
+}
+
+.burger_userinfo {
+    padding: 6px;
+      display: flex;
+      align-items: center;
+      background-color: #4F2EE8;
+      text-decoration: none;
+      border-radius: 25px;
+      color: #fff;
+      width: fit-content;
+      border: none;
+}
+.burger__username{
+  margin-left: 4px;
+  margin-right: 4px;
+}
+/* ___________________________________ */
+
 /* ___________________________________ */
 
 .header__burgercloser__icon:hover{
   stroke: var( --brand-color);
 }
+
