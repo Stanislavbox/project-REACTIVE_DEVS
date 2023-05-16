@@ -5,6 +5,7 @@ import {
   signInWithEmailAndPassword,
 } from 'firebase/auth';
 import { getDatabase, ref, set } from 'firebase/database';
+import { spinnerFoo } from './spinner';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBcc1DA6ZvhYH6HNL0bBHQ0dDKoHx7bVFo',
@@ -163,3 +164,32 @@ export function closeBurgerMenu() {
 }
 
 // __________________________________________
+
+
+
+// _____________sign_up / sign_in____________
+
+
+const signUplink = document.querySelector('.first-link');
+const signInlink = document.querySelector('.last-link');
+const formSignUp = document.querySelector('.button-registraition');
+const formSignIn = document.querySelector('.button-login');
+
+signInlink.addEventListener('click', onLinkSignIn)
+signUplink.addEventListener('click', onLinkSignUp);
+
+export function onLinkSignIn(evt) {
+  evt.preventDefault()
+  formSignUp.classList.toggle('is-hidden')
+  formSignIn.classList.toggle('is-hidden');
+  signInlink.classList.toggle('link_underline')
+  signUplink.classList.toggle('link_underline');
+}
+
+export function onLinkSignUp(evt) {
+  evt.preventDefault();
+  formSignUp.classList.toggle('is-hidden');
+  formSignIn.classList.toggle('is-hidden');
+    signInlink.classList.toggle('link_underline');
+    signUplink.classList.toggle('link_underline');
+}
