@@ -1,4 +1,4 @@
-import{a as y,n as d,r as p,s as a,b as c,c as S,o as T,d as $,l as w,e as E,f as O,g as C}from"./footer-75dc83f1.js";const u={TOP_BOOKS:"https://books-backend.p.goit.global/books/top-books",listOfBooks:document.querySelector(".js-container")};async function k(t){try{const{data:e}=await y.get(`https://books-backend.p.goit.global/books/category?category=${t}`);return e}catch{d.exports.Notify.failure("Sorry, there is nothing here. Try again later.")}}function q({_id:t,title:e,author:o,description:n,book_image:s}){return`
+import{a as y,n as d,r as p,s as a,b as c,c as S,o as T,d as $,l as w,e as E,f as O,g as C}from"./footer-477c0461.js";const u={TOP_BOOKS:"https://books-backend.p.goit.global/books/top-books",listOfBooks:document.querySelector(".js-container")};async function k(t){try{const{data:e}=await y.get(`https://books-backend.p.goit.global/books/category?category=${t}`);return e}catch{d.exports.Notify.failure("Sorry, there is nothing here. Try again later.")}}function q({_id:t,title:e,author:o,description:n,book_image:s}){return`
   <li class="books-list-item" data_id=${t}>
     <div class="book-wrap">
       <div class="book-thumb">
