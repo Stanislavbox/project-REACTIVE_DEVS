@@ -74,13 +74,13 @@
 .popup-book-close-icon {
   width: 24px;
   height: 24px;
-  fill: currentColor;
+  stroke: currentColor;
   transition: fill var(--animation);
 }
 
 .popup-book-close-btn:hover .popup-book-close-icon,
 .popup-book-close-btn:focus .popup-book-close-icon {
-  fill: var(--brand-color);
+  stroke: var(--brand-color);
 }
 
 .popup-book-wrapper {

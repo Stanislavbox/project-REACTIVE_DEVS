@@ -91,7 +91,7 @@ background-color: var(--dark-theme-color);
 }
 
 .js-dark-theme .popup-book-close-icon{
-  fill: var( --main-white-color);
+  stroke: var( --main-white-color);
 }
 
 .js-dark-theme .popup-book-btn{
