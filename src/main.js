@@ -4,7 +4,6 @@ import { Notify } from 'notiflix';
 import { root } from './js/root';
 
 import { homePage } from './js/root';
-// import { loadMoreCategories } from './js/intersectionObserverHome';
 import { seeMoreBtnClickHandler } from './js/seeMoreBtn';
 //----------Book categories------
 import { getCategoriesArray } from './js/categories-book/getCategoriesArray';
@@ -64,26 +63,6 @@ getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
     }
   });
 
-
-// const observer = new IntersectionObserver(onIntersection, { threshold: 0.5 });
-// async function onIntersection(entries) {
-//   let categoriesRendered = 3;
-//   if (entries[0].isIntersecting) {
-//     if (categoriesRendered <= homePage.categories.length){
-//         return Notify.warning(
-//           "We're sorry, but you've reached the end of search results."
-//         );
-//       }
-//     observer.unobserve(homePage.lastCategory);
-//     try {
-//       getTopBooks(homePage.TOP_BOOKS, numCardsToRender);
-//       observer.observe(homePage.lastCategory);
-//       categoriesRendered += 3;
-//     } catch (error) {
-//       Notify.failure(error.message);
-//     }
-//   }
-// }
 
 
 // _________________________Auth__________________________
