@@ -55,11 +55,11 @@ export async function createShopingListMarkup() {
 
     const markup = arrData.map(({ _id, author, book_image, description, title }) => {
         return `<button class="popup-book-close-btn js-popup-close" data_id=${_id} type="button">
-      <svg class="popup-book-close-icon js-popup-close" width="24" height="24">
-        <use class="js-popup-close" href="./img/sprite.svg#icon-shopping"></use>
-      </svg>
-    </button>
-    <div class="popup-book-wrapper">
+        <svg class="popup-book-close-icon js-popup-close" width="24" height="24">
+          <use class="js-popup-close" href="./img/sprite.svg#icon-trach"></use>
+        </svg>
+      </button>
+      <div class="popup-book-wrapper">
       <img class="popup-book-cover" src="${book_image}"" alt="Book's cover. ${title}" />
       <div class="popup-book-inner">
         <h2 class="popup-book-title">${title}</h2>
