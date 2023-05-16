@@ -30,9 +30,9 @@
     <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=" />
     
 
-    <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/index-006533e1.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-REACTIVE_DEVS/assets/footer-a027e587.js">
-    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/footer-34389d3f.css">
+    <script type="module" crossorigin src="/project-REACTIVE_DEVS/assets/index-13b21d16.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-REACTIVE_DEVS/assets/footer-fce8c843.js">
+    <link rel="stylesheet" href="/project-REACTIVE_DEVS/assets/footer-938515f0.css">
   </head>
 
   <body class="page">
@@ -84,13 +84,11 @@
           <a href="./index.html" class="header__home current">HOME</a>
         </li>
         <li class="nav-item">
-          <a href="./shopping_list.html" class="header__shopping_list"
-            >SHOPPING LIST
+          <a href="./shopping_list.html" class="header__shopping_list">SHOPPING LIST
             <span class="cart__img">
               <svg class="header__shopping_icon">
                 <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-shopping"></use>
-              </svg> </span
-          ></a>
+              </svg> </span></a>
         </li>
       </ul>
     </nav>
@@ -120,8 +118,7 @@
           </svg>
         </button>
         <button class="dropdown__button" id="logOutButton">
-          <span class="logout_text">Log out</span
-          ><span class="logout_icon">
+          <span class="logout_text">Log out</span><span class="logout_icon">
             <svg class="header__logout_icon">
               <use xlink:href="/project-REACTIVE_DEVS/assets/sprite-3462b723.svg#icon-arrow-right"></use>
             </svg>
@@ -140,35 +137,38 @@
   <div class="backdrop is-hidden " data-modal id="backdrop_hide_show">
     <div class="modal container-registration">
       <form action="submit" class="sign_up_form sign_in_form">
-      <button class="close-modal" id="closeModalButton">Close</button>
-      <div class="position-form">
-        <form action="submit" class="sign_form sign_up_form">
-          <div class="uni-form">
-            <div class="position-name">
-              <input type="text" name="name" id="sign_up_name" placeholder="name" required>
+        <button class="close-modal" id="closeModalButton">Close</button>
+        <div class="position-form">
+          <form action="submit" class="sign_form sign_up_form">
+            <div class="uni-form">
+              <div class="position-name">
+                <input type="text" name="name" id="sign_up_name" placeholder="name" required>
+              </div>
             </div>
+        </div>
+        <div class="uni-form">
+          <div class="position-name">
+            <input type="email" name="email" id="sign_up_email" placeholder="email" required>
           </div>
-      </div>
-      <div class="uni-form">
-        <div class="position-name">
-          <input type="email" name="email" id="sign_up_email" placeholder="email" required>
         </div>
-      </div>
-      <div class="uni-form">
-        <div class="position-name">
-          <input type="password" name="password" id="sign_up_password" placeholder="password" required>
+        <div class="uni-form">
+          <div class="position-name">
+            <input type="password" name="password" id="sign_up_password" placeholder="password" required>
+          </div>
         </div>
-      </div>
-      <div class="pos-button">
-        <button class="button-registraition" type="button">SIGN UP</button>
-      </div>
-      <div class="link-change">
-        <a class="first-link" href="#">SIGN UP</a>
-        <a class="last-link" href="#">SIGN IN</a>
-      </div>
+        <div class="pos-button">
+          <button class="button-registraition" type="button">SIGN UP</button>
+        </div>
+        <div class="pos-button">
+          <button class="button-login" type="button">SIGN IN</button>
+        </div>
+        <div class="link-change">
+          <a class="first-link" href="#">SIGN UP</a>
+          <a class="last-link" href="#">SIGN IN</a>
+        </div>
       </form>
     </div>
- 
+
   </div>
 </div>
 <div class="container">
@@ -206,7 +206,6 @@
     </div>
   </div>
 </div>
-
 
     
 
