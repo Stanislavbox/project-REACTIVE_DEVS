@@ -252,6 +252,11 @@
   stroke: var(--main-black-color);
 }
 
+.header__burger_icon:hover,
+.header__burger_icon:focus{
+  stroke: var(--brand-color);
+}
+
 .is-hidden {
   display: none;
 }
@@ -352,9 +357,13 @@
 .header__burgercloser__icon{
   width: 20px;
   height: 20px;
-  stroke: black;
+  stroke: var(--main-black-color);
 }
 .header_block_burger{
-  background-color: #fff;
+  background-color: var(--main-white-color);
 }
 /* ___________________________________ */
+
+.header__burgercloser__icon:hover{
+  stroke: var( --brand-color);
+}

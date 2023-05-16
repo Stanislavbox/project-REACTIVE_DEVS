@@ -31,6 +31,18 @@ body.js-dark-theme{
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+.js-dark-theme .header__burgercloser__icon{
+  stroke: var(--main-white-color);
+}
+.js-dark-theme .close-modal-burger{
+  background-color: var(--main-black-color);
+}
+/* ___________________________________ */
+
+.js-dark-theme .header__burgercloser__icon:hover{
+  stroke: var( --brand-color);
+}
+
 .js-dark-theme .header__burger_icon{
   stroke: var(--main-white-color);
 }
@@ -102,6 +114,12 @@ background-color: var(--dark-theme-color);
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* .js-dark-theme .book{
-  --color: var(--brand-color);
-} */
+/*? SHOPPING LIST */
+
+.js-dark-theme .shopping-list-title{
+  color: var(--main-white-color);
+}
+
+.js-dark-theme .shopping-list-empty-message{
+  color: rgba(255, 255, 255, 0.6)
+}
