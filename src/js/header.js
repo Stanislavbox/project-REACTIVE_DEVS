@@ -43,7 +43,8 @@ const signUpPassword = document.getElementById('sign_up_password');
 const signInPassword = document.getElementById('sign_in_password');
 const userBlock = document.querySelector('.header__username');
 const userBoardName = document.querySelector('.userboard_dropdown');
-const burgerUserBlock = document.querySelector('.burger__userinfo');
+const burgerUserBlock = document.querySelector('.burger__username');
+const burgerUserInfo = document.querySelector('.burger_userinfo');
 export function registration(event) {
   event.preventDefault();
   const email = signUpEmail.value;
@@ -62,6 +63,7 @@ export function registration(event) {
       localStorage.setItem('user', JSON.stringify(user));
       userBoardBtnSignUp.classList.toggle('is-hidden');
       userBoardName.classList.toggle('is-hidden');
+      burgerUserInfo.classList.toggle('is-hidden');
       backdrop_hide_show.classList.toggle('is-hidden');
       location.reload();
     })
@@ -93,6 +95,7 @@ export function logIn(event) {
       burgerUserBlock.textContent = user.email;
       userBoardBtnSignUp.classList.toggle('is-hidden');
       userBoardName.classList.toggle('is-hidden');
+      burgerUserInfo.classList.toggle('is-hidden');
       location.reload();
     })
     .catch(error => {
@@ -113,8 +116,9 @@ export function onLoad() {
     if (storedUser) {
       const user = JSON.parse(storedUser);
       userBlock.textContent = user.email;
-      burgerUserBlock.textContent = user.email;
+      // burgerUserBlock.textContent = user.email;
       userBoardName.classList.toggle('is-hidden');
+      burgerUserInfo.classList.toggle('is-hidden');
     } else {
       userBoardBtnSignUp.classList.toggle('is-hidden');
     }
@@ -164,7 +168,6 @@ export function openBurgerMenu() {
     const user = JSON.parse(storedUser);
     userBlock.textContent = user.email;
     burgerUserBlock.textContent = user.email;
-        burgerUserBlock.classList.toggle('is-hidden');
   } else {
     burgerSignUpButton.classList.toggle('is-hidden')
 
@@ -178,11 +181,8 @@ export function closeBurgerMenu() {
   modal_burger.style.visibility = 'hidden';
   modal_burger.style.opacity = 0;
     const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-
-      burgerUserBlock.classList.toggle('is-hidden');
-    } else {
-      burgerSignUpButton.classList.toggle('is-hidden');
+  if (!storedUser) {
+     burgerSignUpButton.classList.toggle('is-hidden'); 
     }
 }
 
