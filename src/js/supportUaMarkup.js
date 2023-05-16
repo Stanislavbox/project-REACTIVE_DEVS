@@ -47,7 +47,7 @@ $(document).ready(function () {
     draggable: false,
     responsive: [
       {
-        breakpoint: 760,
+        breakpoint: 768,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
