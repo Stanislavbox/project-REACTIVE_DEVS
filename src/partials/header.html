@@ -69,7 +69,11 @@
   <div class="backdrop is-hidden " data-modal id="backdrop_hide_show">
     <div class="modal container-registration">
       <form action="submit" class="sign_up_form sign_in_form">
-        <button class="close-modal" id="closeModalButton">Close</button>
+        <button class="close-modal" id="closeModalButton">
+          <svg class="close-form ">
+            <use href="./img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
         <div class="position-form">
           <form action="submit" class="sign_form sign_up_form">
             <!-- <div class="uni-form">
@@ -81,11 +85,17 @@
         <div class="uni-form">
           <div class="position-name">
             <input type="email" name="email" id="sign_up_email" placeholder="email" required>
+            <svg class="registration-email">
+              <use href="./img/sprite.svg#icon-email"></use>
+            </svg>
           </div>
         </div>
-        <div class="uni-form">
+        <div class="uni-form-pass">
           <div class="position-name">
             <input type="password" name="password" id="sign_up_password" placeholder="password" required>
+            <svg class="registration-lock">
+              <use href="./img/sprite.svg#icon-lock"></use>
+            </svg>
           </div>
         </div>
         <div class="pos-button">
@@ -151,8 +161,8 @@
             <p class="burger__username">USERNAME</p>
           </div>
           <div class="burger_nav">
-            <a class="burger__home_link current" href="">HOME</a>
-            <a class="burger__sl_link" href="">SHOPPING LIST</a>
+            <a class="burger__home_link current" href="./index.html">HOME</a>
+            <a class="burger__sl_link" href="./shopping_list.html">SHOPPING LIST</a>
           </div>
 
           <button class="burger__logout" id="logOutButtonBurger">

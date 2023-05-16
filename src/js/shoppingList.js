@@ -31,13 +31,17 @@ const refs = {
 // Управляет рендером стартовым
 export async function createShopingListMarkup() {
     
-    let arrOfBooksId = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
-    if ((!JSON.parse(arrOfBooksId).length) > 0 || !arrOfBooksId) {        
-        // базовая пустая разметка
-      spinnerFoo()
-       return refs.shopListEmpty.insertAdjacentHTML('beforeend', refs.startMarkup)
-    }
+  let arrOfBooksId = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
 
+  if (!arrOfBooksId) {
+    spinnerFoo()
+    return refs.shopListEmpty.insertAdjacentHTML('beforeend', refs.startMarkup)
+  } else if (!JSON.parse(arrOfBooksId).length) {
+    spinnerFoo()
+    return refs.shopListEmpty.insertAdjacentHTML('beforeend', refs.startMarkup)
+  }
+ 
+    
     refs.shopListEmpty.style.display = "none";
     arrOfBooksId = JSON.parse(arrOfBooksId);    
 
@@ -53,40 +57,38 @@ export async function createShopingListMarkup() {
         arrData.push(resp);
     }   
 
-    const markup = arrData.map(({ _id, author, book_image, description, title }) => {
-        return `<button class="popup-book-close-btn js-popup-close" data_id=${_id} type="button">
-        <svg class="popup-book-close-icon js-popup-close" width="24" height="24">
-          <use class="js-popup-close" href="./img/sprite.svg#icon-trach"></use>
-        </svg>
-      </button>
-      <div class="popup-book-wrapper">
-      <img class="popup-book-cover" src="${book_image}"" alt="Book's cover. ${title}" />
-      <div class="popup-book-inner">
-        <h2 class="popup-book-title">${title}</h2>
-        <h3 class="popup-book-author">${author}</h3>
-        <p class="popup-book-description">${description}</p>
-        <ul class="list popup-book-shops-list">
-          <li class="popup-book-shops-item">
-            <a
-              href=""
-              class="popup-book-shops-link popup-shop-icon-rectungular popup-shop-amazon"
-            ></a>
-          </li>
-          <li class="popup-book-shops-item">
-            <a
-              href=""
-              class="popup-book-shops-link popup-shop-icon-sqr popup-shop-apple"
-            ></a>
-          </li>
-          <li class="popup-book-shops-item">
-            <a
-              href=""
-              class="popup-book-shops-link popup-shop-icon-sqr popup-shop-bs"
-            ></a>
-          </li>
-        </ul>
-      </div>
-    </div>`
+    const markup = arrData.map(({ _id, author, book_image, description, title, list_name }) => {
+        return `<li class="sh-list-item">               
+                    <img class="sh-list-book-img" src="${book_image}"" alt="Book's cover. ${title}" />
+                    <div class="sh-list-item-main-wrapper">
+                       <div class="sh-list-item-top-wrapper">
+                         <div class="sh-list-titles">
+                           <h2 class="sh-list-book-title">${title}</h2>
+                           <h3 class="sh-list-book-category">${list_name}</h3>
+                         </div>                      
+                       <button class="sh-list-btn" data_id="${_id}" type="button">
+                         <svg class="sh-list-icon" width="16" height="16">
+                           <use href="./img/sprite.svg#icon-trash"></use>
+                         </svg>
+                       </button>
+                    </div>                       
+                    <p class="sh-list-book-descr">${description}</p>
+                    <div class="sh-list-item-bottom-wrapper">
+                       <h3 class="sh-list-book-author">${author}</h3>
+                       <ul class="sh-list-shops-list">
+                         <li class="sh-list-shops-list-item">
+                           <a href="" class="sh-list-shops-link sh-list-shops-amazon"></a>
+                         </li>
+                         <li class="sh-list-shops-list-item">
+                            <a href="" class="sh-list-shops-link sh-list-shops-apple"></a>
+                         </li>
+                         <li class="sh-list-shops-list-item">
+                           <a href="" class="sh-list-shops-link sh-list-shops-bs"></a>
+                         </li>
+                       </ul>
+                    </div>                   
+                  </div>
+                </li>`
     }).join('');
     spinnerFoo()
     refs.shopList.insertAdjacentHTML("beforeend", markup);

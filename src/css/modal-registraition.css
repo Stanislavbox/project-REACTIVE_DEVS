@@ -2,12 +2,14 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    background-image: radial-gradient(circle at 0 0, rgba(204, 236, 231, .4) 10%, #4f2ee8 50%);
     background-color: #4F2EE8;
     top: 0;
     left: 0;
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(3px);
+    overflow: scroll;
     z-index: 99999;
 }
 
@@ -25,8 +27,7 @@
 
     }
 }
-
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .container-registration {
         width: 579px;
         margin-left: auto;
@@ -59,16 +60,19 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
-
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form {
     display: flex;
     flex-direction: column;
-    
-}
 
+}
+.uni-form-pass {
+    display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+}
 .uni-form {
     display: flex;
     flex-direction: column;
@@ -76,7 +80,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .margin {
+    .uni-form-pass {
         margin-bottom: 60px;
     }
 }
@@ -91,11 +95,13 @@
 @media screen and (min-width: 768px) {
     input {
         width: 499px;
+        font-size: 18px;
     }
 }
 
-.uni-form input {
-    padding: 16px 0px 16px 24px;
+.uni-form input,
+.uni-form-pass input {
+    padding: 16px 65px 16px 24px;
 }
 
 @media screen and (min-width: 768px) {
@@ -114,7 +120,7 @@ input:hover {
 
 input {
     border: 2px solid #111111;
-    border-radius: 18px;
+    border-radius: 40px;
 }
 
 
@@ -148,16 +154,7 @@ input::placeholder {
 
 }
 
-@media screen and (min-width: 768px) {
-    .button-registraition {
-        width: 545px;
-        border-radius: 40px;
-    }
-    .button-login{
-        width: 545px;
-        border-radius: 40px;
-    }
-}
+
 
 .button-registraition {
     background-color: black;
@@ -168,20 +165,35 @@ input::placeholder {
     line-height: 24px;
     color: #F3F3F3;
     white-space: nowrap;
-    padding: 16px 60px;
-    border-radius: 18px;
+    padding: 16px 85px;
+    border-radius: 40px;
 }
-.button-login{
-        background-color: black;
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 24px;
-            color: #F3F3F3;
-            white-space: nowrap;
-            padding: 16px 60px;
-            border-radius: 18px;
+@media screen and (min-width: 768px) {
+    .button-registraition {
+        width: 545px;
+        border-radius: 40px;
+    }
+
+    .button-login {
+        width: 545px;
+        border-radius: 40px;
+    }
+}
+.button-login:hover,
+.button-registraition:hover {
+    background-color:  #4F2EE8;
+}
+.button-login {
+    background-color: black;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #F3F3F3;
+    white-space: nowrap;
+    padding: 16px 85px;
+    border-radius: 40px;
 }
 
 .pos-button {
@@ -251,9 +263,82 @@ input::placeholder {
 
     }
 }
+
 .link_underline {
     letter-spacing: -0.01em;
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #4F2EE8;
+}
+
+.close-form {
+    stroke: #111111;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    top: 5px;
+    right: 5px;
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    .close-form {
+        top: 31px;
+        right: 31px;
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.registration-email {
+    width: 20px;
+    height: 20px;
+    stroke: #111111;
+    position: absolute;
+    top: 46, 3%;
+    transform: translateX(-50%);
+    right: 27px;
+    fill: white;
+}
+
+@media screen and (min-width: 768px) {
+    .registration-email {
+        width: 25px;
+        height: 25px;
+        right: 43px;
+    }
+}
+
+.registration-lock {
+    width: 20px;
+    height: 20px;
+    stroke: #111111;
+    position: absolute;
+    top: 46, 1%;
+    transform: translateX(-50%);
+    right: 27px;
+    fill: white;
+}
+
+@media screen and (min-width: 768px) {
+    .registration-lock {
+        width: 25px;
+        height: 25px;
+        right: 43px;
+    }
+}
+.button-registraition,
+.button-login {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button-registraition:hover,
+.button-login:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-registraition:active,
+.button-login:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
