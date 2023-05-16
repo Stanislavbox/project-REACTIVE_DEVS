@@ -20,7 +20,7 @@ import { activeCatBtnSwitch } from './js/categories-book/activeCategoryBtnSwitch
 
 import { supportMarkup } from './js/supportUaMarkup';
 
-import { getTopBooks } from './js/homePage';
+import { getTopBooks, /*loadMore*/ } from './js/homePage';
 
 // *** Support Ukraine Marup *** //
 supportMarkup();
@@ -46,10 +46,19 @@ if (window.innerWidth < 767) {
   numCardsToRender = 5;
 }
 
+
+// let observer = new IntersectionObserver(loadMore, options);
+// var options = {
+//   root: null,
+//   rootMargin: '200px',
+//   threshold: 1.0
+// }
+
 getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
   .then(resp => {
     
     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
+    // observer.observe(homePage.target)
     spinnerFoo();
   })
   .catch(error =>
@@ -96,3 +105,51 @@ import {
   addBookListListeners,
   removeBookListListeners,
 } from './js/popup';
+
+
+// window.addEventListener('resize', onScreen)
+
+// function onScreen(){
+//   let numCardsToRender = 1;
+
+// if (window.innerWidth < 767) {
+//   numCardsToRender = 1;
+//   getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
+//   .then(resp => {
+    
+//     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
+//     // observer.observe(homePage.target)
+//     spinnerFoo();
+//   })
+//   .catch(error =>
+//     Notify.failure('Sorry, there is nothing here. Try again later.')
+//   )
+//   .finally(() => addBookListListeners());
+// } else if (window.innerWidth < 1439) {
+//   numCardsToRender = 3;
+//   getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
+//   .then(resp => {
+    
+//     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
+//     // observer.observe(homePage.target)
+//     spinnerFoo();
+//   })
+//   .catch(error =>
+//     Notify.failure('Sorry, there is nothing here. Try again later.')
+//   )
+//   .finally(() => addBookListListeners());
+// } else {
+//   numCardsToRender = 5;
+//   getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
+//   .then(resp => {
+    
+//     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
+//     // observer.observe(homePage.target)
+//     spinnerFoo();
+//   })
+//   .catch(error =>
+//     Notify.failure('Sorry, there is nothing here. Try again later.')
+//   )
+//   .finally(() => addBookListListeners());
+// }
+// }
