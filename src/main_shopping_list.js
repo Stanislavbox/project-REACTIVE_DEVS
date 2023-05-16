@@ -15,8 +15,10 @@ const formSignIn = document.querySelector('.button-login');
 formSignUp.addEventListener('click', registration);
 formSignIn.addEventListener('click', logIn);
 
+const logOutBurgBtn = document.getElementById('logOutButtonBurger');
 const logOutButton = document.getElementById('logOutButton');
 logOutButton.addEventListener('click', logOutFunc);
+logOutBurgBtn.addEventListener('click', logOutFunc);
 
 const userBoardBtnSignUp = document.querySelector('.user_board_signup');
 userBoardBtnSignUp.addEventListener('click', openForm);

@@ -142,11 +142,26 @@
             <use xlink:href="./img/sprite.svg#icon-arrow-right"></use>
           </svg>
         </button>
+
         <div class="burger_userinfo is-hidden">
-          <svg class="header__user_img">
-            <use xlink:href="./img/sprite.svg#icon-user"></use>
-          </svg>
-          <p class="burger__username ">USERNAME</p>
+          <div class="burger_usercard">
+            <svg class="header__user_img">
+              <use xlink:href="./img/sprite.svg#icon-user"></use>
+            </svg>
+            <p class="burger__username">USERNAME</p>
+          </div>
+          <div class="burger_nav">
+            <a class="burger__home_link current" href="">HOME</a>
+            <a class="burger__sl_link" href="">SHOPPING LIST</a>
+          </div>
+
+          <button class="burger__logout" id="logOutButtonBurger">
+            <span class="logout_text">Log out</span><span class="logout_icon">
+              <svg class="header__logout_icon">
+                <use xlink:href="./img/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </span>
+          </button>
         </div>
       </div>
     </div>

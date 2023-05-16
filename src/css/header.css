@@ -35,9 +35,7 @@
   font-family: 'DM Sans';
 }
 
-.current {
-  background-color: #EAC645;
-}
+
 
 .header__shopping_list {
   display: flex;
@@ -100,13 +98,15 @@
   opacity: 1;
   transition: .3s;
 }
-.header__logout_icon{
+
+.header__logout_icon {
   width: 14px;
   height: 12px;
   stroke: #EAC645;
   margin-left: auto;
   margin-right: 0;
 }
+
 /* ____________________________ */
 
 
@@ -146,17 +146,18 @@
   background-color: #4F2EE8;
   color: #fff;
 }
-.burger_user_board_signup{
-    display: flex;
-      width: 184px;
-      height: 48px;
-      border-radius: 20px;
-      border: none;
-      align-items: center;
-      padding: 10px;
-      margin-right: 24px;
-      background-color: #4F2EE8;
-      color: #fff;
+
+.burger_user_board_signup {
+  display: flex;
+  width: 184px;
+  height: 48px;
+  border-radius: 20px;
+  border: none;
+  align-items: center;
+  padding: 10px;
+  margin-right: 24px;
+  background-color: #4F2EE8;
+  color: #fff;
 }
 
 .header__signup_img {
@@ -248,7 +249,7 @@
   transition: .3s;
 }
 
-.header__burger_menu{
+.header__burger_menu {
   width: 32px;
   height: 32px;
   padding: 0;
@@ -257,14 +258,14 @@
   background-color: transparent;
 }
 
-.header__burger_icon{
+.header__burger_icon {
   width: 32px;
   height: 32px;
   stroke: var(--main-black-color);
 }
 
 .header__burger_icon:hover,
-.header__burger_icon:focus{
+.header__burger_icon:focus {
   stroke: var(--brand-color);
 }
 
@@ -273,25 +274,28 @@
 }
 
 @media screen and (max-width: 767px) {
- .header__userauthbuttons{
-  display: none;
- }
- .header__home{
-  display: none;
- }
- .header__shopping_list {
-  display: none;
- }
+  .header__userauthbuttons {
+    display: none;
+  }
+
+  .header__home {
+    display: none;
+  }
+
+  .header__shopping_list {
+    display: none;
+  }
 
 }
+
 /* @media screen and (max-width:1280px){
   .header__home {
       margin-left: 24px;
     }
 } */
 
-@media screen and (min-width: 768px){
-  .header__burger_menu{
+@media screen and (min-width: 768px) {
+  .header__burger_menu {
     display: none;
   }
 }
@@ -327,13 +331,14 @@
   border: none;
   cursor: pointer;
 }
+
 /* __Burger__ */
 
 .modal_burger {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   max-width: 375px;
@@ -347,6 +352,10 @@
   transition: visibility 0s, opacity 0.3s;
 }
 
+.burger_userinfo {
+  height: 100vh;
+}
+
 .modal_burger_content {
   position: absolute;
   top: 0;
@@ -356,51 +365,94 @@
 
 
 
-.close-modal-burger{
-    width: 32px;
-      height: 32px;
-      padding: 0;
-      margin-right: 24px;
-      border: none;
-      background-color: #fff;
+.close-modal-burger {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin-right: 24px;
+  border: none;
+  background-color: #fff;
 }
 
-.header__burgercloser__icon{
+.header__burgercloser__icon {
   width: 20px;
   height: 20px;
   stroke: var(--main-black-color);
 }
-.header_block_burger{
+
+.header_block_burger {
   background-color: var(--main-white-color);
 }
 
-.burger__signup_button{
- padding-left: 20px;
- padding-right: 20px;
- padding-top: 40px;
-
+.burger__signup_button {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
 }
 
-.burger_userinfo {
-    padding: 6px;
-      display: flex;
-      align-items: center;
-      background-color: #4F2EE8;
-      text-decoration: none;
-      border-radius: 25px;
-      color: #fff;
-      width: fit-content;
-      border: none;
+.burger_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
 }
-.burger__username{
+
+.burger__logout {
+  height: 48px;
+  min-width: 120px;
+  background-color: #fff;
+  border: 2px solid #EAC645;
+  border-radius: 20px;
+  border: 1px solid black;
+  margin-top: 30vh;
+  margin-bottom: 10vh;
+}
+
+.burger__home_link {
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: 'DM Sans';
+  color: white;
+  font-size: 15px;
+}
+
+.burger_usercard {
+  padding: 6px;
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  border-radius: 25px;
+  color: #fff;
+  width: fit-content;
+  border: none;
+}
+
+.burger__sl_link {
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: 'DM Sans';
+  color: white;
+  font-size: 15px;
+}
+
+.burger__username {
   margin-left: 4px;
   margin-right: 4px;
+  font-size: 19px;
 }
+
 /* ___________________________________ */
 
 /* ___________________________________ */
 
-.header__burgercloser__icon:hover{
-  stroke: var( --brand-color);
+.header__burgercloser__icon:hover {
+  stroke: var(--brand-color);
 }
 
+.current {
+  background-color: #EAC645;
+  color: black;
+}
