@@ -5,7 +5,6 @@ import {
   signInWithEmailAndPassword,
 } from 'firebase/auth';
 import { getDatabase, ref, set } from 'firebase/database';
-import { spinnerFoo } from './spinner';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBcc1DA6ZvhYH6HNL0bBHQ0dDKoHx7bVFo',
@@ -36,15 +35,14 @@ function writeUserData() {
 
 // __________________________________
 
-const signUpName = document.getElementById('sign_up_name');
+// const signUpName = document.getElementById('sign_up_name');
 const signUpEmail = document.getElementById('sign_up_email');
-const signInEmail = document.getElementById('sign_in_email');
 const signUpPassword = document.getElementById('sign_up_password');
-const signInPassword = document.getElementById('sign_in_password');
 const userBlock = document.querySelector('.header__username');
 const userBoardName = document.querySelector('.userboard_dropdown');
 const burgerUserBlock = document.querySelector('.burger__username');
 const burgerUserInfo = document.querySelector('.burger_userinfo');
+
 export function registration(event) {
   event.preventDefault();
   const email = signUpEmail.value;
@@ -56,7 +54,6 @@ export function registration(event) {
   }
   createUserWithEmailAndPassword(auth, email, password,)
     .then(userCredential => {
-      // Signed in
       const user = userCredential.user;
       userBlock.textContent = user.email;
       burgerUserBlock.textContent = user.email;
@@ -87,10 +84,8 @@ export function logIn(event) {
   }
   signInWithEmailAndPassword(auth, email, password)
     .then(userCredential => {
-      // Signed in
       const user = userCredential.user;
       localStorage.setItem('user', JSON.stringify(user));
-      // ...
       userBlock.textContent = user.email;
       burgerUserBlock.textContent = user.email;
       userBoardBtnSignUp.classList.toggle('is-hidden');
@@ -154,15 +149,14 @@ export function closeForm() {
   modal_form.style.opacity = 0;
   backdrop_hide_show.classList.toggle('is-hidden');
 }
-// _________________________burger________________
 
+// _________________________burger________________
 const burgerSignUpButton = document.querySelector('.burger_user_board_signup');
 const burgerBtn = document.querySelector('.header__burger_menu');
 burgerBtn.addEventListener('click', openBurgerMenu);
 export function openBurgerMenu() {
   modal_burger.style.visibility = 'visible';
   modal_burger.style.opacity = 1;
-
   const storedUser = localStorage.getItem('user');
   if (storedUser) {
     const user = JSON.parse(storedUser);
@@ -170,7 +164,6 @@ export function openBurgerMenu() {
     burgerUserBlock.textContent = user.email;
   } else {
     burgerSignUpButton.classList.toggle('is-hidden')
-
   }
 }
 
@@ -188,11 +181,7 @@ export function closeBurgerMenu() {
 
 // __________________________________________
 
-
-
 // _____________sign_up / sign_in____________
-
-
 const signUplink = document.querySelector('.first-link');
 const signInlink = document.querySelector('.last-link');
 const formSignUp = document.querySelector('.button-registraition');
