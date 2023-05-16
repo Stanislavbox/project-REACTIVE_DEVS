@@ -60,6 +60,7 @@ export function registration(event) {
       localStorage.setItem('user', JSON.stringify(user));
       userBoardBtnSignUp.classList.toggle('is-hidden');
       userBoardName.classList.toggle('is-hidden');
+      backdrop_hide_show.classList.toggle('is-hidden');
       location.reload();
     })
     .catch(error => {
@@ -134,14 +135,16 @@ export function logOutFunc() {
 const userBoardBtnSignUp = document.querySelector('.user_board_signup');
 export function openForm(event) {
     modal_form.style.visibility = 'visible';
-    modal_form.style.opacity = 1;
+  modal_form.style.opacity = 1;
+  backdrop_hide_show.classList.toggle('is-hidden');
 }
 
 const closeFormBtn = document.querySelector('.close-modal')
 closeFormBtn.addEventListener('click', closeForm);
 export function closeForm() {
     modal_form.style.visibility = 'hidden';
-    modal_form.style.opacity = 0;
+  modal_form.style.opacity = 0;
+  backdrop_hide_show.classList.toggle('is-hidden');
 }
 
 const burgerBtn = document.querySelector('.header__burger_menu');
