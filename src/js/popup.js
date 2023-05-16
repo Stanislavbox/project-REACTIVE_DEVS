@@ -18,19 +18,18 @@ const refs = {
   popUpNotice: document.querySelector(".popup-book-notice"),
 }
 
-const LOCALSTORAGE_SHOPPING_LIST_KEY = "booksShopingList";
+export const LOCALSTORAGE_SHOPPING_LIST_KEY = "booksShopingList";
 
 
 
 
 
-async function getBooksById(id) {
+export async function getBooksById(id) {
   try {
     const response = await instanceAxios.get(`${id}`);
-    return (response.data)
-
+    return (response.data);
   } catch (error) {
-    console.log(error)
+    Notify.failure(error.message);
   }
 }
 

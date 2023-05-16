@@ -1,3 +1,79 @@
+import { Notify } from "notiflix";
+import storage from './storage';
+import { LOCALSTORAGE_SHOPPING_LIST_KEY, getBooksById, removeLocalStorageBook } from "./popup";
+
+
+const refs = {
+    shopListEmpty: document.querySelector(".shopping-list-empty"),
+    shopListWrapper: document.querySelector(".shopping-list-card"),
+    shopList: document.querySelector("#booksShopingList"),
+}
+
+// Управляет рендером стартовым
+export async function createShopingListMarkup() {
+    
+    let arrOfBooksId = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
+
+    if (!arrOfBooksId && !JSON.parse(arrOfBooksId).length) {        
+        // базовая пустая разметка
+        return
+    }
+
+    refs.shopListEmpty.style.display = "none";
+    arrOfBooksId = JSON.parse(arrOfBooksId);    
+
+    try {
+        
+    } catch (error) {
+        Notify.failure(error.message);
+    }
+    let arrData = [];
+
+    for (let i = 0; i < arrOfBooksId.length; i +=1) {
+        const resp = await getBooksById(arrOfBooksId[i]);
+        arrData.push(resp);
+    }   
+
+    const markup = arrData.map(({ _id, author, book_image, description, title }) => {
+        return `<button class="popup-book-close-btn js-popup-close" data_id=${_id} type="button">
+      <svg class="popup-book-close-icon js-popup-close" width="24" height="24">
+        <use class="js-popup-close" href="./img/sprite.svg#icon-shopping"></use>
+      </svg>
+    </button>
+    <div class="popup-book-wrapper">
+      <img class="popup-book-cover" src="${book_image}"" alt="Book's cover. ${title}" />
+      <div class="popup-book-inner">
+        <h2 class="popup-book-title">${title}"</h2>
+        <h3 class="popup-book-author">${author}"</h3>
+        <p class="popup-book-description">${description}"</p>
+        <ul class="list popup-book-shops-list">
+          <li class="popup-book-shops-item">
+            <a
+              href=""
+              class="popup-book-shops-link popup-shop-icon-rectungular popup-shop-amazon"
+            ></a>
+          </li>
+          <li class="popup-book-shops-item">
+            <a
+              href=""
+              class="popup-book-shops-link popup-shop-icon-sqr popup-shop-apple"
+            ></a>
+          </li>
+          <li class="popup-book-shops-item">
+            <a
+              href=""
+              class="popup-book-shops-link popup-shop-icon-sqr popup-shop-bs"
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>`
+    }).join('');    
+    refs.shopList.insertAdjacentHTML("beforeend", markup);
+}
+
+
+
 
 // const easyPagination = ({
 //     items,
@@ -251,3 +327,5 @@
 //     );
 //   }, '');
 // }
+
+
