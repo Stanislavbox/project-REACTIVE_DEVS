@@ -32,7 +32,6 @@ const refs = {
 export async function createShopingListMarkup() {
     
     let arrOfBooksId = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
-  console.log((JSON.parse(arrOfBooksId).length) > 0)
     if ((!JSON.parse(arrOfBooksId).length) > 0 || !arrOfBooksId) {        
         // базовая пустая разметка
       spinnerFoo()
@@ -63,9 +62,9 @@ export async function createShopingListMarkup() {
     <div class="popup-book-wrapper">
       <img class="popup-book-cover" src="${book_image}"" alt="Book's cover. ${title}" />
       <div class="popup-book-inner">
-        <h2 class="popup-book-title">${title}"</h2>
-        <h3 class="popup-book-author">${author}"</h3>
-        <p class="popup-book-description">${description}"</p>
+        <h2 class="popup-book-title">${title}</h2>
+        <h3 class="popup-book-author">${author}</h3>
+        <p class="popup-book-description">${description}</p>
         <ul class="list popup-book-shops-list">
           <li class="popup-book-shops-item">
             <a
