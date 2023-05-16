@@ -150,6 +150,10 @@ input::placeholder {
         width: 545px;
         border-radius: 40px;
     }
+    .button-login{
+        width: 545px;
+        border-radius: 40px;
+    }
 }
 
 .button-registraition {
@@ -163,6 +167,18 @@ input::placeholder {
     white-space: nowrap;
     padding: 16px 60px;
     border-radius: 18px;
+}
+.button-login{
+        background-color: black;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            color: #F3F3F3;
+            white-space: nowrap;
+            padding: 16px 60px;
+            border-radius: 18px;
 }
 
 .pos-button {

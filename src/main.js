@@ -67,11 +67,11 @@ import { closeForm } from './js/header';
 
 onLoad();
 
-const formSignUp = document.querySelector('.sign_up_form');
-const formSignIn = document.querySelector('.sign_in_form');
+const formSignUp = document.querySelector('.button-registraition');
+const formSignIn = document.querySelector('.button-login');
 
-formSignUp.addEventListener('submit', registration);
-formSignIn.addEventListener('submit', logIn);
+formSignUp.addEventListener('click', registration);
+formSignIn.addEventListener('click', logIn);
 
 const logOutButton = document.getElementById('logOutButton');
 logOutButton.addEventListener('click', logOutFunc);
