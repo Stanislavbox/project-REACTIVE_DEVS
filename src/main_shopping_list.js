@@ -30,7 +30,10 @@ closeFormBtn.addEventListener('click', closeForm);
 import { supportMarkup } from './js/supportUaMarkup';
 supportMarkup();
 
-import { spinnerFoo } from './js/spinner'; //! Stas
+// import { spinnerFoo } from './js/spinner'; //! Stas
 import { switchTheme } from './js/switcher'; //! Stas
 
+
+import { createShopingListMarkup } from './js/shoppingList';
+createShopingListMarkup();
 import './js/footer';

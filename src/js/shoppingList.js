@@ -1,22 +1,42 @@
 import { Notify } from "notiflix";
 import storage from './storage';
 import { LOCALSTORAGE_SHOPPING_LIST_KEY, getBooksById, removeLocalStorageBook } from "./popup";
+import { spinnerFoo } from "./spinner";
 
 
 const refs = {
     shopListEmpty: document.querySelector(".shopping-list-empty"),
     shopListWrapper: document.querySelector(".shopping-list-card"),
     shopList: document.querySelector("#booksShopingList"),
+    startMarkup: `<p class="shopping-list-empty-message">
+    This page is empty, add some books and proceed to order.
+  </p>
+  <picture class="shopping-list-empty-img">
+    <source
+      srcset="./img/books@2x.png 1x, ./img/books@2x.png 2x"
+      media="(min-width:1440px)"
+    />
+    <source
+      srcset="./img/books@2x.png 1x, ./img/books@2x.png 2x"
+      media="(min-width:768px)"
+    />
+    <source
+      srcset="./img/books.png 1x, ./img/books.png 2x"
+      media="(max-width:767px)"
+    />
+    <img src="./images/books-mob-min.png" alt="books" />
+  </picture>`
 }
 
 // Управляет рендером стартовым
 export async function createShopingListMarkup() {
     
     let arrOfBooksId = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
-
-    if (!arrOfBooksId && !JSON.parse(arrOfBooksId).length) {        
+  console.log((JSON.parse(arrOfBooksId).length) > 0)
+    if ((!JSON.parse(arrOfBooksId).length) > 0 || !arrOfBooksId) {        
         // базовая пустая разметка
-        return
+      spinnerFoo()
+       return refs.shopListEmpty.insertAdjacentHTML('beforeend', refs.startMarkup)
     }
 
     refs.shopListEmpty.style.display = "none";
@@ -68,7 +88,8 @@ export async function createShopingListMarkup() {
         </ul>
       </div>
     </div>`
-    }).join('');    
+    }).join('');
+    spinnerFoo()
     refs.shopList.insertAdjacentHTML("beforeend", markup);
 }
 
