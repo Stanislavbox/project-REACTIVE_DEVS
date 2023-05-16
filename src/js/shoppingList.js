@@ -24,7 +24,7 @@ const refs = {
       srcset="./img/books.png 1x, ./img/books.png 2x"
       media="(max-width:767px)"
     />
-    <img src="./images/books-mob-min.png" alt="books" />
+    <img src="./img/books.png" alt="books" />
   </picture>`
 }
 
