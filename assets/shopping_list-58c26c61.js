@@ -3,18 +3,18 @@ import{h as u,L as g,s as r,i as k,n as b,j as y,o as L,p as v,d as f,l as B,e a
   </p>
   <picture class="shopping-list-empty-img">
     <source
-      srcset="../img/books@2x.png 1x, ../img/books@2x.png 2x"
+      srcset="src/img/books@2x.png 1x, src/img/books@2x.png 2x"
       media="(min-width:1440px)"
     />
     <source
-      srcset="../img/books@2x.png 1x, ../img/books@2x.png 2x"
+      srcset="src/img/books@2x.png 1x, src/img/books@2x.png 2x"
       media="(min-width:768px)"
     />
     <source
-      srcset="../img/books.png 1x, ../img/books.png 2x"
+      srcset="src/img/books.png 1x, src/img/books.png 2x"
       media="(max-width:767px)"
     />
-    <img src="../img/books.png" alt="books" />
+    <img src="src/img//books.png" alt="books" />
   </picture>`,arrBtnsID:[]};async function l(){let e=u.load(g);if(e){if(!JSON.parse(e).length)return r(),s.shopListEmpty.insertAdjacentHTML("beforeend",s.startMarkup)}else return r(),s.shopListEmpty.insertAdjacentHTML("beforeend",s.startMarkup);s.shopListEmpty.style.display="none",e=JSON.parse(e);try{let o=[];for(let t=0;t<e.length;t+=1){const i=await k(e[t]);o.push(i)}const p=o.map(({_id:t,author:i,book_image:h,description:d,title:a,list_name:m})=>`<li class="sh-list-item">               
                     <img class="sh-list-book-img" src="${h}"" alt="Book's cover. ${a}" />
                     <div class="sh-list-item-main-wrapper">
@@ -25,7 +25,7 @@ import{h as u,L as g,s as r,i as k,n as b,j as y,o as L,p as v,d as f,l as B,e a
                          </div>                      
                        <button class="sh-list-btn" data_id="${t}" type="button">
                          <svg class="sh-list-icon" width="16" height="16">
-                           <use href="../img/sprite.svg#icon-trash"></use>
+                           <use href="src/img/sprite.svg#icon-trash"></use>
                          </svg>
                        </button>
                     </div>                       
