@@ -21,13 +21,11 @@
   .book-img {
     width: 335px;
   }
+    .book-item {
+      max-width: 335px;
+    }
 }
 
-@media screen and (min-width: 375px) {
-  .book-item {
-    max-width: 335px;
-  }
-}
 
 .home-title {
   font-weight: 700;

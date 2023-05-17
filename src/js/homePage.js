@@ -66,7 +66,12 @@ export async function getTopBooks(TOP_BOOKS) {
 }
 
 
-
+let observer = new IntersectionObserver(loadMore, options);
+var options = {
+  root: null,
+  rootMargin: '200px',
+  threshold: 1.0,
+};
 
 export function loadMore(entries, observer){
   entries.forEach(entry => {
@@ -78,7 +83,6 @@ export function loadMore(entries, observer){
         // spinnerFoo();
       })
         .catch(error => {
-          console.log(error);
           Notify.failure('Sorry, there is nothing here. Try again later.')})
       .finally(() => addBookListListeners());
     }
