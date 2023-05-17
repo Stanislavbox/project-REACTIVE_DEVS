@@ -1,11 +1,17 @@
 .book-image {
   object-fit: fill;
 
-  min-width: 335px;
+  width: 310px;
   height: 485px;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 375px) {
+  .book-image {
+    min-width: 335px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .book-image {
     min-width: 218px;
     height: 316px;
@@ -85,6 +91,6 @@
   text-transform: uppercase;
 }
 
-.book-image-overlay-text:hover {
+/* .book-image-overlay-text:hover {
   color: var(--main-white-color);
-}
+} */

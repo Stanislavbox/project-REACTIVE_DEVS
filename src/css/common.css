@@ -18,14 +18,18 @@ body::-webkit-scrollbar {
   /* padding: 0px 24px; Добавьте отступы слева и справа для контента */
   box-sizing: border-box; /* Установите box-sizing на border-box, чтобы padding не увеличивал ширину элемента */
 }
-
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 374px) {
+  .container {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 375px) {
   .container {
     width: 375px;
   }
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 768px) {
   .container {
     width: 768px;
   }
@@ -43,16 +47,28 @@ body::-webkit-scrollbar {
   gap: 40px;
 
   padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 80px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 375px) {
   .wrapper {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    gap: 40px;
+
+    padding-top: 40px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
     gap: 100px;
 
     padding-top: 40px;
@@ -80,13 +96,13 @@ body::-webkit-scrollbar {
   gap: 40px;
 }
 
-@media screen and (max-width: 759px) {
+@media screen and (max-width: 767px) {
   .sidebar {
     align-items: center;
   }
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 768px) {
   .sidebar {
     display: flex;
     flex-direction: row;
