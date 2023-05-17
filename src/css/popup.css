@@ -35,8 +35,6 @@
   justify-content: center;
   flex-direction: column;
   max-width: 335px;
-  max-height: 80%;
-  overflow-y: auto;
 
   padding: 40px 24px;
   border: 2px solid var(--main-black-color);

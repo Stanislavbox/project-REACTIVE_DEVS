@@ -5,7 +5,7 @@ import { Notify } from 'notiflix';
 const instanceAxios = axios.create({
   baseURL: 'https://books-backend.p.goit.global/books/',
 });
-// =======================Добавить На ЛИ сласс .js-book-item
+
 const refs = {
   bodyEl: document.querySelector("body"),
   bookItemEl: document.querySelectorAll(".book-item"),
@@ -15,7 +15,7 @@ const refs = {
   authorBook: document.querySelector(".popup-book-author"),
   descrBook: document.querySelector(".popup-book-description"),
   popUpBtn: document.querySelector(".popup-book-btn"),
-  popUpNotice: document.querySelector(".popup-book-notice"),
+  popUpNotice: document.querySelector(".popup-book-notice"),  
 }
 
 export const LOCALSTORAGE_SHOPPING_LIST_KEY = "booksShopingList";
@@ -92,10 +92,10 @@ export async function popUpModal(event) {
 
   try {
 
-  const { author, book_image, description, title } = await getBooksById(bookId);
-  refs.coverBook.setAttribute("src", `${book_image}`);
-  refs.titleBook.textContent = `${title}`;
-  refs.authorBook.textContent = `${author}`;
+    const { author, book_image, description, title } = await getBooksById(bookId);    
+    refs.coverBook.setAttribute("src", `${book_image}`);
+    refs.titleBook.textContent = `${title}`;
+    refs.authorBook.textContent = `${author}`;    
   if (description) {
     refs.descrBook.textContent = `${description}`;
     } 
