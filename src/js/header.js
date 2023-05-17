@@ -56,7 +56,7 @@ export function registration(event) {
   const password = signUpPassword.value;
   // const name = signUpName.value;
   if (!email || !password) {
-    Notiflix.Notify.success('Sol lucet omnibus');
+    Notiflix.Notify.warning('Not all fields are filled');
     return;
   }
   createUserWithEmailAndPassword(auth, email, password)
@@ -70,13 +70,16 @@ export function registration(event) {
       burgerUserInfo.classList.toggle('is-hidden');
       backdrop_hide_show.classList.toggle('is-hidden');
       location.reload();
+      Notiflix.Notify.success('Registration complete');
     })
     .catch(error => {
       const errorMessage = error.message;
       if (errorMessage === 'Firebase: Error (auth/email-already-in-use).') {
-        alert('Цей email вже використовується!');
+        // alert('Цей email вже використовується!');
+        Notiflix.Notify.warning('This e-mail already in use');
       }
       console.log('Помилка при реєстрації:', error);
+      Notiflix.Notify.failure("Regisration failed")
     });
 }
 
@@ -86,7 +89,8 @@ export function logIn(event) {
   const password = signUpPassword.value;
 
   if (!email || !password) {
-    alert('Всі поля мають бути засіяні!');
+    // alert('Всі поля мають бути засіяні!');
+    Notiflix.Notify.warning('Not all fields are filled');
     return;
   }
   signInWithEmailAndPassword(auth, email, password)
@@ -98,16 +102,22 @@ export function logIn(event) {
       userBoardBtnSignUp.classList.toggle('is-hidden');
       userBoardName.classList.toggle('is-hidden');
       burgerUserInfo.classList.toggle('is-hidden');
+      // Notiflix.Notify.success('You are signed in');
       location.reload();
+      
+
     })
     .catch(error => {
       const errorMessage = error.message;
       if (errorMessage === 'Firebase: Error (auth/invalid-email).') {
-        alert('Не вірний email');
+        // alert('Не вірний email');
+        Notiflix.Notify.warning('Invalid e-mail');
       } else if (errorMessage === 'Firebase: Error (auth/wrong-password).') {
-        alert('Не вірний password');
+        // alert('Не вірний password');
+        Notiflix.Notify.warning('Invalid password');
       } else if (errorMessage === 'Firebase: Error (auth/user-not-found).') {
-        alert('Такого користувача не знайдено');
+        // alert('Такого користувача не знайдено');
+        Notiflix.Notify.warning('This user not found');
       }
       console.log(errorMessage);
     });
@@ -133,11 +143,14 @@ export function logOutFunc() {
     .then(() => {
       localStorage.removeItem('user');
       userBlock.textContent = '';
-      alert('Вихід з облікового запису');
+      // alert('Вихід з облікового запису');
+      // Notiflix.Notify.info('You are logged out');
       location.reload();
+      
     })
     .catch(error => {
       console.log('Помилка при виході:', error);
+      Notiflix.Notify.failure('Logging out ERROR');
     });
 }
 
