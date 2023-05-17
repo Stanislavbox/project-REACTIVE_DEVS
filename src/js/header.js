@@ -4,6 +4,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile
 } from 'firebase/auth';
 import { getDatabase, ref, set } from 'firebase/database';
 
@@ -41,8 +42,7 @@ function writeUserData() {
 }
 
 // __________________________________
-
-// const signUpName = document.getElementById('sign_up_name');
+const signUpName = document.getElementById('sign_up_name');
 const signUpEmail = document.getElementById('sign_up_email');
 const signUpPassword = document.getElementById('sign_up_password');
 const userBlock = document.querySelector('.header__username');
@@ -50,36 +50,77 @@ const userBoardName = document.querySelector('.userboard_dropdown');
 const burgerUserBlock = document.querySelector('.burger__username');
 const burgerUserInfo = document.querySelector('.burger_userinfo');
 
+// export function registration(event) {
+//   event.preventDefault();
+//   const email = signUpEmail.value;
+//   const password = signUpPassword.value;
+//   const name = signUpName.value;
+//   if (!email || !password || !name) {
+//     Notiflix.Notify.warning('Not all fields are filled');
+//     return;
+//   }
+//   createUserWithEmailAndPassword(auth, email, password)
+//     .then(userCredential => {
+//       const user = userCredential.user;
+//       userBlock.textContent = user.email;
+//       burgerUserBlock.textContent = user.email;
+//       localStorage.setItem('user', JSON.stringify(user));
+//       userBoardBtnSignUp.classList.toggle('is-hidden');
+//       userBoardName.classList.toggle('is-hidden');
+//       burgerUserInfo.classList.toggle('is-hidden');
+//       backdrop_hide_show.classList.toggle('is-hidden');
+//       location.reload();
+//       Notiflix.Notify.success('Registration complete');
+//     })
+//     .catch(error => {
+//       const errorMessage = error.message;
+//       if (errorMessage === 'Firebase: Error (auth/email-already-in-use).') {
+//         // alert('Цей email вже використовується!');
+//         Notiflix.Notify.warning('This e-mail already in use');
+//       }
+//       console.log('Помилка при реєстрації:', error);
+//       Notiflix.Notify.failure("Regisration failed")
+//     });
+// }
+
 export function registration(event) {
   event.preventDefault();
   const email = signUpEmail.value;
   const password = signUpPassword.value;
-  // const name = signUpName.value;
-  if (!email || !password) {
+  const name = signUpName.value;
+  if (!email || !password || !name) {
     Notiflix.Notify.warning('Not all fields are filled');
     return;
   }
   createUserWithEmailAndPassword(auth, email, password)
     .then(userCredential => {
       const user = userCredential.user;
-      userBlock.textContent = user.email;
-      burgerUserBlock.textContent = user.email;
-      localStorage.setItem('user', JSON.stringify(user));
-      userBoardBtnSignUp.classList.toggle('is-hidden');
-      userBoardName.classList.toggle('is-hidden');
-      burgerUserInfo.classList.toggle('is-hidden');
-      backdrop_hide_show.classList.toggle('is-hidden');
-      location.reload();
-      Notiflix.Notify.success('Registration complete');
+      updateProfile(user, {
+        displayName: name,
+      })
+        .then(() => {
+          userBlock.textContent = user.displayName;
+          burgerUserBlock.textContent = user.displayName;
+          localStorage.setItem('user', JSON.stringify(user));
+          userBoardBtnSignUp.classList.toggle('is-hidden');
+          userBoardName.classList.toggle('is-hidden');
+          burgerUserInfo.classList.toggle('is-hidden');
+          backdrop_hide_show.classList.toggle('is-hidden');
+          location.reload();
+          Notiflix.Notify.success('Registration complete');
+        })
+        .catch(error => {
+          console.log('Помилка при оновленні профілю:', error);
+          Notiflix.Notify.failure('Failed to update profile');
+        });
     })
     .catch(error => {
       const errorMessage = error.message;
       if (errorMessage === 'Firebase: Error (auth/email-already-in-use).') {
-        // alert('Цей email вже використовується!');
         Notiflix.Notify.warning('This e-mail already in use');
       }
       console.log('Помилка при реєстрації:', error);
-      Notiflix.Notify.failure("Regisration failed")
+      Notiflix.Notify.failure('Registration failed');
     });
 }
 
@@ -97,8 +138,8 @@ export function logIn(event) {
     .then(userCredential => {
       const user = userCredential.user;
       localStorage.setItem('user', JSON.stringify(user));
-      userBlock.textContent = user.email;
-      burgerUserBlock.textContent = user.email;
+      userBlock.textContent = user.displayName;
+      burgerUserBlock.textContent = user.displayName;
       userBoardBtnSignUp.classList.toggle('is-hidden');
       userBoardName.classList.toggle('is-hidden');
       burgerUserInfo.classList.toggle('is-hidden');
@@ -127,8 +168,8 @@ export function onLoad() {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       const user = JSON.parse(storedUser);
-      userBlock.textContent = user.email;
-      // burgerUserBlock.textContent = user.email;
+      userBlock.textContent = user.displayName;
+      burgerUserBlock.textContent = user.displayName;
       userBoardName.classList.toggle('is-hidden');
       burgerUserInfo.classList.toggle('is-hidden');
     } else {
@@ -180,8 +221,8 @@ export function openBurgerMenu() {
   const storedUser = localStorage.getItem('user');
   if (storedUser) {
     const user = JSON.parse(storedUser);
-    userBlock.textContent = user.email;
-    burgerUserBlock.textContent = user.email;
+    userBlock.textContent = user.displayName;
+    burgerUserBlock.textContent = user.displayName;
   } else {
     burgerSignUpButton.classList.toggle('is-hidden');
   }
