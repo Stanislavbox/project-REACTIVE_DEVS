@@ -48,11 +48,11 @@ export function registration(event) {
   const email = signUpEmail.value;
   const password = signUpPassword.value;
   // const name = signUpName.value;
-  if (!email || !password ) {
+  if (!email || !password) {
     alert('Всі поля мають бути заповнені!');
     return;
   }
-  createUserWithEmailAndPassword(auth, email, password,)
+  createUserWithEmailAndPassword(auth, email, password)
     .then(userCredential => {
       const user = userCredential.user;
       userBlock.textContent = user.email;
@@ -163,7 +163,7 @@ export function openBurgerMenu() {
     userBlock.textContent = user.email;
     burgerUserBlock.textContent = user.email;
   } else {
-    burgerSignUpButton.classList.toggle('is-hidden')
+    burgerSignUpButton.classList.toggle('is-hidden');
   }
 }
 
@@ -173,10 +173,10 @@ closeBurgerBtn.addEventListener('click', closeBurgerMenu);
 export function closeBurgerMenu() {
   modal_burger.style.visibility = 'hidden';
   modal_burger.style.opacity = 0;
-    const storedUser = localStorage.getItem('user');
+  const storedUser = localStorage.getItem('user');
   if (!storedUser) {
-     burgerSignUpButton.classList.toggle('is-hidden'); 
-    }
+    burgerSignUpButton.classList.toggle('is-hidden');
+  }
 }
 
 // __________________________________________
@@ -187,14 +187,14 @@ const signInlink = document.querySelector('.last-link');
 const formSignUp = document.querySelector('.button-registraition');
 const formSignIn = document.querySelector('.button-login');
 
-signInlink.addEventListener('click', onLinkSignIn)
+signInlink.addEventListener('click', onLinkSignIn);
 signUplink.addEventListener('click', onLinkSignUp);
 
 export function onLinkSignIn(evt) {
-  evt.preventDefault()
-  formSignUp.classList.toggle('is-hidden')
+  evt.preventDefault();
+  formSignUp.classList.toggle('is-hidden');
   formSignIn.classList.toggle('is-hidden');
-  signInlink.classList.toggle('link_underline')
+  signInlink.classList.toggle('link_underline');
   signUplink.classList.toggle('link_underline');
 }
 
@@ -202,6 +202,32 @@ export function onLinkSignUp(evt) {
   evt.preventDefault();
   formSignUp.classList.toggle('is-hidden');
   formSignIn.classList.toggle('is-hidden');
-    signInlink.classList.toggle('link_underline');
-    signUplink.classList.toggle('link_underline');
+  signInlink.classList.toggle('link_underline');
+  signUplink.classList.toggle('link_underline');
+}
+
+const headerShoppingListLink = document.querySelector('.header__shopping_list');
+const burgerShoppingListLink = document.querySelector('.burger__sl_link');
+const headerHomeLink = document.querySelector('.header__home');
+const burgerHomeLink = document.querySelector('.burger__home_link');
+
+const currentURL = window.location.href;
+export function pageCheck() {
+  if (
+    currentURL ===
+      'https://stanislavbox.github.io/project-REACTIVE_DEVS/index.html' ||
+    currentURL === 'https://stanislavbox.github.io/project-REACTIVE_DEVS/' ||
+    currentURL === 'http://localhost:5173/index.html' ||
+    currentURL === 'http://localhost:5173/'
+  ) {
+    headerHomeLink.classList.toggle('current');
+burgerHomeLink.classList.toggle('current');
+  }
+  else if (
+    currentURL === 'https://stanislavbox.github.io/project-REACTIVE_DEVS/shopping_list.html' ||
+    currentURL === 'http://localhost:5173/shopping_list.html'
+  ) {
+    headerShoppingListLink.classList.toggle('current');
+    burgerShoppingListLink.classList.toggle('current');
+  }
 }

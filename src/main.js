@@ -73,8 +73,10 @@ import { onLoad } from './js/header';
 import { logOutFunc } from './js/header';
 import { openForm } from './js/header';
 import { closeForm } from './js/header';
+import { pageCheck } from './js/header';
 
 onLoad();
+pageCheck()
 
 const formSignUp = document.querySelector('.button-registraition');
 const formSignIn = document.querySelector('.button-login');
