@@ -5,9 +5,8 @@ import { spinnerFoo } from "./spinner";
 
 
 const refs = {
-    shopListEmpty: document.querySelector(".shopping-list-empty"),
-    shopListWrapper: document.querySelector(".shopping-list-card"),
-  shopList: document.querySelector("#booksShopingList"),    
+    shopListEmpty: document.querySelector(".shopping-list-empty"),   
+    shopList: document.querySelector("#booksShopingList"),  
     startMarkup: `<p class="shopping-list-empty-message">
     This page is empty, add some books and proceed to order.
   </p>
@@ -29,30 +28,32 @@ const refs = {
    arrBtnsID: [],
 }
 
+let arrOfBooksId = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
 // Управляет рендером стартовым
 export async function createShopingListMarkup() {
-    
-  let arrOfBooksId = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY);
-
-  if (!arrOfBooksId) {
-    spinnerFoo()
-    return refs.shopListEmpty.insertAdjacentHTML('beforeend', refs.startMarkup)
+  // Перевірка на наявність ключа в ЛокСховищі та на наявність в ньому ID-шників;
+    if (!arrOfBooksId) {
+    refs.shopList.style.display = "none";
+    spinnerFoo();    
+    return refs.shopListEmpty.insertAdjacentHTML('beforeend', refs.startMarkup);
   } else if (!JSON.parse(arrOfBooksId).length) {
-    spinnerFoo()
-    return refs.shopListEmpty.insertAdjacentHTML('beforeend', refs.startMarkup)
+    refs.shopList.style.display = "none";
+    spinnerFoo();
+    return refs.shopListEmpty.insertAdjacentHTML('beforeend', refs.startMarkup);
   }
  
-    
-    refs.shopListEmpty.style.display = "none";
-    arrOfBooksId = JSON.parse(arrOfBooksId);    
+    // Ренндер списку книг в Shopping List  
+  refs.shopList.style.display = "flex";
+  arrOfBooksId = JSON.parse(arrOfBooksId);    
 
   try {
       let arrData = [];
-
+    // Отримання данних с бекненду
       for (let i = 0; i < arrOfBooksId.length; i +=1) {
         const resp = await getBooksById(arrOfBooksId[i]);
         arrData.push(resp);
-      }   
+      }  
+    
 
       const markup = arrData.map(({ _id, author, book_image, description, title, list_name }) => {
         return `<li class="sh-list-item">               
@@ -88,23 +89,28 @@ export async function createShopingListMarkup() {
                 </li>`
     }).join('');
     spinnerFoo();
-    refs.shopList.insertAdjacentHTML("beforeend", markup);
-    const shopListRemoveBtn = document.querySelectorAll('.sh-list-btn');
-
-    
-    shopListRemoveBtn.forEach(btn => refs.arrBtnsID.push(Object.values(btn.attributes).find(item => item.nodeName === "data_id").value));
-    refs.arrBtnsID.forEach(id => document.querySelector(`[data_id="${id}"]`).addEventListener("click", removeFromShopingList));
-    console.log(refs.arrBtnsID);    
-  } catch (error) {   
+    refs.shopList.innerHTML = markup;  
+    arrOfBooksId.forEach(id => document.querySelector(`[data_id="${id}"]`).addEventListener("click", removeFromShopingList));
+        
+  } catch (error) {    
         Notify.failure(error.message);
     }    
 }
 
 async function removeFromShopingList(event) {
-  removeLocalStorageBook(event);
-  refs.arrBtnsID.forEach(id => document.querySelector(`[data_id="${id}"]`).removeEventListener("click", removeFromShopingList));
-  refs.arrBtnsID = [];
-  await createShopingListMarkup();  
+  spinnerFoo()
+  removeLocalStorageBook(event);  
+  // arrOfBooksId.forEach(id => document.querySelector(`[data_id="${id}"]`).removeEventListener("click", removeFromShopingList));  
+  arrOfBooksId = storage.load(LOCALSTORAGE_SHOPPING_LIST_KEY); 
+  if (JSON.parse(arrOfBooksId).length) {
+    event.currentTarget.closest('.sh-list-item').style.display = "none"
+    spinnerFoo();
+    return
+  }
+  refs.shopList.innerHTML = "";
+  refs.shopList.style.display = "none";  
+  refs.shopListEmpty.innerHTML = refs.startMarkup;
+  spinnerFoo();
 }
 
 
