@@ -12,7 +12,7 @@ export async function getTopBooks(TOP_BOOKS, numCardsToRender) {
               ${obj.books.slice(0, numCardsToRender).map(
                 ({ title, book_image, author, _id }) => `<li class="book-item"  data_id=${_id}>
                       <div class ="img-wrapper">
-                          <img class = "book-img" src="${book_image}" alt="Poster of ${title}"/>
+                          <img class = "book-img" src="${book_image}" alt="Poster of ${title}" loading="lazy" />
                           <a class = "overlay" href="http://"><span class = "text-overlay">QUICK VIEW</span></a>
                       </div>
                           <h3 class="book-name">${title}</h3>
