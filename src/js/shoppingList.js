@@ -13,23 +13,21 @@ const refs = {
   </p>
   <picture class="shopping-list-empty-img">
     <source
-      srcset="${import.meta.env.BASE_URL}img/books.png 1x, ${import.meta.env.BASE_URL}img/books.png 2x"
+      srcset="img/books@2x.png 1x, img/books@2x.png 2x"
       media="(min-width:1440px)"
     />
     <source
-      srcset="${import.meta.env.BASE_URL}img/books.png 1x, ${import.meta.env.BASE_URL}img/books.png 2x"
+      srcset="img/books@2x.png 1x, img/books@2x.png 2x"
       media="(min-width:768px)"
     />
     <source
-      srcset="${import.meta.env.BASE_URL}img/books.png 1x, ${import.meta.env.BASE_URL}img/books.png 2x"
+      srcset="img/books.png 1x, img/books.png 2x"
       media="(max-width:767px)"
     />
-    <img :src="${import.meta.env.BASE_URL}img/books.png" alt="books" />
+    <img src="img/books.png" alt="books" />
   </picture>`,
    arrBtnsID: [],
 }
-
-// `${import.meta.env.BASE_URL}img/books.png`
 
 // Управляет рендером стартовым
 export async function createShopingListMarkup() {
@@ -67,7 +65,7 @@ export async function createShopingListMarkup() {
                          </div>                      
                        <button class="sh-list-btn" data_id="${_id}" type="button">
                          <svg class="sh-list-icon" width="16" height="16">
-                           <use href="src/img/sprite.svg#icon-trash"></use>
+                           <use href="./img/sprite.svg#icon-trash"></use>
                          </svg>
                        </button>
                     </div>                       
