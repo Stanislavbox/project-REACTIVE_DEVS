@@ -13,6 +13,10 @@
     z-index: 999;
 }
 
+.container-registration input:hover{
+    border: 2px solid var( --brand-color);
+}
+
 .is-hidden {
     display: none;
 }
@@ -272,13 +276,18 @@ input::placeholder {
 }
 
 .close-form {
-    stroke: #111111;
+    stroke: var( --main-black-color);
     width: 10px;
     height: 10px;
     padding: 0;
     top: 5px;
     right: 5px;
     position: relative;
+}
+
+.close-form:hover,
+.close-form:focus{
+    stroke: var( --brand-color);
 }
 
 @media screen and (min-width: 768px) {

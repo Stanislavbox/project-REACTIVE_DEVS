@@ -117,6 +117,58 @@ background-color: var(--dark-theme-color);
   color: rgba(255, 255, 255, 0.5);
 }
 
+/*? Modal REGISTRETION */
+.js-dark-theme .close-form {
+  stroke: var(--main-white-color);
+}
+
+.js-dark-theme .close-form:hover,
+.js-dark-theme .close-form:focus {
+  stroke: var(--brand-color);
+}
+
+.js-dark-theme .button-registraition, 
+.js-dark-theme .button-login{
+  background-color: var(--backdrop-color);
+  color: var(--dark-theme-color);
+} 
+.js-dark-theme .button-registraition:hover, 
+.js-dark-theme .button-login:hover{
+  background-color: var(--brand-color);
+  color: var(--backdrop-color);
+  border: 2px solid var(--backdrop-color);
+} 
+
+.js-dark-theme .container-registration{
+  background-color: var( --dark-theme-color);
+}
+.js-dark-theme .container-registration input{
+  background-color: var(--dark-theme-color);
+  border: 2px solid var(--backdrop-color);
+}
+
+.js-dark-theme .container-registration input::placeholder{
+  color: var(--main-white-color);
+}
+
+.js-dark-theme .container-registration input:hover{
+  border: 2px solid var( --brand-color);
+}
+.js-dark-theme .container-registration svg{
+  stroke: var(--backdrop-color);
+  fill: var(--dark-theme-color);
+}
+
+.js-dark-theme .first-link,
+.js-dark-theme .last-link {
+  color: rgba(246, 246, 246, 0.5);
+}
+
+.js-dark-theme  .link_underline{
+    color: var(--brand-color);
+}
+
+
 /*? SHOPPING LIST */
 
 .js-dark-theme .shop-list-title,

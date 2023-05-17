@@ -13,18 +13,18 @@ const refs = {
   </p>
   <picture class="shopping-list-empty-img">
     <source
-      srcset="./img/books@2x.png 1x, ./img/books@2x.png 2x"
+      srcset="/img/books@2x.png 1x, /img/books@2x.png 2x"
       media="(min-width:1440px)"
     />
     <source
-      srcset="./img/books@2x.png 1x, ./img/books@2x.png 2x"
+      srcset="/img/books@2x.png 1x, /img/books@2x.png 2x"
       media="(min-width:768px)"
     />
     <source
-      srcset="./img/books.png 1x, ./img/books.png 2x"
+      srcset="/img/books.png 1x, /img/books.png 2x"
       media="(max-width:767px)"
     />
-    <img src="./img/books.png" alt="books" />
+    <img src="/img/books.png" alt="books" />
   </picture>`,
    arrBtnsID: [],
 }

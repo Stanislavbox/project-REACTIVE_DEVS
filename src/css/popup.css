@@ -72,8 +72,8 @@
 }
 
 .popup-book-close-icon {
-  width: 24px;
-  height: 24px;
+  width: 14px;
+  height: 14px;
   stroke: currentColor;
   transition: fill var(--animation);
 }
