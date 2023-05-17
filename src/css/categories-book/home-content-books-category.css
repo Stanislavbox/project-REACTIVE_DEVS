@@ -6,7 +6,7 @@
   margin-top: 40px;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 768px) {
   .category-books-list {
     flex-flow: row wrap;
     row-gap: 40px;
@@ -22,15 +22,16 @@
 
 .books-list-item {
   gap: 25px;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 767px) {
   .books-list-item {
     flex-basis: calc((100% - 25px * 0) / 1);
   }
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 768px) {
   .books-list-item {
     flex-basis: calc((100% - 25px * (3 - 1)) / 3);
   }
