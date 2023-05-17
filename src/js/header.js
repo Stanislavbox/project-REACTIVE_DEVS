@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { initializeApp } from 'firebase/app';
 import {
   getAuth,
@@ -17,6 +18,12 @@ const firebaseConfig = {
   databaseURL:
     'https://goit-77-team-1-books-project-default-rtdb.europe-west1.firebasedatabase.app/',
 };
+
+Notiflix.Notify.init({
+  width: '500px',
+  zindex: 4001,
+  position: 'center-top'
+})
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -49,7 +56,7 @@ export function registration(event) {
   const password = signUpPassword.value;
   // const name = signUpName.value;
   if (!email || !password) {
-    alert('Всі поля мають бути заповнені!');
+    Notiflix.Notify.success('Sol lucet omnibus');
     return;
   }
   createUserWithEmailAndPassword(auth, email, password)

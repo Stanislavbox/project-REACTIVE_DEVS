@@ -10,7 +10,7 @@
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(3px);
     overflow: scroll;
-    z-index: 99999;
+    z-index: 999;
 }
 
 .is-hidden {
