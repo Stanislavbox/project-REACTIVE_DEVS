@@ -1,4 +1,4 @@
-import{h as u,L as g,s as r,i as k,n as b,j as y,o as L,p as v,d as f,l as B,e as n,f as S,g as E,c as x}from"./footer-b8784e12.js";const s={shopListEmpty:document.querySelector(".shopping-list-empty"),shopListWrapper:document.querySelector(".shopping-list-card"),shopList:document.querySelector("#booksShopingList"),startMarkup:`<p class="shopping-list-empty-message">
+import{h as u,L as g,s as r,i as k,n as b,j as y,o as L,p as v,d as f,l as B,e as n,f as S,g as E,c as x}from"./footer-163cfa28.js";const s={shopListEmpty:document.querySelector(".shopping-list-empty"),shopListWrapper:document.querySelector(".shopping-list-card"),shopList:document.querySelector("#booksShopingList"),startMarkup:`<p class="shopping-list-empty-message">
     This page is empty, add some books and proceed to order.
   </p>
   <picture class="shopping-list-empty-img">
