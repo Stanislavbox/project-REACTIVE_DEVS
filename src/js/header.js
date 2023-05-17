@@ -207,7 +207,10 @@ export function onLinkSignUp(evt) {
 }
 
 const headerShoppingListLink = document.querySelector('.header__shopping_list');
+const burgerShoppingListLink = document.querySelector('.burger__sl_link');
 const headerHomeLink = document.querySelector('.header__home');
+const burgerHomeLink = document.querySelector('.burger__home_link');
+
 const currentURL = window.location.href;
 export function pageCheck() {
   if (
@@ -218,11 +221,13 @@ export function pageCheck() {
     currentURL === 'http://localhost:5173/'
   ) {
     headerHomeLink.classList.toggle('current');
+burgerHomeLink.classList.toggle('current');
   }
   else if (
     currentURL === 'https://stanislavbox.github.io/project-REACTIVE_DEVS/shopping_list.html' ||
     currentURL === 'http://localhost:5173/shopping_list.html'
   ) {
     headerShoppingListLink.classList.toggle('current');
+    burgerShoppingListLink.classList.toggle('current');
   }
 }
