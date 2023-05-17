@@ -19,7 +19,7 @@
 
 @media screen and (min-width: 375px) {
   .book-img {
-    min-width: 335px;
+    width: 335px;
   }
 }
 
