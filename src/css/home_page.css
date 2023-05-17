@@ -14,6 +14,13 @@
 .book-img {
   object-fit: fill;
   max-height: 485px;
+  width: 310px;
+}
+
+@media screen and (min-width: 375px) {
+  .book-img {
+    min-width: 335px;
+  }
 }
 
 @media screen and (min-width: 375px) {
