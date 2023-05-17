@@ -24,7 +24,7 @@ const refs = {
       srcset="${import.meta.env.BASE_URL}img/books.png 1x, ${import.meta.env.BASE_URL}img/books.png 2x"
       media="(max-width:767px)"
     />
-    <img src="${import.meta.env.BASE_URL}img/books.png" alt="books" />
+    <img :src="${import.meta.env.BASE_URL}img/books.png" alt="books" />
   </picture>`,
    arrBtnsID: [],
 }
