@@ -2,7 +2,8 @@ import { Notify } from "notiflix";
 import storage from './storage';
 import { LOCALSTORAGE_SHOPPING_LIST_KEY, getBooksById, removeLocalStorageBook } from "./popup";
 import { spinnerFoo } from "./spinner";
-
+import x1 from "../img/books.png";
+import x2 from "../img/books@2x.png";
 
 const refs = {
     shopListEmpty: document.querySelector(".shopping-list-empty"),   
@@ -12,18 +13,18 @@ const refs = {
   </p>
   <picture class="shopping-list-empty-img">
     <source
-      srcset="img/books@2x.png 1x, img/books@2x.png 2x"
+      srcset="${x1} 1x, ${x2} 2x"
       media="(min-width:1440px)"
     />
     <source
-      srcset="img/books@2x.png 1x, img/books@2x.png 2x"
+      srcset="${x1} 1x, ${x2} 2x"
       media="(min-width:768px)"
     />
     <source
-      srcset="img/books.png 1x, img/books.png 2x"
+      srcset="${x1} 1x, ${x2} 2x"
       media="(max-width:767px)"
     />
-    <img src="img/books.png" alt="books" />
+    <img src="${x1}" alt="books" />
   </picture>`,
    arrBtnsID: [],
 }
