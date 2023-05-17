@@ -1,17 +1,52 @@
 import axios from 'axios';
-import { Notify } from 'notiflix';
+// import { data } from 'jquery';
+// import { homePage } from './root';
 
-import { homePage } from './root';
-import { addBookListListeners } from './popup';
+export async function getTopBooks(TOP_BOOKS, numCardsToRender) {
+  const response = await axios.get(TOP_BOOKS);
+  const data = response.data;
+  const topBooks = data
+    .map(obj => {
+      return `<div class = "category-container"><h2 class="home-book-category">${obj.list_name}</h2>
+      <ul class="books-list js-book-list">
+              ${obj.books.slice(0, numCardsToRender).map(
+                ({ title, book_image, author, _id }) => `<li class="book-item"  data_id=${_id}>
+                      <div class ="img-wrapper">
+                          <img class = "book-img" src="${book_image}" alt="Poster of ${title}"/>
+                          <a class = "overlay" href="http://"><span class = "text-overlay">QUICK VIEW</span></a>
+                      </div>
+                          <h3 class="book-name">${title}</h3>
+                          <p class="author-name">${author}</p></li>`
+              ).join('')}
+              </ul><button class="btn-see-more" type="button" data-id="${obj.list_name}">SEE MORE</button></div>`
+    })
+    .join('');
 
-// export async function getTopBooks(TOP_BOOKS) {
+  return topBooks;
+}
+// let currentPage = 3;
+// let arrBooks = [];
+// let observer = new IntersectionObserver(loadMore, options);
+// var options = {
+//   root: null,
+//   rootMargin: '200px',
+//   threshold: 1.0
+// }
+
+// export async function getTopBooks(TOP_BOOKS, numCardsToRender) {
 //   const response = await axios.get(TOP_BOOKS);
 //   const data = response.data;
-//   const topBooks = data
+  
+//   for (let index = 0; index < currentPage; index++) {
+//     console.log(data[index])
+//     arrBooks.push(data[index])
+//   }
+//   console.log(index)
+//   const topBooks = arrBooks
 //     .map(obj => {
 //       return `<div class = "category-container"><h2 class="home-book-category">${obj.list_name}</h2>
 //       <ul class="books-list js-book-list">
-//               ${obj.books.map(
+//               ${obj.books.slice(0, numCardsToRender).map(
 //                 ({ title, book_image, author, _id }) => `<li class="book-item"  data_id=${_id}>
 //                       <div class ="img-wrapper">
 //                           <img class = "book-img" src="${book_image}" alt="Poster of ${title}"/>
@@ -27,110 +62,65 @@ import { addBookListListeners } from './popup';
 //   return topBooks;
 // }
 
+// const target = document.querySelector('.js-guard')
 
+// let numCardsToRender = 1;
 
+// if (window.innerWidth < 767) {
+//   numCardsToRender = 1;
+// } else if (window.innerWidth < 1439) {
+//   numCardsToRender = 3;
+// } else {
+//   numCardsToRender = 5;
+// }
 
-
-let booksToRender = 2;
-let bookIndex = 0
-let arrBooks = [];
-
-
-export async function getTopBooks(TOP_BOOKS) {
-  const response = await axios.get(TOP_BOOKS);
-  const data = response.data;
-  
-  for (let index = bookIndex; index < booksToRender; index += 1) {
-    arrBooks.push(data[index]);
-  }
-  booksToRender += 2
-  bookIndex+=2
-  const topBooks = arrBooks
-    .map(obj => {
-      return `<div class = "category-container"><h2 class="home-book-category">${obj.list_name}</h2>
-      <ul class="books-list js-book-list">
-              ${obj.books.map(
-                ({ title, book_image, author, _id }) => `<li class="book-item"  data_id=${_id}>
-                      <div class ="img-wrapper">
-                          <img class = "book-img" src="${book_image}" alt="Poster of ${title}"/>
-                          <a class = "overlay" href="http://"><span class = "text-overlay">QUICK VIEW</span></a>
-                      </div>
-                          <h3 class="book-name">${title}</h3>
-                          <p class="author-name">${author}</p></li>`
-              ).join('')}
-              </ul><button class="btn-see-more" type="button" data-id="${obj.list_name}">SEE MORE</button></div>`
-    })
-    .join('');
-
-  return topBooks;
-}
-
-
-
-
-export function loadMore(entries, observer){
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      getMoreBooks(homePage.TOP_BOOKS).then(resp => {
-        homePage.listOfBooks.insertAdjacentHTML('beforeend', resp);
-        
-        observer.observe(homePage.target)
-        // spinnerFoo();
-      })
-        .catch(error => {
-          console.log(error);
-          Notify.failure('Sorry, there is nothing here. Try again later.')})
-      .finally(() => addBookListListeners());
-    }
-  });
-}
-
-async function getMoreBooks(TOP_BOOKS){
-  const response = await axios.get(TOP_BOOKS);
-  const data = response.data;
-  for (let index = bookIndex; index < booksToRender; index += 1) {
+// export function loadMore(entries, observer){
+//   entries.forEach(entry => {
+//     console.log(entry)
+//     if(entry.isIntersecting){
+//       getMoreBooks(homePage.TOP_BOOKS, numCardsToRender).then(resp => {
     
-    if (arrBooks.length === 17) {
-      observer.unobserve(homePage.target);
-      Notify.warning(
-        "We are sorry, but you've reached the end of the list of books. "
-      );
-    }
+//         homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
+//         observer.observe(homePage.target)
+//         spinnerFoo();
+//       })
+//       .catch(error =>
+//         Notify.failure('Sorry, there is nothing here. Try again later.')
+//       )
+//       .finally(() => addBookListListeners());
+//     }
+//   });
+// }
 
-    arrBooks.push(data[index]);
-  }
-
-  const topBooks = arrBooks
-    .slice(bookIndex, booksToRender)
-    .map(obj => {
-      return `<div class = "category-container"><h2 class="home-book-category">${
-        obj.list_name
-      }</h2>
-      <ul class="books-list js-book-list">
-              ${obj.books
-                .map(
-                  ({
-                    title,
-                    book_image,
-                    author,
-                    _id,
-                  }) => `<li class="book-item"  data_id=${_id}>
-                      <div class ="img-wrapper">
-                          <img class = "book-img" src="${book_image}" alt="Poster of ${title}"/>
-                          <a class = "overlay" href="http://"><span class = "text-overlay">QUICK VIEW</span></a>
-                      </div>
-                          <h3 class="book-name">${title}</h3>
-                          <p class="author-name">${author}</p></li>`
-                )
-                .join('')}
-              </ul><button class="btn-see-more" type="button" data-id="${
-                obj.list_name
-              }">SEE MORE</button></div>`;
-    })
-    .join('');
+// async function getMoreBooks(TOP_BOOKS, numCardsToRender){
+//   const response = await axios.get(TOP_BOOKS);
+//   const data = response.data;
   
-   booksToRender += 2;
-   bookIndex += 2;
+//   for (let index = 4; index < currentPage; index++) {
+//     console.log(data[index])
+//     arrBooks.push(data[index])
+//     if(index===currentPage){
+//       index=currentPage
+//       console.log([index])
+//     }
+//   }
+//   console.log(index)
+//   const topBooks = arrBooks
+//     .map(obj => {
+//       return `<div class = "category-container"><h2 class="home-book-category">${obj.list_name}</h2>
+//       <ul class="books-list js-book-list">
+//               ${obj.books.slice(0, numCardsToRender).map(
+//                 ({ title, book_image, author, _id }) => `<li class="book-item"  data_id=${_id}>
+//                       <div class ="img-wrapper">
+//                           <img class = "book-img" src="${book_image}" alt="Poster of ${title}"/>
+//                           <a class = "overlay" href="http://"><span class = "text-overlay">QUICK VIEW</span></a>
+//                       </div>
+//                           <h3 class="book-name">${title}</h3>
+//                           <p class="author-name">${author}</p></li>`
+//               ).join('')}
+//               </ul><button class="btn-see-more" type="button" data-id="${obj.list_name}">SEE MORE</button></div>`
+//     })
+//     .join('');
 
-  return topBooks;
-}
+//   return topBooks;
+// }
