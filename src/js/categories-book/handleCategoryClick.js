@@ -30,17 +30,17 @@ export async function onCategoryClick(event) {
     spinnerFoo();
     // add function render top books;
 
-    let numCardsToRender = 1;
+    // let numCardsToRender = 1;
 
-    if (window.innerWidth < 759) {
-      numCardsToRender = 1;
-    } else if (window.innerWidth < 1439) {
-      numCardsToRender = 3;
-    } else {
-      numCardsToRender = 5;
-    }
+    // if (window.innerWidth < 759) {
+    //   numCardsToRender = 1;
+    // } else if (window.innerWidth < 1439) {
+    //   numCardsToRender = 3;
+    // } else {
+    //   numCardsToRender = 5;
+    // }
 
-    getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
+    getTopBooks(homePage.TOP_BOOKS)
       .then(resp => {
         renderingContainer.innerHTML = resp;
         spinnerFoo();

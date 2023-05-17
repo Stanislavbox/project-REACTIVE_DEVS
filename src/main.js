@@ -20,7 +20,7 @@ import { activeCatBtnSwitch } from './js/categories-book/activeCategoryBtnSwitch
 
 import { supportMarkup } from './js/supportUaMarkup';
 
-import { getTopBooks, /*loadMore*/ } from './js/homePage';
+import { getTopBooks /*loadMore*/ } from './js/homePage';
 
 // *** Support Ukraine Marup *** //
 supportMarkup();
@@ -36,16 +36,15 @@ import { switchTheme } from './js/switcher'; //! Stas
 
 // console.log(root.screenWidth)
 
-let numCardsToRender = 1;
+// let numCardsToRender = 1;
 
-if (window.innerWidth < 767) {
-  numCardsToRender = 1;
-} else if (window.innerWidth < 1439) {
-  numCardsToRender = 3;
-} else {
-  numCardsToRender = 5;
-}
-
+// if (window.innerWidth < 767) {
+//   numCardsToRender = 1;
+// } else if (window.innerWidth < 1439) {
+//   numCardsToRender = 3;
+// } else {
+//   numCardsToRender = 5;
+// }
 
 // let observer = new IntersectionObserver(loadMore, options);
 // var options = {
@@ -54,9 +53,9 @@ if (window.innerWidth < 767) {
 //   threshold: 1.0
 // }
 
-getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
+// getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
+getTopBooks(homePage.TOP_BOOKS)
   .then(resp => {
-    
     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
     // observer.observe(homePage.target)
     spinnerFoo();
@@ -104,7 +103,6 @@ import {
   removeBookListListeners,
 } from './js/popup';
 
-
 // window.addEventListener('resize', onScreen)
 
 // function onScreen(){
@@ -114,7 +112,7 @@ import {
 //   numCardsToRender = 1;
 //   getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
 //   .then(resp => {
-    
+
 //     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
 //     // observer.observe(homePage.target)
 //     spinnerFoo();
@@ -127,7 +125,7 @@ import {
 //   numCardsToRender = 3;
 //   getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
 //   .then(resp => {
-    
+
 //     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
 //     // observer.observe(homePage.target)
 //     spinnerFoo();
@@ -140,7 +138,7 @@ import {
 //   numCardsToRender = 5;
 //   getTopBooks(homePage.TOP_BOOKS, numCardsToRender)
 //   .then(resp => {
-    
+
 //     homePage.listOfBooks.insertAdjacentHTML('afterbegin', resp);
 //     // observer.observe(homePage.target)
 //     spinnerFoo();
