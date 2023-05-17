@@ -25,6 +25,9 @@ body.js-dark-theme{
 .js-dark-theme .header__shopping_icon{
   fill: var(--main-white-color);
 }
+.js-dark-theme .current .header__shopping_icon {
+  fill: var( --main-black-color);
+}
 
 .js-dark-theme .switch__slider{
   background: var(--switcher-dark-theme-gradient);
@@ -116,10 +119,12 @@ background-color: var(--dark-theme-color);
 
 /*? SHOPPING LIST */
 
-.js-dark-theme .shopping-list-title{
+.js-dark-theme .shop-list-title,
+.js-dark-theme .sh-list-book-title,
+.js-dark-theme .sh-list-book-descr{
   color: var(--main-white-color);
 }
 
-.js-dark-theme .shopping-list-empty-message{
-  color: rgba(255, 255, 255, 0.6)
+.js-dark-theme .sh-list-item{
+  background-color: var(--main-black-color);
 }
