@@ -224,11 +224,30 @@ color: rgba(0, 0, 0, 0.6);
 
 .sh-list-shops-amazon {
   width: 48px;
+  height: 15px;
+  transition:transform var(--animation);
+}
+
+.sh-list-shops-apple {
+  width: 28px;
+  height: 27px;
+  background-repeat: no-repeat;
+  transition:transform var(--animation);
 }
 
 .sh-list-shops-bs {
- margin-left: 16px;
+  width: 28px;
+  height: 27px;
+  transition:all var(--animation);
 }
+
+.sh-list-shops-apple:hover, 
+.sh-list-shops-bs:hover,
+.sh-list-shops-amazon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
 
 .sh-list-item-top-wrapper {
   margin-bottom: 14px;
@@ -239,4 +258,28 @@ color: rgba(0, 0, 0, 0.6);
   margin-bottom: 28px;
 }
 
+.sh-list-btn {
+  padding: 8px;
+}
+
+}
+
+
+@media screen and (min-width: 1440px) {
+ .shop-list-sidebar {
+  display: block;
+ }
+
+ .shop-list-wrapper {
+  flex-direction: row;
+  gap: 40px;
+ }
+
+ .sh-list-item {
+  width: 996px;
+ }
+
+ .sh-list-book-descr{
+  width: 808px;
+ }
 }
