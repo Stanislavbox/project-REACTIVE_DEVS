@@ -93,6 +93,10 @@ body.js-dark-theme{
 
 /*? POP UP MODAL */
 
+.js-dark-theme .popup-shop-amazon {  
+  background-image: url(../img/bookstores/amazon-dark.png);
+}
+
 .js-dark-theme .popup-book-modal{
 background-color: var(--dark-theme-color);
 }
@@ -185,3 +189,6 @@ background-color: var(--dark-theme-color);
   color: rgba(255, 255, 255, 0.6);
 }
 
+.js-dark-theme .sh-list-shops-amazon{
+  background-image: url(../img/bookstores/amazon-dark.png);
+}
