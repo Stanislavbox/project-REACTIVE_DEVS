@@ -4,6 +4,7 @@ import { LOCALSTORAGE_SHOPPING_LIST_KEY, getBooksById, removeLocalStorageBook } 
 import { spinnerFoo } from "./spinner";
 import x1 from "../img/books.png";
 import x2 from "../img/books@2x.png";
+import svg from "../img/sprite.svg";
 
 const refs = {
     shopListEmpty: document.querySelector(".shopping-list-empty"),   
@@ -67,7 +68,7 @@ export async function createShopingListMarkup() {
                          </div>                      
                        <button class="sh-list-btn" data_id="${_id}" type="button">
                          <svg class="sh-list-icon" width="16" height="16">
-                           <use href="./img/sprite.svg#icon-trash"></use>
+                           <use href="${svg}#icon-trash"></use>
                          </svg>
                        </button>
                     </div>                       
@@ -85,7 +86,7 @@ export async function createShopingListMarkup() {
                            <a href="" class="sh-list-shops-link sh-list-shops-bs"></a>
                          </li>
                        </ul>
-                    </div>                   
+                    </div>
                   </div>
                 </li>`
     }).join('');

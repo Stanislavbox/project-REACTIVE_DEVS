@@ -1,5 +1,11 @@
 .wrap-for-footer{
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 136px);
+}
+
+@media screen and (min-width: 320px) {
+    .wrap-for-footer{
+        min-height: calc(100vh - 154px);
+    }
 }
 
 .footer-section {
@@ -12,7 +18,6 @@
     color: var(--subtitle-color);
     text-align: center;
     font-size: 14px;
-    
 }
 
 .footer-team-name {

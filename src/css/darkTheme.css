@@ -145,6 +145,7 @@ background-color: var(--dark-theme-color);
 .js-dark-theme .container-registration input{
   background-color: var(--dark-theme-color);
   border: 2px solid var(--backdrop-color);
+  color: var(--main-white-color);
 }
 
 .js-dark-theme .container-registration input::placeholder{
@@ -180,3 +181,7 @@ background-color: var(--dark-theme-color);
 .js-dark-theme .sh-list-item{
   background-color: var(--main-black-color);
 }
+.js-dark-theme .shopping-list-empty-message{
+  color: rgba(255, 255, 255, 0.6);
+}
+

@@ -10,7 +10,14 @@
   padding: 40px 26px;
 }
 
-/* .shop-list-container {} */
+.shop-list-container {
+  width: 100%;
+}
+
+.shopping-list-empty-img img{
+  margin: 0 auto;
+  width: 322px;
+}
 
 .shop-list-title {
   margin-bottom: 40px;
