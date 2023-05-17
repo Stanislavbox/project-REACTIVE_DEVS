@@ -14,7 +14,7 @@ import{h as u,L as g,s as r,i as E,n as k,j as b,o as y,p as L,d as S,l as v,e a
       srcset="/project-REACTIVE_DEVS/img/books.png 1x, /project-REACTIVE_DEVS/img/books.png 2x"
       media="(max-width:767px)"
     />
-    <img src="/project-REACTIVE_DEVS/img/books.png" alt="books" />
+    <img :src="/project-REACTIVE_DEVS/img/books.png" alt="books" />
   </picture>`,arrBtnsID:[]};async function l(){let e=u.load(g);if(e){if(!JSON.parse(e).length)return r(),s.shopListEmpty.insertAdjacentHTML("beforeend",s.startMarkup)}else return r(),s.shopListEmpty.insertAdjacentHTML("beforeend",s.startMarkup);s.shopListEmpty.style.display="none",e=JSON.parse(e);try{let o=[];for(let t=0;t<e.length;t+=1){const i=await E(e[t]);o.push(i)}const p=o.map(({_id:t,author:i,book_image:h,description:d,title:a,list_name:m})=>`<li class="sh-list-item">               
                     <img class="sh-list-book-img" src="${h}"" alt="Book's cover. ${a}" />
                     <div class="sh-list-item-main-wrapper">
